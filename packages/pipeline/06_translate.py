@@ -119,6 +119,31 @@ def translate_one(client, description: str) -> str:
     return msg.content[0].text.strip()
 
 
+def _load_translation_cache() -> dict[str, str]:
+    """既存の翻訳結果を description_original -> description_ja で読み込む。
+    増分翻訳で同一原文を再翻訳しないために使う。"""
+    cache: dict[str, str] = {}
+    candidates = [
+        OUTPUT_FILE,
+        DATA_DIR / "translated_skills.phase_a.jsonl",
+    ]
+    for path in candidates:
+        if not path.exists():
+            continue
+        with path.open(encoding="utf-8") as f:
+            for line in f:
+                try:
+                    s = json.loads(line)
+                except json.JSONDecodeError:
+                    continue
+                orig = (s.get("description_original") or "").strip()
+                ja = (s.get("description_ja") or "").strip()
+                if not orig or not ja or orig == ja:
+                    continue
+                cache.setdefault(orig, ja)
+    return cache
+
+
 def main():
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
@@ -132,19 +157,40 @@ def main():
                 continue
     print(f"対象: {len(skills)}件")
 
+    cache = _load_translation_cache()
+    print(f"翻訳キャッシュ: {len(cache)}件 (前回までの結果を再利用)")
+
+    # キャッシュ命中分をマーク
     translations: dict[str, str] = {}
-    if USE_BATCH_API:
-        requests_list = prepare_batch_requests(skills)
-        translations = run_batch_translation(client, requests_list)
-    else:
-        for skill in skills:
-            if not needs_translation(skill):
-                continue
-            try:
-                translations[skill["id"]] = translate_one(client, skill["description_original"])
-            except Exception as e:
-                print(f"  翻訳失敗 {skill['id']}: {e}")
-            time.sleep(0.1)
+    skills_to_translate = []
+    for s in skills:
+        if not needs_translation(s):
+            continue
+        orig = (s.get("description_original") or "").strip()
+        if orig in cache:
+            translations[s["id"]] = cache[orig]
+        else:
+            skills_to_translate.append(s)
+    print(
+        f"キャッシュ命中: {len(translations)}件 / 新規翻訳対象: {len(skills_to_translate)}件"
+    )
+
+    if skills_to_translate:
+        if USE_BATCH_API:
+            requests_list = prepare_batch_requests(skills_to_translate)
+            new_translations = run_batch_translation(client, requests_list)
+        else:
+            new_translations = {}
+            for s in skills_to_translate:
+                try:
+                    new_translations[s["id"]] = translate_one(
+                        client, s["description_original"]
+                    )
+                except Exception as e:
+                    print(f"  翻訳失敗 {s['id']}: {e}")
+                time.sleep(0.1)
+        translations.update(new_translations)
+        print(f"新規翻訳: {len(new_translations)}件")
 
     # 書き出し
     with OUTPUT_FILE.open("w", encoding="utf-8") as f_out:
@@ -157,7 +203,7 @@ def main():
                 skill["description_ja"] = skill["description_original"]  # フォールバック
             f_out.write(json.dumps(skill, ensure_ascii=False) + "\n")
 
-    print(f"翻訳完了: {len(translations)}件を日本語化")
+    print(f"翻訳完了: 合計{len(translations)}件 (キャッシュ含む) を日本語化")
 
 
 if __name__ == "__main__":

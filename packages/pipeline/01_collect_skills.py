@@ -17,6 +17,7 @@ SKILL.md ファイルを世界中のGitHubリポジトリから収集する。
 """
 
 import argparse
+import datetime as _dt
 import json
 import os
 import re
@@ -24,6 +25,17 @@ import subprocess
 import time
 from pathlib import Path
 from typing import Iterator
+
+
+def _json_default(o):
+    """YAML フロントマターの date/datetime を文字列化"""
+    if isinstance(o, (_dt.date, _dt.datetime)):
+        return o.isoformat()
+    raise TypeError(f"Object of type {o.__class__.__name__} is not JSON serializable")
+
+
+def _dump(skill: dict) -> str:
+    return json.dumps(skill, ensure_ascii=False, default=_json_default)
 
 import requests
 import yaml
@@ -69,6 +81,17 @@ SEARCH_QUERIES = [
     "filename:SKILL.md path:skills",
     "filename:SKILL.md created:>2025-10-01",
     "filename:SKILL.md created:<2025-10-01",
+    # 拡張クエリ(キーワード・パス指定)
+    "filename:SKILL.md anthropic",
+    "filename:SKILL.md claude",
+    "filename:SKILL.md sonnet",
+    "filename:SKILL.md haiku",
+    "filename:SKILL.md opus",
+    "filename:SKILL.md mcp",
+    "filename:SKILL.md agent",
+    "path:.claude/agents filename:SKILL.md",
+    "path:claude-skills filename:SKILL.md",
+    "path:.claude/commands filename:SKILL.md",
 ]
 
 # ============================================================
@@ -266,11 +289,11 @@ def main():
     with OUTPUT_FILE.open("w", encoding="utf-8") as out:
         if args.phase in ("a", "all"):
             for skill in collect_from_clones(KNOWN_REPOS):
-                out.write(json.dumps(skill, ensure_ascii=False) + "\n")
+                out.write(_dump(skill) + "\n")
                 count += 1
         if args.phase in ("b", "all"):
             for skill in collect_from_search(SEARCH_QUERIES):
-                out.write(json.dumps(skill, ensure_ascii=False) + "\n")
+                out.write(_dump(skill) + "\n")
                 count += 1
 
     print(f"完了: {count} 件を {OUTPUT_FILE} に保存")

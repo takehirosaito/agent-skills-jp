@@ -38,6 +38,7 @@ SETTINGS = {
         "license",
         "quality_score",
         "github_stars",
+        "slug",
     ],
     "sortableAttributes": [
         "quality_score",
