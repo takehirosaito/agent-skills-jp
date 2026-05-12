@@ -51,6 +51,7 @@ SETTINGS = {
         "typo",
         "proximity",
         "attribute",
+        "sort",
         "quality_score:desc",
         "exactness",
     ],

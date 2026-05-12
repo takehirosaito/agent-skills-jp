@@ -26,6 +26,34 @@ def slugify(name: str) -> str:
     return s[:80] or "untitled"
 
 
+def detect_vendor(path: str, repo: str = "") -> str:
+    """パスとリポ名からベンダーを推定(01と同じロジック・再判定用)"""
+    p = (path or "").lower()
+    r = (repo or "").lower()
+    if ".claude/skills/" in p or ".claude/agents/" in p or ".claude/commands/" in p:
+        return "claude"
+    if ".agents/skills/" in p:
+        return "openai"
+    if "opencode/skills/" in p:
+        return "opencode"
+    if ".gemini/skills/" in p:
+        return "gemini"
+    owner = r.split("/")[0] if "/" in r else r
+    if owner in {"anthropics", "anthropic-experimental"}:
+        return "claude"
+    if "claude" in r:
+        return "claude"
+    if owner in {"openai", "openai-cookbook"}:
+        return "openai"
+    if owner in {"google", "google-deepmind", "googleapis"}:
+        return "gemini"
+    if "gemini" in r:
+        return "gemini"
+    if "opencode" in r:
+        return "opencode"
+    return "generic"
+
+
 def detect_language(text: str) -> str:
     """description の言語を簡易判定"""
     if re.search(r"[\u3040-\u309f\u30a0-\u30ff]", text):
@@ -58,7 +86,12 @@ def normalize(raw: dict) -> dict | None:
         "name": name,
         "description_original": desc,
         "language_original": detect_language(desc),
-        "vendor": raw.get("vendor", "generic"),
+        # 01 が付けた vendor を採用しつつ、generic の場合はリポ名から再推定
+        "vendor": (
+            raw.get("vendor", "generic")
+            if raw.get("vendor", "generic") != "generic"
+            else detect_vendor(path, repo_name)
+        ),
         "repo_name": repo_name,
         "repo_url": f"https://github.com/{repo_name}",
         "repo_path": path,

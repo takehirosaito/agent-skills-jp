@@ -118,10 +118,12 @@ def parse_frontmatter(content: str) -> dict | None:
         return None
 
 
-def detect_vendor(path: str) -> str:
-    """パスからベンダーを推定"""
+def detect_vendor(path: str, repo: str = "") -> str:
+    """パスとリポ名からベンダーを推定"""
     p = path.lower()
-    if ".claude/skills/" in p:
+    r = repo.lower()
+    # パスベース判定(最優先)
+    if ".claude/skills/" in p or ".claude/agents/" in p or ".claude/commands/" in p:
         return "claude"
     if ".agents/skills/" in p:
         return "openai"
@@ -129,6 +131,20 @@ def detect_vendor(path: str) -> str:
         return "opencode"
     if ".gemini/skills/" in p:
         return "gemini"
+    # リポ名・所有者ベース判定
+    owner = r.split("/")[0] if "/" in r else r
+    if owner in {"anthropics", "anthropic-experimental"}:
+        return "claude"
+    if "claude" in r:
+        return "claude"
+    if owner in {"openai", "openai-cookbook"}:
+        return "openai"
+    if owner in {"google", "google-deepmind", "googleapis"}:
+        return "gemini"
+    if "gemini" in r:
+        return "gemini"
+    if "opencode" in r:
+        return "opencode"
     return "generic"
 
 
@@ -189,7 +205,7 @@ def collect_from_clones(repos: list[str]) -> Iterator[dict]:
             yield {
                 "repo_name": repo,
                 "path": str(rel_path),
-                "vendor": detect_vendor(str(rel_path)),
+                "vendor": detect_vendor(str(rel_path), repo),
                 "name": fm.get("name", ""),
                 "description": fm.get("description", ""),
                 "frontmatter": fm,
@@ -263,7 +279,9 @@ def collect_from_search(queries: list[str]) -> Iterator[dict]:
             yield {
                 "repo_name": item["repository"]["full_name"],
                 "path": item["path"],
-                "vendor": detect_vendor(item["path"]),
+                "vendor": detect_vendor(
+                    item["path"], item["repository"]["full_name"]
+                ),
                 "name": fm.get("name", ""),
                 "description": fm.get("description", ""),
                 "frontmatter": fm,
