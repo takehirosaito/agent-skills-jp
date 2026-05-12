@@ -67,10 +67,23 @@ def detect_language(text: str) -> str:
     return "en"
 
 
+def _as_str(v) -> str:
+    """YAML frontmatter は int/list 等にもなり得るので、安全に文字列化"""
+    if v is None:
+        return ""
+    if isinstance(v, str):
+        return v
+    if isinstance(v, (int, float, bool)):
+        return str(v)
+    if isinstance(v, list):
+        return ", ".join(_as_str(x) for x in v)
+    return str(v)
+
+
 def normalize(raw: dict) -> dict | None:
     """1件を正規化"""
-    name = (raw.get("name") or "").strip()
-    desc = (raw.get("description") or "").strip()
+    name = _as_str(raw.get("name")).strip()
+    desc = _as_str(raw.get("description")).strip()
     if not name or not desc:
         return None
     if len(desc) < 20:
