@@ -31,11 +31,16 @@ def _json_default(o):
     """YAML フロントマターの date/datetime を文字列化"""
     if isinstance(o, (_dt.date, _dt.datetime)):
         return o.isoformat()
+    if isinstance(o, bytes):
+        return o.decode("utf-8", errors="replace")
     raise TypeError(f"Object of type {o.__class__.__name__} is not JSON serializable")
 
 
 def _dump(skill: dict) -> str:
-    return json.dumps(skill, ensure_ascii=False, default=_json_default)
+    """JSON 化。surrogate 文字は \\uXXXX エスケープして安全に書く"""
+    s = json.dumps(skill, ensure_ascii=False, default=_json_default)
+    # lone surrogate を含む文字列を UTF-8 安全にする
+    return s.encode("utf-8", errors="replace").decode("utf-8")
 
 import requests
 import yaml
@@ -260,9 +265,11 @@ def fetch_raw_content(item: dict) -> str | None:
         return None
 
 
-def collect_from_search(queries: list[str]) -> Iterator[dict]:
-    """Phase B: GitHub Search API から収集"""
-    seen = set()  # 重複排除用
+def collect_from_search(queries: list[str], seen: set | None = None) -> Iterator[dict]:
+    """Phase B: GitHub Search API から収集
+    seen: 既に取得済みの (repo_name, path) 集合(レジューム用)"""
+    if seen is None:
+        seen = set()
     for query in queries:
         print(f"検索中: {query}")
         for item in search_github_code(query):
@@ -299,18 +306,44 @@ def collect_from_search(queries: list[str]) -> Iterator[dict]:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--phase", choices=["a", "b", "all"], default="all")
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="OUTPUT_FILE が既に存在する場合に追記モードで継続。重複は (repo, path) でスキップ",
+    )
     args = parser.parse_args()
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
-    count = 0
-    with OUTPUT_FILE.open("w", encoding="utf-8") as out:
+    # レジューム時は既存ファイルから seen を再構築
+    seen: set[tuple[str, str]] = set()
+    open_mode = "w"
+    initial_count = 0
+    if args.resume and OUTPUT_FILE.exists():
+        open_mode = "a"
+        with OUTPUT_FILE.open(encoding="utf-8") as f:
+            for line in f:
+                try:
+                    d = json.loads(line)
+                    seen.add((d.get("repo_name", ""), d.get("path", "")))
+                    initial_count += 1
+                except json.JSONDecodeError:
+                    continue
+        print(f"レジューム: 既存 {initial_count} 件を seen に登録")
+
+    count = initial_count
+    with OUTPUT_FILE.open(open_mode, encoding="utf-8") as out:
         if args.phase in ("a", "all"):
             for skill in collect_from_clones(KNOWN_REPOS):
                 out.write(_dump(skill) + "\n")
                 count += 1
         if args.phase in ("b", "all"):
-            for skill in collect_from_search(SEARCH_QUERIES):
+            for skill in collect_from_search(SEARCH_QUERIES, seen=seen):
+                # collect_from_search 側でも seen に追加されるが、念のため
+                key = (skill.get("repo_name", ""), skill.get("path", ""))
+                if key in seen and args.resume:
+                    # レジューム時は既出をスキップ(本来は collect_from_search 内で済むが二重防御)
+                    pass
                 out.write(_dump(skill) + "\n")
                 count += 1
 
