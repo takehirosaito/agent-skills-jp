@@ -255,6 +255,9 @@ export async function searchSkills(
       facets: ["vendor", "category"],
       limit: opts.limit ?? 30,
       offset: opts.offset ?? 0,
+      // 全クエリ語必須(lindera で 楽天 が [楽, 天] に分解されて
+      // "last" だと「楽」だけで音楽系などにヒットしてしまうのを防ぐ)
+      matchingStrategy: "all",
       attributesToHighlight: ["name", "description_ja"],
       highlightPreTag: "<mark>",
       highlightPostTag: "</mark>",
