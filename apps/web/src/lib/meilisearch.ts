@@ -31,6 +31,8 @@ export type Skill = {
   install_command?: string;
   content_full?: string;
   content_full_ja?: string | null;
+  is_original?: boolean;
+  is_featured?: boolean;
 };
 
 export const CATEGORY_LABELS: Record<string, string> = {
@@ -149,11 +151,24 @@ export async function getStats(): Promise<Stats> {
 
 export async function getFeaturedSkills(limit: number) {
   try {
-    const res = await index.search("", {
-      sort: ["quality_score:desc"],
-      limit,
-    });
-    return res.hits as unknown as Skill[];
+    // ALSEL 独自スキルを最優先で取得し、足りない分は quality_score 順で埋める
+    const [originals, rest] = await Promise.all([
+      index.search("", {
+        filter: "is_original = true",
+        sort: ["quality_score:desc"],
+        limit,
+      }),
+      index.search("", {
+        filter: "is_original != true",
+        sort: ["quality_score:desc"],
+        limit,
+      }),
+    ]);
+    const merged = [
+      ...(originals.hits as unknown as Skill[]),
+      ...(rest.hits as unknown as Skill[]),
+    ];
+    return merged.slice(0, limit);
   } catch {
     return [] as Skill[];
   }
@@ -260,14 +275,51 @@ export async function listSkills(opts: {
   limit?: number;
   offset?: number;
   sort?: string;
+  /** ALSEL 独自スキルをトップに固定するか(品質スコア順の場合のみ有効) */
+  pinOriginals?: boolean;
 }) {
   const filters: string[] = [];
   if (opts.vendor) filters.push(`vendor = "${opts.vendor}"`);
   if (opts.category) filters.push(`category = "${opts.category}"`);
+  const sort = opts.sort ?? "quality_score:desc";
+
+  // 独自スキルピン留め(品質スコア順 + offset 0 のときのみ)
+  const shouldPin =
+    opts.pinOriginals !== false &&
+    sort === "quality_score:desc" &&
+    (opts.offset ?? 0) === 0;
+
   try {
+    if (shouldPin) {
+      const baseFilter = filters.length ? filters.join(" AND ") : "";
+      const originalsFilter = baseFilter
+        ? `(${baseFilter}) AND is_original = true`
+        : "is_original = true";
+      const restFilter = baseFilter
+        ? `(${baseFilter}) AND is_original != true`
+        : "is_original != true";
+      const [originals, rest] = await Promise.all([
+        index.search("", { filter: originalsFilter, sort: [sort], limit: 20 }),
+        index.search("", {
+          filter: restFilter,
+          sort: [sort],
+          limit: opts.limit ?? 50,
+        }),
+      ]);
+      const merged = [
+        ...(originals.hits as unknown as Skill[]),
+        ...(rest.hits as unknown as Skill[]),
+      ].slice(0, opts.limit ?? 50);
+      return {
+        hits: merged,
+        total:
+          (rest.estimatedTotalHits ?? 0) + (originals.estimatedTotalHits ?? 0),
+      };
+    }
+
     const res = await index.search("", {
       filter: filters.length ? filters : undefined,
-      sort: [opts.sort ?? "quality_score:desc"],
+      sort: [sort],
       limit: opts.limit ?? 50,
       offset: opts.offset ?? 0,
     });

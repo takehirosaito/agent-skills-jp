@@ -55,15 +55,26 @@ export default async function SkillPage({ params }: { params: Params }) {
       {/* タイトル */}
       <header className="mb-8">
         <div className="flex items-center gap-3 mb-3 flex-wrap">
+          {skill.is_original && (
+            <span
+              className="px-2 py-1 text-xs font-bold rounded-full text-white"
+              style={{ backgroundColor: "#C9A84C" }}
+              title="株式会社ALSEL のオリジナルスキル"
+            >
+              ALSEL独自
+            </span>
+          )}
           <span className="px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-800">
             {vendorLabel}
           </span>
           <span className="px-2 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-800">
             {categoryLabel}
           </span>
-          <span className="text-xs text-slate-500">
-            ⭐ {(skill.github_stars ?? 0).toLocaleString()}
-          </span>
+          {!skill.is_original && (
+            <span className="text-xs text-slate-500">
+              ⭐ {(skill.github_stars ?? 0).toLocaleString()}
+            </span>
+          )}
           <span className="text-xs text-slate-500">
             品質スコア {skill.quality_score}/100
           </span>

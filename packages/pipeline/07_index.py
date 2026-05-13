@@ -41,6 +41,8 @@ SETTINGS = {
         "quality_score",
         "github_stars",
         "slug",
+        "is_original",
+        "is_featured",
     ],
     "sortableAttributes": [
         "quality_score",
@@ -76,12 +78,22 @@ SETTINGS = {
         "license",
         "content_full",
         "content_full_ja",
+        "is_original",
+        "is_featured",
     ],
     "stopWords": [],
     "synonyms": {
-        "ec": ["e-commerce", "ecommerce"],
-        "ai": ["artificial intelligence"],
-        "llm": ["language model"],
+        "ai": ["artificial intelligence", "人工知能"],
+        "ec": ["e-commerce", "ecommerce", "イーコマース"],
+        "llm": ["language model", "大規模言語モデル"],
+        # 楽天市場/楽天/Rakuten は lindera が「楽天市場」を1単語として扱うため明示
+        "rakuten": ["楽天", "楽天市場", "Rakuten"],
+        "楽天": ["楽天市場", "rakuten", "Rakuten", "rakuten-seo", "rakuten-rms"],
+        "楽天市場": ["楽天", "rakuten"],
+        "amazon": ["アマゾン", "Amazon.co.jp", "amzn"],
+        "アマゾン": ["amazon", "Amazon"],
+        "seo": ["SEO", "検索最適化", "search engine optimization"],
+        "csv": ["CSV", "ファイル"],
     },
     "typoTolerance": {
         "enabled": True,
@@ -116,6 +128,19 @@ def main():
             skill.pop("frontmatter", None)
             skill.pop("mirrors", None)
             docs.append(skill)
+
+    # ALSEL 独自スキルがあれば追加
+    alsel_file = DATA_DIR / "alsel_originals.jsonl"
+    if alsel_file.exists():
+        added = 0
+        with alsel_file.open(encoding="utf-8") as f:
+            for line in f:
+                try:
+                    docs.append(json.loads(line))
+                    added += 1
+                except json.JSONDecodeError:
+                    continue
+        print(f"ALSEL 独自スキル: {added}件 を追加")
 
     print(f"投入対象: {len(docs)}件")
 
