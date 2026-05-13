@@ -24,6 +24,16 @@ function stripCodeFenceWrapper(s: string): string {
   return m ? m[1] : s;
 }
 
+/** SKILL.md 冒頭の YAML frontmatter を取り除く(--- に囲まれた、または --- が落ちて
+ *  本文先頭に name:/description: ...\n が残った形式の両方に対応) */
+function stripFrontmatter(s: string): string {
+  let t = s.replace(/^\s*---\s*\n[\s\S]*?\n---\s*\n+/, "");
+  // 翻訳で --- が落ちて 'name:' から始まるパターンに対応
+  // (key: value 行を空行まで連続で剥がす)
+  t = t.replace(/^(?:[A-Za-z_][\w-]*\s*:[^\n]*\n)+\s*\n+/, "");
+  return t;
+}
+
 export function BodyToggle(props: Props) {
   const {
     slug,
@@ -36,18 +46,27 @@ export function BodyToggle(props: Props) {
     rawUrl,
   } = props;
 
-  const contentJa = rawJa ? stripCodeFenceWrapper(rawJa) : rawJa;
+  // 表示用(frontmatter 除去)
+  const contentJa = rawJa
+    ? stripFrontmatter(stripCodeFenceWrapper(rawJa))
+    : rawJa;
+  const contentEnClean = stripFrontmatter(contentEn);
+
+  // ダウンロード用(SKILL.md の体裁: 元の英語 frontmatter + 翻訳本文)
+  const originalFmMatch = contentEn.match(/^---\s*\n[\s\S]*?\n---\s*\n/);
+  const originalFrontmatter = originalFmMatch ? originalFmMatch[0] : "";
+  const contentJaForDownload = contentJa
+    ? `${originalFrontmatter}${contentJa}`
+    : null;
 
   // 翻訳本文が利用可能かつ寛容ライセンスなら、デフォルト日本語
   const hasJa = !!contentJa && contentJa.trim().length > 0;
   const [lang, setLang] = useState<"ja" | "en">(hasJa ? "ja" : "en");
 
-  const fullContent = lang === "ja" && hasJa ? contentJa! : contentEn;
+  const fullContent = lang === "ja" && hasJa ? contentJa! : contentEnClean;
 
-  // プレビュー(冒頭のみ + frontmatter は隠す)
-  const stripFrontmatter = (s: string) =>
-    s.replace(/^---[\s\S]*?---\n*/, "");
-  const preview = stripFrontmatter(fullContent).slice(0, PREVIEW_LENGTH);
+  // プレビュー(冒頭のみ)
+  const preview = fullContent.slice(0, PREVIEW_LENGTH);
 
   return (
     <section className="mt-10 border-t border-slate-200 pt-8">
@@ -89,7 +108,7 @@ export function BodyToggle(props: Props) {
             <DownloadButtons
               slug={slug}
               contentEn={contentEn}
-              contentJa={hasJa ? contentJa : null}
+              contentJa={contentJaForDownload}
             />
           </div>
           <MarkdownView content={fullContent} />
