@@ -17,17 +17,26 @@ type Props = {
 
 const PREVIEW_LENGTH = 600;
 
+/** Claude が翻訳結果を ```markdown ... ``` で囲んでくることがあるので剥がす */
+function stripCodeFenceWrapper(s: string): string {
+  const t = s.trim();
+  const m = t.match(/^```(?:markdown|md)?\s*\n([\s\S]*?)\n```\s*$/);
+  return m ? m[1] : s;
+}
+
 export function BodyToggle(props: Props) {
   const {
     slug,
     contentEn,
-    contentJa,
+    contentJa: rawJa,
     canShowFull,
     needsCaution,
     licenseLabel,
     repoUrl,
     rawUrl,
   } = props;
+
+  const contentJa = rawJa ? stripCodeFenceWrapper(rawJa) : rawJa;
 
   // 翻訳本文が利用可能かつ寛容ライセンスなら、デフォルト日本語
   const hasJa = !!contentJa && contentJa.trim().length > 0;
