@@ -13,6 +13,7 @@ type Props = {
   licenseLabel: string;
   repoUrl: string;
   rawUrl: string;
+  hideExternalLinks?: boolean;
 };
 
 const PREVIEW_LENGTH = 600;
@@ -44,6 +45,7 @@ export function BodyToggle(props: Props) {
     licenseLabel,
     repoUrl,
     rawUrl,
+    hideExternalLinks,
   } = props;
 
   // 表示用(frontmatter 除去)
@@ -113,15 +115,22 @@ export function BodyToggle(props: Props) {
           </div>
           <MarkdownView content={fullContent} />
           <p className="mt-6 text-xs text-slate-500">
-            ライセンス: <strong>{licenseLabel}</strong>(寛容ライセンスのため全文を引用しています) ·{" "}
-            <a
-              href={repoUrl}
-              target="_blank"
-              rel="noopener"
-              className="text-blue-600 hover:underline"
-            >
-              原本リポジトリ
-            </a>
+            ライセンス: <strong>{licenseLabel}</strong>
+            {hideExternalLinks ? (
+              ""
+            ) : (
+              <>
+                (寛容ライセンスのため全文を引用しています) ·{" "}
+                <a
+                  href={repoUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-blue-600 hover:underline"
+                >
+                  原本リポジトリ
+                </a>
+              </>
+            )}
           </p>
         </>
       ) : (
@@ -134,24 +143,26 @@ export function BodyToggle(props: Props) {
             </div>
           )}
           <MarkdownView content={preview + (fullContent.length > PREVIEW_LENGTH ? "\n\n..." : "")} />
-          <div className="mt-6 flex gap-3 flex-wrap">
-            <a
-              href={rawUrl}
-              target="_blank"
-              rel="noopener"
-              className="inline-block px-5 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-700"
-            >
-              全文を GitHub の原本で見る →
-            </a>
-            <a
-              href={repoUrl}
-              target="_blank"
-              rel="noopener"
-              className="inline-block px-5 py-2 border border-slate-300 rounded-lg hover:bg-slate-100 text-slate-700"
-            >
-              リポジトリ
-            </a>
-          </div>
+          {!hideExternalLinks && (
+            <div className="mt-6 flex gap-3 flex-wrap">
+              <a
+                href={rawUrl}
+                target="_blank"
+                rel="noopener"
+                className="inline-block px-5 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-700"
+              >
+                全文を GitHub の原本で見る →
+              </a>
+              <a
+                href={repoUrl}
+                target="_blank"
+                rel="noopener"
+                className="inline-block px-5 py-2 border border-slate-300 rounded-lg hover:bg-slate-100 text-slate-700"
+              >
+                リポジトリ
+              </a>
+            </div>
+          )}
         </>
       )}
     </section>

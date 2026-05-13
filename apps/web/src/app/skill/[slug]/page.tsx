@@ -30,7 +30,10 @@ export default async function SkillPage({ params }: { params: Params }) {
   const skill = await getSkillBySlug(slug);
   if (!skill) notFound();
   const related = await getRelatedSkills(skill.category, skill.id, 6);
-  const licenseHref = skill.license
+  // ALSEL 独自スキルは GitHub に原本リポジトリを持たないので、
+  // 「外部リポジトリへのリンク」系 UI は一律に出さない
+  const isOriginal = !!skill.is_original;
+  const licenseHref = !isOriginal && skill.license
     ? `${skill.repo_url}/blob/main/LICENSE`
     : null;
 
@@ -118,6 +121,7 @@ export default async function SkillPage({ params }: { params: Params }) {
           licenseLabel={licensePolicy.label}
           repoUrl={skill.repo_url}
           rawUrl={skill.raw_url}
+          hideExternalLinks={isOriginal}
         />
       )}
 
@@ -129,19 +133,21 @@ export default async function SkillPage({ params }: { params: Params }) {
             <dt className="text-slate-500">作者</dt>
             <dd className="font-medium">{skill.author}</dd>
           </div>
-          <div>
-            <dt className="text-slate-500">リポジトリ</dt>
-            <dd>
-              <a
-                href={skill.repo_url}
-                target="_blank"
-                rel="noopener"
-                className="text-blue-600 hover:underline break-all"
-              >
-                {skill.repo_name}
-              </a>
-            </dd>
-          </div>
+          {!isOriginal && (
+            <div>
+              <dt className="text-slate-500">リポジトリ</dt>
+              <dd>
+                <a
+                  href={skill.repo_url}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-blue-600 hover:underline break-all"
+                >
+                  {skill.repo_name}
+                </a>
+              </dd>
+            </div>
+          )}
           <div>
             <dt className="text-slate-500">ライセンス</dt>
             <dd>
@@ -156,7 +162,7 @@ export default async function SkillPage({ params }: { params: Params }) {
                   {skill.license}
                 </a>
               ) : (
-                "不明"
+                skill.license ?? "不明"
               )}
             </dd>
           </div>
@@ -170,14 +176,16 @@ export default async function SkillPage({ params }: { params: Params }) {
           </div>
         </dl>
         <div className="mt-6 flex gap-3 flex-wrap">
-          <a
-            href={skill.repo_url}
-            target="_blank"
-            rel="noopener"
-            className="inline-block px-5 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-700"
-          >
-            GitHubで原本を見る →
-          </a>
+          {!isOriginal && (
+            <a
+              href={skill.repo_url}
+              target="_blank"
+              rel="noopener"
+              className="inline-block px-5 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-700"
+            >
+              GitHubで原本を見る →
+            </a>
+          )}
           <a
             href={`mailto:info@alsel.co.jp?subject=${encodeURIComponent(
               `[フィードバック] ${skill.name}`,
@@ -187,9 +195,11 @@ export default async function SkillPage({ params }: { params: Params }) {
             フィードバックを送る
           </a>
         </div>
-        <p className="text-xs text-slate-400 mt-4">
-          Source: {skill.repo_url} / ライセンス: {skill.license ?? "未指定"}
-        </p>
+        {!isOriginal && (
+          <p className="text-xs text-slate-400 mt-4">
+            Source: {skill.repo_url} / ライセンス: {skill.license ?? "未指定"}
+          </p>
+        )}
       </section>
 
       {/* 関連スキル */}
@@ -206,29 +216,45 @@ export default async function SkillPage({ params }: { params: Params }) {
 
       {/* アトリビューション・削除依頼 */}
       <footer className="border-t border-slate-200 mt-12 pt-6 text-xs text-slate-500 leading-relaxed">
-        本サイトは GitHub 上で公開されているオープンソースの SKILL.md ファイルをクロール・インデックス化したものです。
-        各スキルの著作権は原作者に帰属します。掲載に問題がある場合は{" "}
-        <a
-          href="mailto:info@alsel.co.jp?subject=%5B%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC%5D%20agent-skills.jp"
-          className="text-blue-600 hover:underline"
-        >
-          info@alsel.co.jp
-        </a>{" "}
-        または{" "}
-        <Link href="/takedown" className="text-blue-600 hover:underline">
-          /takedown
-        </Link>{" "}
-        フォームよりご連絡ください。<br />
-        原作者: <strong>{skill.author}</strong> ·{" "}
-        <a
-          href={skill.repo_url}
-          target="_blank"
-          rel="noopener"
-          className="text-blue-600 hover:underline"
-        >
-          {skill.repo_name}
-        </a>{" "}
-        · ライセンス: {licensePolicy.label}
+        {isOriginal ? (
+          <>
+            このスキルは株式会社ALSELが制作したオリジナルスキルです。掲載内容について問題がある場合は{" "}
+            <a
+              href="mailto:info@alsel.co.jp"
+              className="text-blue-600 hover:underline"
+            >
+              info@alsel.co.jp
+            </a>{" "}
+            までご連絡ください。<br />
+            制作: <strong>{skill.author}</strong> · ライセンス: {licensePolicy.label}
+          </>
+        ) : (
+          <>
+            本サイトは GitHub 上で公開されているオープンソースの SKILL.md ファイルをクロール・インデックス化したものです。
+            各スキルの著作権は原作者に帰属します。掲載に問題がある場合は{" "}
+            <a
+              href="mailto:info@alsel.co.jp?subject=%5B%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC%5D%20agent-skills.jp"
+              className="text-blue-600 hover:underline"
+            >
+              info@alsel.co.jp
+            </a>{" "}
+            または{" "}
+            <Link href="/takedown" className="text-blue-600 hover:underline">
+              /takedown
+            </Link>{" "}
+            フォームよりご連絡ください。<br />
+            原作者: <strong>{skill.author}</strong> ·{" "}
+            <a
+              href={skill.repo_url}
+              target="_blank"
+              rel="noopener"
+              className="text-blue-600 hover:underline"
+            >
+              {skill.repo_name}
+            </a>{" "}
+            · ライセンス: {licensePolicy.label}
+          </>
+        )}
       </footer>
     </main>
   );
