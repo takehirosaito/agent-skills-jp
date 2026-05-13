@@ -11,6 +11,11 @@ const apiKey =
 const client = new Meilisearch({ host, apiKey });
 const index = client.index("skills");
 
+// 量産テンプレ系 (description が "Auto-activating skill for X. Triggers on: ..." パターン)
+// は表示しない。is_template フィールドが未定義のドキュメントもこのフィルタを通過する
+// (Meilisearch の != は値が一致しないものも返す)。
+const EXCLUDE_TEMPLATE = "is_template != true";
+
 export type Skill = {
   id: string;
   slug: string;
@@ -86,11 +91,13 @@ export async function getStats(): Promise<Stats> {
     // 検索キーには stats アクションが無いため、facet 検索で集計
     const [facets, latest] = await Promise.all([
       index.search("", {
+        filter: EXCLUDE_TEMPLATE,
         facets: ["vendor", "category", "license"],
         limit: 0,
       }),
       index
         .search("", {
+          filter: EXCLUDE_TEMPLATE,
           sort: ["last_updated:desc"],
           limit: 1,
           attributesToRetrieve: ["last_updated"],
@@ -154,12 +161,12 @@ export async function getFeaturedSkills(limit: number) {
     // ALSEL 独自スキルを最優先で取得し、足りない分は quality_score 順で埋める
     const [originals, rest] = await Promise.all([
       index.search("", {
-        filter: "is_original = true",
+        filter: ["is_original = true", EXCLUDE_TEMPLATE],
         sort: ["quality_score:desc"],
         limit,
       }),
       index.search("", {
-        filter: "is_original != true",
+        filter: ["is_original != true", EXCLUDE_TEMPLATE],
         sort: ["quality_score:desc"],
         limit,
       }),
@@ -177,7 +184,7 @@ export async function getFeaturedSkills(limit: number) {
 export async function getSkillBySlug(slug: string) {
   try {
     const res = await index.search("", {
-      filter: `slug = "${slug.replace(/"/g, '\\"')}"`,
+      filter: [`slug = "${slug.replace(/"/g, '\\"')}"`, EXCLUDE_TEMPLATE],
       limit: 1,
     });
     return (res.hits[0] as unknown as Skill) ?? null;
@@ -196,6 +203,7 @@ export async function getRelatedSkills(
       filter: [
         `category = "${category}"`,
         `id != "${excludeId}"`,
+        EXCLUDE_TEMPLATE,
       ],
       sort: ["quality_score:desc"],
       limit,
@@ -209,6 +217,7 @@ export async function getRelatedSkills(
 export async function getCategories() {
   try {
     const facets = await index.search("", {
+      filter: EXCLUDE_TEMPLATE,
       facets: ["category"],
       limit: 0,
     });
@@ -246,12 +255,12 @@ export async function searchSkills(
     offset?: number;
   } = {},
 ) {
-  const filters: string[] = [];
+  const filters: string[] = [EXCLUDE_TEMPLATE];
   if (opts.vendor) filters.push(`vendor = "${opts.vendor}"`);
   if (opts.category) filters.push(`category = "${opts.category}"`);
   try {
     const res = await index.search(query, {
-      filter: filters.length ? filters : undefined,
+      filter: filters,
       facets: ["vendor", "category"],
       limit: opts.limit ?? 30,
       offset: opts.offset ?? 0,
@@ -281,7 +290,7 @@ export async function listSkills(opts: {
   /** ALSEL 独自スキルをトップに固定するか(品質スコア順の場合のみ有効) */
   pinOriginals?: boolean;
 }) {
-  const filters: string[] = [];
+  const filters: string[] = [EXCLUDE_TEMPLATE];
   if (opts.vendor) filters.push(`vendor = "${opts.vendor}"`);
   if (opts.category) filters.push(`category = "${opts.category}"`);
   const sort = opts.sort ?? "quality_score:desc";

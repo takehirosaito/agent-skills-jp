@@ -10,11 +10,28 @@
 
 import json
 import os
+import re
 from pathlib import Path
 
 import meilisearch
 
 from config import DATA_DIR
+
+# 量産テンプレ description のパターン (Auto-activating skill for ... / Triggers on: ... 系)。
+# 該当する skill は is_template=True に分類し、Web 側でデフォルト除外する。
+_TPL_AUTO_ACT = re.compile(r"Auto-activating skill")
+_TPL_TRIGGERS = re.compile(r"Triggers on:")
+_TPL_PART_OF = re.compile(r"Part of the .+ skill category")
+
+
+def is_template_description(desc: str | None) -> bool:
+    if not desc:
+        return False
+    if _TPL_AUTO_ACT.search(desc) and _TPL_TRIGGERS.search(desc):
+        return True
+    if _TPL_PART_OF.search(desc):
+        return True
+    return False
 
 # 08 (本文翻訳) の出力があればそれを優先、無ければ 06 の出力
 _FULL = DATA_DIR / "translated_body_skills.jsonl"
@@ -43,6 +60,7 @@ SETTINGS = {
         "slug",
         "is_original",
         "is_featured",
+        "is_template",
     ],
     "sortableAttributes": [
         "quality_score",
@@ -80,6 +98,7 @@ SETTINGS = {
         "content_full_ja",
         "is_original",
         "is_featured",
+        "is_template",
     ],
     "stopWords": [],
     "synonyms": {
@@ -133,6 +152,9 @@ def main():
             # Meilisearchに不要なフィールドを削除(content_full は displayedAttributes として残す)
             skill.pop("frontmatter", None)
             skill.pop("mirrors", None)
+            # 量産テンプレ description は is_template=True で表示除外
+            if is_template_description(skill.get("description_original")):
+                skill["is_template"] = True
             docs.append(skill)
 
     # ALSEL 独自スキルがあれば追加
