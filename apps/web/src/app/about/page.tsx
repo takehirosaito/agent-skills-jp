@@ -38,16 +38,19 @@ export default async function AboutPage() {
         <h2 className="text-xl font-bold mb-3">運営</h2>
         <ul className="text-slate-700 leading-relaxed space-y-1">
           <li>
-            <strong>運営:</strong> 株式会社ALSEL
+            <strong>運営:</strong> 株式会社ALSEL(オルセル)
           </li>
           <li>
-            <strong>代表者:</strong> 齋藤竹紘(技術評論社より 3 冊の書籍を出版、宅建士)
+            <strong>代表者:</strong> 齋藤竹紘
           </li>
           <li>
-            <strong>事業:</strong> EC × AI コンサルティング、教育、不動産仲介、越境 EC
+            <strong>事業内容:</strong> AIソリューション事業 / ECソリューション事業 / 不動産事業
           </li>
           <li>
-            <strong>実績:</strong> 19 年の EC 支援、5,000 社超の EC 事業者支援
+            <strong>設立:</strong> 2007年8月
+          </li>
+          <li>
+            <strong>免許:</strong> 東京都知事(1)第113520号
           </li>
         </ul>
       </section>
