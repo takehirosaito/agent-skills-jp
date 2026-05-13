@@ -83,7 +83,7 @@ export default async function FindSkillsLandingPage() {
               <div className="text-2xl mb-2">🏷</div>
               <h3 className="font-bold mb-1">ALSEL 独自スキルも含む</h3>
               <p className="text-sm text-slate-600">
-                株式会社 ALSEL 代表 齋藤竹紘氏が開発した楽天SEO・Amazon SEO 等の独自スキルも検索対象。
+                株式会社 ALSEL が開発した楽天SEO・Amazon SEO 等の独自スキルも検索対象。
               </p>
             </div>
           </div>

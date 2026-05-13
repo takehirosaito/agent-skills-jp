@@ -49,7 +49,8 @@ def main():
     desc = fm.get("description", "")
 
     doc = {
-        "id": str(uuid.uuid4()),
+        # スラッグから決定的 UUID(再投入時に同じ id で upsert される)
+        "id": str(uuid.uuid5(uuid.NAMESPACE_URL, "https://agent-skills.jp/alsel/find-skills")),
         "slug": "find-skills",
         "name": "find-skills",
         "description_original": desc,

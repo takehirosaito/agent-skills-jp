@@ -29,8 +29,8 @@ MEILI_KEY = os.environ.get("MEILI_MASTER_KEY", "")
 INDEX_NAME = "skills"
 
 CREDIT_LINE = (
-    "【ALSEL独自スキル】株式会社ALSEL代表 齋藤竹紘が18年のEC支援経験から"
-    "開発したオリジナルスキルです。"
+    "【ALSEL独自スキル】株式会社ALSEL が、18年・5,000社超の EC 支援で得た"
+    "ノウハウをもとに開発したオリジナルスキルです。"
 )
 
 SLUGS = ["rakuten-seo", "amazon-seo-jp", "rakuten-bulk-control-csv"]
@@ -79,7 +79,8 @@ def build_doc(slug: str) -> dict:
     description_ja = desc_ja_raw.rstrip() + "\n\n" + CREDIT_LINE
 
     return {
-        "id": str(uuid.uuid4()),
+        # スラッグから決定的 UUID(再投入時に同じ id で upsert される)
+        "id": str(uuid.uuid5(uuid.NAMESPACE_URL, f"https://agent-skills.jp/alsel/{slug}")),
         "slug": slug,
         "name": name,
         "description_original": desc_ja_raw,
@@ -90,7 +91,7 @@ def build_doc(slug: str) -> dict:
         "vendor": "claude",
         "category": "ecommerce-marketing",
         "category_confidence": 1.0,
-        "author": "齋藤竹紘 / 株式会社ALSEL",
+        "author": "株式会社ALSEL",
         "repo_name": "alsel-jp/agent-skills",
         "repo_url": "https://agent-skills.jp",
         "repo_path": f"{slug}/SKILL.md",
