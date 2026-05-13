@@ -55,6 +55,46 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* find-skills CTA (AIエージェントから直接使う) */}
+      <section className="py-12 px-6 bg-slate-900 text-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
+            <div className="flex-1">
+              <div
+                className="inline-block px-2 py-0.5 mb-3 rounded-full text-xs font-bold text-slate-900"
+                style={{ backgroundColor: "#C9A84C" }}
+              >
+                ALSEL独自スキル
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+                Claude Code / Codex / Gemini CLI から、
+                <br className="hidden md:inline" />
+                日本語でスキルを発見。
+              </h2>
+              <p className="text-slate-300 leading-relaxed text-sm md:text-base">
+                <code className="px-1.5 py-0.5 bg-slate-800 rounded text-slate-100">find-skills</code> を入れるだけで、AIエージェントに「楽天SEOのスキル探して」「PDFを処理したい」と日本語で頼むと、本サイトの {stats.totalSkills.toLocaleString()} 件から最適なスキルを推薦・インストール案内します。
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 shrink-0 md:min-w-[260px]">
+              <Link
+                href="/find-skills"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium hover:opacity-90"
+                style={{ backgroundColor: "#C9A84C", color: "#0f172a" }}
+              >
+                find-skills を入れる →
+              </Link>
+              <a
+                href="/api/skill/find-skills/zip"
+                download
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-slate-700 rounded-lg text-sm text-slate-300 hover:bg-slate-800"
+              >
+                📦 ZIP を直接ダウンロード
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* カテゴリ */}
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
