@@ -47,7 +47,7 @@ export default async function AboutPage() {
             <strong>事業:</strong> EC × AI コンサルティング、教育、不動産仲介、越境 EC
           </li>
           <li>
-            <strong>実績:</strong> 18 年の EC 支援、5,000 社超の EC 事業者支援
+            <strong>実績:</strong> 19 年の EC 支援、5,000 社超の EC 事業者支援
           </li>
         </ul>
       </section>

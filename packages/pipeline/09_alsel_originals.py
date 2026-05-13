@@ -29,7 +29,7 @@ MEILI_KEY = os.environ.get("MEILI_MASTER_KEY", "")
 INDEX_NAME = "skills"
 
 CREDIT_LINE = (
-    "【ALSEL独自スキル】株式会社ALSEL が、18年・5,000社超の EC 支援で得た"
+    "【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得た"
     "ノウハウをもとに開発したオリジナルスキルです。"
 )
 
