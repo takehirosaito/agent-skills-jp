@@ -61,6 +61,8 @@ SETTINGS = {
         "is_original",
         "is_featured",
         "is_template",
+        "is_internal",
+        "is_off_topic",
     ],
     "sortableAttributes": [
         "quality_score",
@@ -99,6 +101,8 @@ SETTINGS = {
         "is_original",
         "is_featured",
         "is_template",
+        "is_internal",
+        "is_off_topic",
     ],
     "stopWords": [],
     "synonyms": {
