@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "スキルを投稿 | Agent Skills 日本",
+  title: "スキルを投稿 | Agent Skills by ALSEL",
 };
 
 export default function SubmitPage() {

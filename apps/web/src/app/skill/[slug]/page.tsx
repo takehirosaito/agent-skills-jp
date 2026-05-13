@@ -18,9 +18,9 @@ type Params = Promise<{ slug: string }>;
 export async function generateMetadata({ params }: { params: Params }) {
   const { slug } = await params;
   const skill = await getSkillBySlug(slug);
-  if (!skill) return { title: "Not Found | Agent Skills 日本" };
+  if (!skill) return { title: "Not Found | Agent Skills by ALSEL" };
   return {
-    title: `${skill.name} | Agent Skills 日本`,
+    title: `${skill.name} | Agent Skills by ALSEL`,
     description: (skill.description_ja ?? skill.description_original).slice(0, 150),
   };
 }
@@ -29,7 +29,10 @@ export default async function SkillPage({ params }: { params: Params }) {
   const { slug } = await params;
   const skill = await getSkillBySlug(slug);
   if (!skill) notFound();
-  const related = await getRelatedSkills(skill.category, skill.id, 4);
+  const related = await getRelatedSkills(skill.category, skill.id, 6);
+  const licenseHref = skill.license
+    ? `${skill.repo_url}/blob/main/LICENSE`
+    : null;
 
   const categoryLabel = CATEGORY_LABELS[skill.category] ?? skill.category;
   const vendorLabel = VENDOR_LABELS[skill.vendor] ?? skill.vendor;
@@ -130,7 +133,21 @@ export default async function SkillPage({ params }: { params: Params }) {
           </div>
           <div>
             <dt className="text-slate-500">ライセンス</dt>
-            <dd>{skill.license ?? "不明"}</dd>
+            <dd>
+              {licenseHref ? (
+                <a
+                  href={licenseHref}
+                  target="_blank"
+                  rel="noopener"
+                  className="text-blue-600 hover:underline"
+                  title="GitHub の LICENSE ファイルを開く"
+                >
+                  {skill.license}
+                </a>
+              ) : (
+                "不明"
+              )}
+            </dd>
           </div>
           <div>
             <dt className="text-slate-500">最終更新</dt>
@@ -151,14 +168,12 @@ export default async function SkillPage({ params }: { params: Params }) {
             GitHubで原本を見る →
           </a>
           <a
-            href={`https://github.com/agent-skills-jp/agent-skills-jp/issues/new?title=${encodeURIComponent(
-              `[feedback] ${skill.name}`,
-            )}`}
-            target="_blank"
-            rel="noopener"
+            href={`mailto:info@alsel.co.jp?subject=${encodeURIComponent(
+              `[フィードバック] ${skill.name}`,
+            )}&body=${encodeURIComponent(`スキル: ${skill.name}\nURL: https://agent-skills.jp/skill/${skill.slug}\n\nご意見:\n`)}`}
             className="inline-block px-5 py-2 border border-slate-300 rounded-lg hover:bg-slate-100 text-slate-700"
           >
-            このスキルに意見する
+            フィードバックを送る
           </a>
         </div>
         <p className="text-xs text-slate-400 mt-4">
@@ -170,7 +185,7 @@ export default async function SkillPage({ params }: { params: Params }) {
       {related.length > 0 && (
         <section className="border-t border-slate-200 pt-8 mt-8">
           <h2 className="text-2xl font-bold mb-6">関連スキル</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {related.map((s) => (
               <SkillCard key={s.id} skill={s} />
             ))}

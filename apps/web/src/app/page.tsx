@@ -23,19 +23,21 @@ export default async function HomePage() {
       {/* ヒーロー */}
       <section className="bg-gradient-to-b from-slate-50 to-white py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold tracking-tight mb-6">
-            Agent Skills <span className="text-blue-600">日本</span>
+          <p className="text-sm tracking-widest text-slate-500 mb-4 uppercase">
+            AI時代のスキル大全。
+          </p>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight">
+            世界中の <span className="text-blue-600">Agent Skills</span> を、
+            <br className="hidden md:inline" />
+            日本語で探す。
           </h1>
-          <p className="text-xl text-slate-600 mb-10">
-            Claude、ChatGPT、Geminiで使える
-            <br className="md:hidden" />
-            Agent Skillsを日本語で探す
+          <p className="text-lg text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+            Claude、OpenAI、Gemini、OpenCode などに対応する Agent Skills を、日本語で検索・比較できる専門データベース。約 <strong>6,800 件</strong> を収録。
           </p>
           <SearchBar />
           <p className="text-sm text-slate-500 mt-6">
             現在{" "}
-            <strong>{stats.totalSkills.toLocaleString()}</strong> 件の Agent
-            Skills から検索できます
+            <strong>{stats.totalSkills.toLocaleString()}</strong> 件のスキルから検索できます
           </p>
         </div>
       </section>
@@ -71,9 +73,7 @@ export default async function HomePage() {
             </Link>
           </div>
           {featured.length === 0 ? (
-            <p className="text-slate-500">
-              データを準備中です。Meilisearch を起動してパイプラインを実行してください。
-            </p>
+            <p className="text-slate-500">データを準備中です。</p>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featured.map((skill) => (
@@ -111,12 +111,12 @@ export default async function HomePage() {
       {/* About */}
       <section className="py-16 px-6 bg-slate-50">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Agent Skills 日本 について</h2>
+          <h2 className="text-3xl font-bold mb-4">Agent Skills by ALSEL について</h2>
           <p className="text-slate-600 leading-relaxed">
-            Agent Skills は Anthropic・OpenAI・Google DeepMind が事実上の標準として採用する、AI エージェントの能力モジュール仕様です。
-            本サイトは世界中の SKILL.md 形式のスキルを集めて日本語で検索可能にする、日本初のディレクトリです。
+            Agent Skills は Anthropic・OpenAI・Google・Vercel などが事実上の標準として採用する、AI エージェントの能力モジュール仕様です。
+            本サイトは世界中の SKILL.md 形式のスキルを収集し、日本語で検索・比較できる専門データベースです。
           </p>
-          <div className="mt-8 flex gap-4 justify-center">
+          <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Link
               href="/about"
               className="px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-700"
@@ -124,36 +124,14 @@ export default async function HomePage() {
               詳しく見る
             </Link>
             <Link
-              href="/submit"
+              href="/directory"
               className="px-6 py-3 border border-slate-300 rounded-lg hover:bg-slate-100"
             >
-              スキルを登録する
+              ディレクトリ
             </Link>
           </div>
         </div>
       </section>
-
-      {/* フッター */}
-      <footer className="py-12 px-6 border-t border-slate-200">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-6 text-sm text-slate-600">
-          <div>
-            <div className="font-bold text-slate-900">Agent Skills 日本</div>
-            <div className="mt-2">運営: 株式会社ALSEL</div>
-          </div>
-          <div className="flex gap-6">
-            <Link href="/about">About</Link>
-            <Link href="/submit">投稿</Link>
-            <Link href="/privacy">プライバシー</Link>
-            <a
-              href="https://github.com/agent-skills-jp"
-              target="_blank"
-              rel="noopener"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
-      </footer>
     </main>
   );
 }

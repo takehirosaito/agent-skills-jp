@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "削除依頼 / Takedown | Agent Skills 日本",
+  title: "削除依頼 / Takedown | Agent Skills by ALSEL",
   description:
     "agent-skills.jp に掲載されているスキル情報の削除依頼フォーム。著作権者・代理人のご請求を受け付けます。",
 };
@@ -46,7 +46,7 @@ export default function TakedownPage() {
         削除依頼 / Takedown Notice
       </h1>
       <p className="text-slate-700 leading-relaxed mb-6">
-        当サイト「Agent Skills 日本」(<code>agent-skills.jp</code>)に掲載されている SKILL.md
+        当サイト「Agent Skills by ALSEL」(<code>agent-skills.jp</code>)に掲載されている SKILL.md
         およびメタ情報について、削除をご希望の権利者・代理人の方は、以下の手順に従ってご請求ください。
       </p>
 

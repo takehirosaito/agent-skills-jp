@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: Params }) {
   const { name } = await params;
   const label = CATEGORY_LABELS[name] ?? name;
   return {
-    title: `${label} | Agent Skills 日本`,
+    title: `${label} | Agent Skills by ALSEL`,
     description: `カテゴリ「${label}」のスキル一覧`,
   };
 }

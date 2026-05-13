@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Agent Skills 日本 — Claude / ChatGPT / Gemini で使えるスキルを日本語で探す";
+export const alt = "Agent Skills by ALSEL — AI時代のスキル大全。世界中のAgent Skillsを日本語で。";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -25,7 +25,18 @@ export default async function Image() {
         <div
           style={{
             display: "flex",
-            fontSize: 96,
+            fontSize: 28,
+            color: "#64748b",
+            letterSpacing: "0.2em",
+            marginBottom: 16,
+          }}
+        >
+          AI時代のスキル大全。
+        </div>
+        <div
+          style={{
+            display: "flex",
+            fontSize: 88,
             fontWeight: 800,
             color: "#0f172a",
             letterSpacing: "-0.04em",
@@ -33,19 +44,18 @@ export default async function Image() {
           }}
         >
           <span>Agent Skills&nbsp;</span>
-          <span style={{ color: "#2563eb" }}>日本</span>
+          <span style={{ color: "#2563eb" }}>by ALSEL</span>
         </div>
         <div
           style={{
             display: "flex",
-            fontSize: 36,
+            fontSize: 32,
             color: "#475569",
-            marginTop: 32,
-            textAlign: "center",
+            marginTop: 36,
             lineHeight: 1.4,
           }}
         >
-          Claude / ChatGPT / Gemini で使える Agent Skills を日本語で探せる、日本初のディレクトリ
+          約 6,800 件の Agent Skills を日本語で検索・比較
         </div>
         <div
           style={{

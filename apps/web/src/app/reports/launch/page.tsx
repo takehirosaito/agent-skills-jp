@@ -11,9 +11,9 @@ import {
 export const revalidate = 3600;
 
 export const metadata = {
-  title: "ローンチレポート | Agent Skills 日本",
+  title: "ローンチレポート | Agent Skills by ALSEL",
   description:
-    "Agent Skills 日本 のローンチ時点での収集統計・カテゴリ分布・上位スキル",
+    "Agent Skills by ALSEL のローンチ時点での収集統計・カテゴリ分布・上位スキル",
 };
 
 export default async function LaunchReportPage() {
@@ -36,7 +36,7 @@ export default async function LaunchReportPage() {
       </Link>
       <h1 className="text-4xl font-bold mt-3 mb-2">ローンチレポート</h1>
       <p className="text-slate-600 mb-10">
-        日本初の Agent Skills ディレクトリ「Agent Skills 日本」の公開時点のデータです。
+        Agent Skills by ALSEL の公開時点における収集・分類・品質スコアリングの結果です。
       </p>
 
       <section className="mb-12">

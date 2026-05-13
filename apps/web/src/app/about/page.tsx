@@ -1,57 +1,82 @@
 export const metadata = {
-  title: "About | Agent Skills 日本",
-  description: "Agent Skills 日本の運営方針・データソース・問い合わせ先",
+  title: "About | Agent Skills by ALSEL",
+  description:
+    "Agent Skills by ALSEL の運営方針、データソース、翻訳について、運営会社情報。",
 };
 
 export default function AboutPage() {
   return (
-    <main className="max-w-3xl mx-auto py-12 px-6 prose prose-slate">
-      <h1 className="text-3xl font-bold mb-6">About Agent Skills 日本</h1>
+    <main className="max-w-3xl mx-auto py-12 px-6">
+      <h1 className="text-3xl font-bold mb-8">About Agent Skills by ALSEL</h1>
 
-      <h2 className="text-xl font-bold mt-8 mb-3">Agent Skills とは</h2>
-      <p className="text-slate-700 leading-relaxed">
-        Agent Skills は、AI エージェントが特定のタスクを実行するための「能力モジュール」の業界標準仕様です。
-        Anthropic Claude、OpenAI Codex / ChatGPT、Google Gemini、OpenCode など主要ベンダーが事実上の標準として採用しており、
-        SKILL.md という単一の Markdown ファイルで構造化されたスキルを記述します。
-      </p>
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">サービス概要</h2>
+        <p className="text-slate-700 leading-relaxed">
+          Agent Skills by ALSEL は、世界中の AI エージェント用スキル
+          (Agent Skills) を日本語で検索・比較できる専門データベースです。
+        </p>
+      </section>
 
-      <h2 className="text-xl font-bold mt-8 mb-3">本サイトについて</h2>
-      <p className="text-slate-700 leading-relaxed">
-        本サイトは、世界中の GitHub リポジトリから公開された SKILL.md を収集し、日本語で検索可能にする日本初のディレクトリです。
-        英語の description は Claude Haiku で自動的に日本語訳し、12 カテゴリへ自動分類しています。
-      </p>
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">運営</h2>
+        <ul className="text-slate-700 leading-relaxed space-y-1">
+          <li>
+            <strong>運営:</strong> 株式会社ALSEL
+          </li>
+          <li>
+            <strong>代表者:</strong> 齋藤竹紘(技術評論社より 4 冊の書籍を出版、宅建士)
+          </li>
+          <li>
+            <strong>事業:</strong> EC × AI コンサルティング、教育、不動産仲介、越境 EC
+          </li>
+          <li>
+            <strong>実績:</strong> 18 年の EC 支援、5,000 社超の EC 事業者支援
+          </li>
+        </ul>
+      </section>
 
-      <h2 className="text-xl font-bold mt-8 mb-3">データソース</h2>
-      <ul className="list-disc list-inside text-slate-700 space-y-1">
-        <li>GitHub Search API (filename:SKILL.md)</li>
-        <li>主要組織のリポジトリを直接クローン (Anthropic, OpenAI, Vercel Labs 等)</li>
-        <li>日次更新を予定</li>
-      </ul>
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">データソース</h2>
+        <p className="text-slate-700 leading-relaxed">
+          世界中の GitHub 公開リポジトリで公開されている SKILL.md 形式のスキルを自動収集しています。
+          Anthropic、OpenAI、Google、Vercel、Hugging Face 等の公式リポジトリから、世界中の個人開発者が公開する野良スキルまで網羅しています。
+        </p>
+      </section>
 
-      <h2 className="text-xl font-bold mt-8 mb-3">著作権・引用</h2>
-      <p className="text-slate-700 leading-relaxed">
-        SKILL.md 本文はサイト側でフルコピーせず、メタデータ(name, description, リンク)のみ引用しています。
-        全文閲覧は GitHub の原本へリンクで誘導します。各スキルページに Source URL とライセンスを明示しています。
-      </p>
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">翻訳について</h2>
+        <p className="text-slate-700 leading-relaxed">
+          スキルの日本語化は AI (Anthropic Claude Haiku) による自動翻訳です。原文(英語)も併記しているため、正確性を要する場合は原文をご確認ください。
+        </p>
+      </section>
 
-      <h2 className="text-xl font-bold mt-8 mb-3">運営</h2>
-      <p className="text-slate-700 leading-relaxed">
-        株式会社ALSEL / お問い合わせ:{" "}
-        <a
-          href="https://github.com/agent-skills-jp"
-          className="text-blue-600 hover:underline"
-          target="_blank"
-          rel="noopener"
-        >
-          GitHub Issues
-        </a>
-      </p>
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">著作権・ライセンス</h2>
+        <p className="text-slate-700 leading-relaxed">
+          各スキルの著作権は原作者に帰属します。本サイトはオープンソースの SKILL.md ファイルをインデックス化したものです。寛容ライセンス(MIT, Apache 2.0, BSD, ISC, CC0 等)のスキルは本文を引用、それ以外はプレビューのみ表示するなど、ライセンスを尊重した運営を行っています。
+        </p>
+      </section>
 
-      <h2 className="text-xl font-bold mt-8 mb-3">DMCA / 掲載削除依頼</h2>
-      <p className="text-slate-700 leading-relaxed">
-        掲載に問題がある場合は、お手数ですが GitHub Issue または問い合わせメールにてご連絡ください。
-        確認次第、速やかに対応します。
-      </p>
+      <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">お問い合わせ</h2>
+        <ul className="text-slate-700 leading-relaxed space-y-1">
+          <li>
+            メール:{" "}
+            <a
+              href="mailto:info@alsel.co.jp"
+              className="text-blue-600 hover:underline"
+            >
+              info@alsel.co.jp
+            </a>
+          </li>
+          <li>
+            削除依頼:{" "}
+            <a href="/takedown" className="text-blue-600 hover:underline">
+              /takedown
+            </a>
+          </li>
+        </ul>
+      </section>
     </main>
   );
 }
