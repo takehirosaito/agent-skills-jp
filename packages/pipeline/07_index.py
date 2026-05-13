@@ -99,6 +99,12 @@ SETTINGS = {
         "enabled": True,
         "minWordSizeForTypos": {"oneTypo": 4, "twoTypos": 8},
     },
+    # Meilisearch の estimatedTotalHits は maxTotalHits でキャップされる。
+    # デフォルト 1000 だとトップ/ディレクトリの件数表示が頭打ちになるため
+    # 想定スキル数(MVP 1万、最終 5万)を見据えて 50000 まで開放する。
+    "pagination": {
+        "maxTotalHits": 50000,
+    },
 }
 
 
