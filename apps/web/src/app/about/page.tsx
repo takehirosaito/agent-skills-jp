@@ -24,7 +24,7 @@ export default function AboutPage() {
             <strong>運営:</strong> 株式会社ALSEL
           </li>
           <li>
-            <strong>代表者:</strong> 齋藤竹紘(技術評論社より 4 冊の書籍を出版、宅建士)
+            <strong>代表者:</strong> 齋藤竹紘(技術評論社より 3 冊の書籍を出版、宅建士)
           </li>
           <li>
             <strong>事業:</strong> EC × AI コンサルティング、教育、不動産仲介、越境 EC

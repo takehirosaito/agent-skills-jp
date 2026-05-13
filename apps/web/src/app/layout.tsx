@@ -54,10 +54,10 @@ export default function RootLayout({
               <Image
                 src="/logo.svg"
                 alt="Agent Skills by ALSEL"
-                width={284}
-                height={160}
+                width={426}
+                height={240}
                 priority
-                className="h-16 md:h-20 w-auto"
+                className="h-24 md:h-32 w-auto"
               />
             </Link>
             <nav className="flex items-center gap-6 text-sm text-slate-600">
