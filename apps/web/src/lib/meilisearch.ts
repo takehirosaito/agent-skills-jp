@@ -41,32 +41,34 @@ export type Skill = {
 };
 
 export const CATEGORY_LABELS: Record<string, string> = {
-  development: "開発・コーディング",
+  "ai-development": "LLM・AI開発",
+  development: "ソフトウェア開発",
   "data-analysis": "データ・分析",
-  documentation: "ドキュメント作成",
+  devops: "DevOps・インフラ",
+  security: "セキュリティ",
   "ecommerce-marketing": "EC・マーケティング",
   "design-creative": "デザイン・クリエイティブ",
-  devops: "DevOps・インフラ",
+  "media-audio": "音声・動画・メディア",
   business: "ビジネス・経営",
-  education: "教育・学習",
-  language: "翻訳・言語",
-  security: "セキュリティ",
   productivity: "個人生産性",
+  documentation: "ドキュメント",
+  education: "教育・学習",
   misc: "その他",
 };
 
 export const CATEGORY_ICONS: Record<string, string> = {
+  "ai-development": "🤖",
   development: "💻",
   "data-analysis": "📊",
-  documentation: "📝",
+  devops: "⚙️",
+  security: "🔒",
   "ecommerce-marketing": "🛒",
   "design-creative": "🎨",
-  devops: "⚙️",
+  "media-audio": "🎬",
   business: "💼",
-  education: "🎓",
-  language: "🌐",
-  security: "🔒",
   productivity: "✅",
+  documentation: "📝",
+  education: "🎓",
   misc: "📦",
 };
 
