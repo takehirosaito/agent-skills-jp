@@ -75,7 +75,7 @@ export async function GET(
     );
   }
 
-  const buffer = await zip.generateAsync({ type: "uint8array" });
+  const buffer = await zip.generateAsync({ type: "arraybuffer" });
   return new NextResponse(buffer, {
     status: 200,
     headers: {
