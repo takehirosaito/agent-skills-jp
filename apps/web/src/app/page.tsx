@@ -94,7 +94,9 @@ export default async function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {["claude", "openai", "gemini", "opencode", "generic"].map((v) => (
+            {["claude", "openai", "gemini", "opencode", "generic"]
+              .sort((a, b) => (stats.byVendor[b] ?? 0) - (stats.byVendor[a] ?? 0))
+              .map((v) => (
               <Link
                 key={v}
                 href={`/directory?vendor=${v}`}
@@ -108,7 +110,7 @@ export default async function HomePage() {
                 </div>
                 <div className="text-sm text-slate-500">件のスキル</div>
               </Link>
-            ))}
+              ))}
           </div>
           <p className="text-xs text-slate-500 mt-4">
             ※「汎用」は対応エージェントが SKILL.md 内で明示されていない、または複数エージェントで利用できるスキルです。
