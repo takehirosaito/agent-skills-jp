@@ -6,8 +6,10 @@ import {
   CATEGORY_LABELS,
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
+import { classifyLicense } from "@/lib/license";
 import { SkillCard } from "@/components/SkillCard";
 import { InstallCommand } from "@/components/InstallCommand";
+import { BodyToggle } from "@/components/BodyToggle";
 
 export const revalidate = 86400;
 
@@ -31,6 +33,7 @@ export default async function SkillPage({ params }: { params: Params }) {
 
   const categoryLabel = CATEGORY_LABELS[skill.category] ?? skill.category;
   const vendorLabel = VENDOR_LABELS[skill.vendor] ?? skill.vendor;
+  const licensePolicy = classifyLicense(skill.license);
 
   return (
     <main className="max-w-4xl mx-auto py-12 px-6">
@@ -80,12 +83,28 @@ export default async function SkillPage({ params }: { params: Params }) {
       {skill.language_original !== "ja" && skill.description_original && (
         <section className="mb-8">
           <details className="border border-slate-200 rounded-lg p-4">
-            <summary className="cursor-pointer font-medium">原文を見る</summary>
+            <summary className="cursor-pointer font-medium">
+              description の原文を見る
+            </summary>
             <p className="mt-3 text-slate-600 whitespace-pre-wrap">
               {skill.description_original}
             </p>
           </details>
         </section>
+      )}
+
+      {/* SKILL.md 本文(翻訳または原文 + ライセンス分岐) */}
+      {skill.content_full && (
+        <BodyToggle
+          slug={skill.slug}
+          contentEn={skill.content_full}
+          contentJa={skill.content_full_ja ?? null}
+          canShowFull={licensePolicy.canShowFull}
+          needsCaution={licensePolicy.needsCaution}
+          licenseLabel={licensePolicy.label}
+          repoUrl={skill.repo_url}
+          rawUrl={skill.raw_url}
+        />
       )}
 
       {/* メタ情報 */}
@@ -149,7 +168,7 @@ export default async function SkillPage({ params }: { params: Params }) {
 
       {/* 関連スキル */}
       {related.length > 0 && (
-        <section className="border-t border-slate-200 pt-8">
+        <section className="border-t border-slate-200 pt-8 mt-8">
           <h2 className="text-2xl font-bold mb-6">関連スキル</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {related.map((s) => (
@@ -158,6 +177,33 @@ export default async function SkillPage({ params }: { params: Params }) {
           </div>
         </section>
       )}
+
+      {/* アトリビューション・削除依頼 */}
+      <footer className="border-t border-slate-200 mt-12 pt-6 text-xs text-slate-500 leading-relaxed">
+        本サイトは GitHub 上で公開されているオープンソースの SKILL.md ファイルをクロール・インデックス化したものです。
+        各スキルの著作権は原作者に帰属します。掲載に問題がある場合は{" "}
+        <a
+          href="mailto:info@alsel.co.jp?subject=%5B%E5%89%8A%E9%99%A4%E4%BE%9D%E9%A0%BC%5D%20agent-skills.jp"
+          className="text-blue-600 hover:underline"
+        >
+          info@alsel.co.jp
+        </a>{" "}
+        または{" "}
+        <Link href="/takedown" className="text-blue-600 hover:underline">
+          /takedown
+        </Link>{" "}
+        フォームよりご連絡ください。<br />
+        原作者: <strong>{skill.author}</strong> ·{" "}
+        <a
+          href={skill.repo_url}
+          target="_blank"
+          rel="noopener"
+          className="text-blue-600 hover:underline"
+        >
+          {skill.repo_name}
+        </a>{" "}
+        · ライセンス: {licensePolicy.label}
+      </footer>
     </main>
   );
 }

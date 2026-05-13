@@ -16,7 +16,9 @@ import meilisearch
 
 from config import DATA_DIR
 
-INPUT_FILE = DATA_DIR / "translated_skills.jsonl"
+# 08 (本文翻訳) の出力があればそれを優先、無ければ 06 の出力
+_FULL = DATA_DIR / "translated_body_skills.jsonl"
+INPUT_FILE = _FULL if _FULL.exists() else DATA_DIR / "translated_skills.jsonl"
 MEILI_URL = os.environ.get("MEILI_URL", "http://localhost:7700")
 MEILI_KEY = os.environ.get("MEILI_MASTER_KEY", "")
 INDEX_NAME = "skills"
@@ -64,12 +66,16 @@ SETTINGS = {
         "category",
         "vendor",
         "author",
+        "repo_name",
         "repo_url",
+        "raw_url",
         "github_stars",
         "quality_score",
         "last_updated",
         "language_original",
         "license",
+        "content_full",
+        "content_full_ja",
     ],
     "stopWords": [],
     "synonyms": {
@@ -106,8 +112,7 @@ def main():
                 skill = json.loads(line)
             except json.JSONDecodeError:
                 continue
-            # Meilisearchに不要なフィールドを削除
-            skill.pop("content_full", None)
+            # Meilisearchに不要なフィールドを削除(content_full は displayedAttributes として残す)
             skill.pop("frontmatter", None)
             skill.pop("mirrors", None)
             docs.append(skill)

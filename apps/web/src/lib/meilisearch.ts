@@ -21,12 +21,15 @@ export type Skill = {
   author: string;
   repo_name: string;
   repo_url: string;
+  raw_url: string;
   github_stars: number;
   quality_score: number;
   last_updated: string | null;
   license: string | null;
   language_original: string;
   install_command?: string;
+  content_full?: string;
+  content_full_ja?: string | null;
 };
 
 export const CATEGORY_LABELS: Record<string, string> = {
