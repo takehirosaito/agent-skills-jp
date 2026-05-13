@@ -33,19 +33,40 @@ ANTHROPIC_API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 MODEL = "claude-haiku-4-5-20251001"
 USE_BATCH_API = True  # Trueで本番用 batch API、Falseで逐次
 
-PROMPT_TEMPLATE = """あなたは技術翻訳の専門家です。以下のAgent Skillsの英語descriptionを、日本語のEC事業者・開発者・経営者にも分かるよう、自然な日本語に翻訳してください。
+PROMPT_TEMPLATE = """以下は AI エージェント向けスキルパッケージ "Agent Skill" の説明文です。原文の言語は英語・中国語・韓国語・ロシア語・ドイツ語・フランス語・ポルトガル語・アラビア語など何でも構いません。
+
+タスク: 言語問わず、自然な日本語に翻訳してください。
 
 ルール:
-- 専門用語(API、SDK、CLIなど)はカタカナで残してよい
-- 「〜できます」「〜します」など丁寧な能動表現
-- 長さは原文と同程度(150〜400字)
-- 余計な説明や注釈は加えない
-- 訳文のみを返す
+- 専門用語(API, SDK, CLI, MCP, LLM など)はそのまま英語で残してよい
+- 「〜できます」「〜します」のような丁寧な能動表現
+- 長さは原文と同程度、最長でも 400 字以内
+- 余計な説明・前置き・注釈・断り書きを一切付けない
+- 翻訳結果のみを 1 段落で返す (見出しや箇条書きは作らない)
+- 原文が不完全・短文・記号のみであっても、可能な範囲で日本語化する。質問や保留の返答は一切しない
 
-英文:
+原文:
 {description}
 
 日本語訳:"""
+
+# 翻訳器が原文を拒否したり質問返ししたときの定型句。これを含む応答は失敗扱い。
+LEAK_MARKERS = (
+    "申し訳ありません",
+    "申し訳ございません",
+    "翻訳できません",
+    "翻訳することができません",
+    "ご提供いただ",
+    "ご提示いた",
+    "I'm sorry",
+    "I apologize",
+    "Please provide",
+)
+
+
+def looks_like_leak(text: str) -> bool:
+    """翻訳結果が拒否文・質問返しになっていないか判定"""
+    return any(m in text for m in LEAK_MARKERS)
 
 
 def needs_translation(skill: dict) -> bool:
@@ -93,12 +114,18 @@ def run_batch_translation(client, requests_list: list[dict]) -> dict[str, str]:
         print(f"  状態: {status.processing_status}")
         if status.processing_status == "ended":
             break
-    # 結果取得
+    # 結果取得。拒否文・質問返しは弾く(後段で description_original にフォールバック)
     results = {}
+    leak_count = 0
     for result in client.messages.batches.results(batch.id):
         if result.result.type == "succeeded":
             text = result.result.message.content[0].text.strip()
+            if looks_like_leak(text):
+                leak_count += 1
+                continue
             results[result.custom_id] = text
+    if leak_count:
+        print(f"  拒否文を含む応答を {leak_count} 件破棄 (description_original にフォールバック)")
     return results
 
 
@@ -106,8 +133,8 @@ def run_batch_translation(client, requests_list: list[dict]) -> dict[str, str]:
 # 方式2: 逐次(開発・少量用)
 # ============================================================
 
-def translate_one(client, description: str) -> str:
-    """1件翻訳"""
+def translate_one(client, description: str) -> str | None:
+    """1件翻訳。拒否文・質問返しが返ったら None"""
     msg = client.messages.create(
         model=MODEL,
         max_tokens=800,
@@ -116,7 +143,8 @@ def translate_one(client, description: str) -> str:
             "content": PROMPT_TEMPLATE.format(description=description[:2000]),
         }],
     )
-    return msg.content[0].text.strip()
+    text = msg.content[0].text.strip()
+    return None if looks_like_leak(text) else text
 
 
 def _load_translation_cache() -> dict[str, str]:
@@ -183,9 +211,9 @@ def main():
             new_translations = {}
             for s in skills_to_translate:
                 try:
-                    new_translations[s["id"]] = translate_one(
-                        client, s["description_original"]
-                    )
+                    ja = translate_one(client, s["description_original"])
+                    if ja is not None:
+                        new_translations[s["id"]] = ja
                 except Exception as e:
                     print(f"  翻訳失敗 {s['id']}: {e}")
                 time.sleep(0.1)
