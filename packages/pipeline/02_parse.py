@@ -54,16 +54,38 @@ def detect_vendor(path: str, repo: str = "") -> str:
     return "generic"
 
 
+_RX_HIRAGANA = re.compile(r"[\u3040-\u309f]")
+_RX_KATAKANA = re.compile(r"[\u30a0-\u30ff]")
+_RX_CJK = re.compile(r"[\u4e00-\u9faf]")
+_RX_HANGUL = re.compile(r"[\uac00-\ud7af]")
+_RX_ASCII_ALPHA = re.compile(r"[A-Za-z]")
+
+
 def detect_language(text: str) -> str:
-    """description の言語を簡易判定"""
-    if re.search(r"[\u3040-\u309f\u30a0-\u30ff]", text):
+    """description の言語を文字種比率で判定。
+
+    旧版は「ひらがな/カナが1文字でもあれば ja」だったため、英語 description に
+    "俳句" の説明等で混入したカナ数文字で誤って ja 判定 → 翻訳スキップ →
+    サイト上で原文ママ表示、という事故が起きていた (haiku-style 等 24 件)。
+    総文字数に対するひらがな+カタカナ比 15% 以上なら ja、という比率判定に変更。
+    """
+    if not text:
+        return "en"
+    hi = len(_RX_HIRAGANA.findall(text))
+    ka = len(_RX_KATAKANA.findall(text))
+    cjk = len(_RX_CJK.findall(text))
+    ko = len(_RX_HANGUL.findall(text))
+    en = len(_RX_ASCII_ALPHA.findall(text))
+    total = hi + ka + cjk + ko + en
+    if total < 10:
+        return "ja" if (hi + ka) else "en"
+    ja_ratio = (hi + ka) / total
+    if ja_ratio >= 0.15:
         return "ja"
-    if re.search(r"[\u4e00-\u9faf]", text):
-        if re.search(r"[\u3040-\u309f\u30a0-\u30ff]", text):
-            return "ja"
-        return "zh"
-    if re.search(r"[\uac00-\ud7af]", text):
+    if ko / total >= 0.30:
         return "ko"
+    if cjk / total >= 0.40:
+        return "zh"
     return "en"
 
 
