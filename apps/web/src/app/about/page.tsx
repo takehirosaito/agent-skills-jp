@@ -52,6 +52,15 @@ export default async function AboutPage() {
           <li>
             <strong>免許:</strong> 東京都知事(1)第113520号
           </li>
+          <li>
+            <strong>所在地:</strong> 〒102-0072 東京都千代田区飯田橋2-11-10 山田ラインビルIII 9F
+          </li>
+          <li>
+            <strong>電話:</strong>{" "}
+            <a href="tel:+81363804571" className="text-blue-600 hover:underline">
+              03-6380-4571
+            </a>
+          </li>
         </ul>
       </section>
 
