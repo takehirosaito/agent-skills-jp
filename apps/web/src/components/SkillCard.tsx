@@ -29,8 +29,11 @@ export function SkillCard({ skill }: { skill: Skill }) {
           {CATEGORY_LABELS[skill.category] ?? skill.category}
         </span>
         {!skill.is_original && (
-          <span className="text-xs text-slate-500">
-            ⭐ {(skill.github_stars ?? 0).toLocaleString()}
+          <span
+            className="text-xs text-slate-500"
+            title="このスキルが属する GitHub リポジトリ全体の Star 数。スキル単体の評価ではありません"
+          >
+            ⭐ リポ {(skill.github_stars ?? 0).toLocaleString()}
           </span>
         )}
       </div>

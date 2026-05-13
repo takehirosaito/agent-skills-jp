@@ -297,11 +297,10 @@ export async function listSkills(opts: {
   if (opts.category) filters.push(`category = "${opts.category}"`);
   const sort = opts.sort ?? "quality_score:desc";
 
-  // 独自スキルピン留め(品質スコア順 + offset 0 のときのみ)
-  const shouldPin =
-    opts.pinOriginals !== false &&
-    sort === "quality_score:desc" &&
-    (opts.offset ?? 0) === 0;
+  // 独自スキルピン留め: 1 ページ目 (offset 0) では常に ALSEL 独自スキルを
+  // 先頭に出す。ソート種別に依存しない (stars 順/更新日順でも上に固定)。
+  // 2 ページ目以降は重複を避けるためピン留めしない。
+  const shouldPin = opts.pinOriginals !== false && (opts.offset ?? 0) === 0;
 
   try {
     if (shouldPin) {
