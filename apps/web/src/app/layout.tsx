@@ -45,26 +45,26 @@ export default function RootLayout({
     <html lang="ja" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-white text-slate-900">
         <header className="border-b border-slate-200 bg-white sticky top-0 z-10">
-          <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+          <div className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between gap-4">
             <Link
               href="/"
-              className="flex items-center hover:opacity-80"
+              className="flex items-center hover:opacity-80 shrink-0"
               aria-label="Agent Skills by ALSEL — ホームへ"
             >
               <Image
                 src="/logo.svg"
                 alt="Agent Skills by ALSEL"
-                width={142}
-                height={80}
+                width={284}
+                height={160}
                 priority
-                className="h-10 w-auto"
+                className="h-16 md:h-20 w-auto"
               />
             </Link>
             <nav className="flex items-center gap-6 text-sm text-slate-600">
               <Link href="/directory" className="hover:text-slate-900">
                 ディレクトリ
               </Link>
-              <Link href="/category/development" className="hover:text-slate-900">
+              <Link href="/category" className="hover:text-slate-900">
                 カテゴリ
               </Link>
               <Link href="/about" className="hover:text-slate-900">
