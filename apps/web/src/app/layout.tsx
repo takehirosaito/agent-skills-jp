@@ -48,18 +48,17 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
             <Link
               href="/"
-              className="flex items-center gap-3 hover:opacity-80"
+              className="flex items-center hover:opacity-80"
+              aria-label="Agent Skills by ALSEL — ホームへ"
             >
               <Image
                 src="/logo.svg"
                 alt="Agent Skills by ALSEL"
-                width={36}
-                height={36}
+                width={142}
+                height={80}
                 priority
+                className="h-10 w-auto"
               />
-              <span className="font-bold text-lg tracking-tight">
-                Agent Skills <span className="text-slate-500 font-normal">by ALSEL</span>
-              </span>
             </Link>
             <nav className="flex items-center gap-6 text-sm text-slate-600">
               <Link href="/directory" className="hover:text-slate-900">
