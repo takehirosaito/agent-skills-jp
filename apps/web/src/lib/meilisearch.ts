@@ -1,6 +1,7 @@
 // Meilisearch クライアント & 検索ヘルパ
 
 import { Meilisearch } from "meilisearch";
+import { PERMISSIVE_LICENSES } from "./license";
 
 const host =
   process.env.NEXT_PUBLIC_MEILI_HOST ?? "http://127.0.0.1:7700";
@@ -70,13 +71,31 @@ export const VENDOR_LABELS: Record<string, string> = {
   generic: "汎用",
 };
 
-export async function getStats() {
+export type Stats = {
+  totalSkills: number;
+  byVendor: Record<string, number>;
+  byCategory: Record<string, number>;
+  byLicense: { permissive: number; restrictive: number; unknown: number };
+  lastUpdated: string | null;
+};
+
+export async function getStats(): Promise<Stats> {
   try {
     // 検索キーには stats アクションが無いため、facet 検索で集計
-    const facets = await index.search("", {
-      facets: ["vendor", "category"],
-      limit: 0,
-    });
+    const [facets, latest] = await Promise.all([
+      index.search("", {
+        facets: ["vendor", "category", "license"],
+        limit: 0,
+      }),
+      index
+        .search("", {
+          sort: ["last_updated:desc"],
+          limit: 1,
+          attributesToRetrieve: ["last_updated"],
+        })
+        .catch(() => null),
+    ]);
+
     const byVendor = (facets.facetDistribution?.vendor ?? {}) as Record<
       string,
       number
@@ -85,12 +104,46 @@ export async function getStats() {
       string,
       number
     >;
+    const licenseDist = (facets.facetDistribution?.license ?? {}) as Record<
+      string,
+      number
+    >;
+
     const total =
       facets.estimatedTotalHits ??
       Object.values(byVendor).reduce((a, b) => a + b, 0);
-    return { totalSkills: total, byVendor, byCategory };
+
+    // ライセンスを 3 カテゴリに集約
+    const byLicense = { permissive: 0, restrictive: 0, unknown: 0 };
+    let licenseAccountedFor = 0;
+    for (const [name, count] of Object.entries(licenseDist)) {
+      licenseAccountedFor += count;
+      if (PERMISSIVE_LICENSES.has(name)) byLicense.permissive += count;
+      else if (name === "NOASSERTION") byLicense.unknown += count;
+      else byLicense.restrictive += count;
+    }
+    // license 属性が無いドキュメント分は unknown へ加算
+    const missingLicense = Math.max(0, total - licenseAccountedFor);
+    byLicense.unknown += missingLicense;
+
+    const lastUpdated =
+      (latest?.hits?.[0] as { last_updated?: string } | undefined)?.last_updated ?? null;
+
+    return {
+      totalSkills: total,
+      byVendor,
+      byCategory,
+      byLicense,
+      lastUpdated,
+    };
   } catch {
-    return { totalSkills: 0, byVendor: {}, byCategory: {} };
+    return {
+      totalSkills: 0,
+      byVendor: {},
+      byCategory: {},
+      byLicense: { permissive: 0, restrictive: 0, unknown: 0 },
+      lastUpdated: null,
+    };
   }
 }
 

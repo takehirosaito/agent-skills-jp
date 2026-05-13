@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SearchBar } from "@/components/SearchBar";
 import { CategoryTile } from "@/components/CategoryTile";
 import { SkillCard } from "@/components/SkillCard";
@@ -9,7 +10,18 @@ import {
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
 
-export const revalidate = 3600;
+export const revalidate = 300;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const stats = await getStats();
+  const count = stats.totalSkills > 0
+    ? stats.totalSkills.toLocaleString()
+    : "6,800";
+  return {
+    title: "Agent Skills by ALSEL｜AI時代のスキル大全",
+    description: `世界中から収集した Agent Skills 約 ${count} 件を日本語で検索・比較。Claude、OpenAI、Gemini、OpenCode に対応するスキルを、用途・対応 AI・導入方法から探せる専門データベースです。`,
+  };
+}
 
 export default async function HomePage() {
   const [stats, featured, categories] = await Promise.all([
@@ -32,7 +44,8 @@ export default async function HomePage() {
             日本語で探す。
           </h1>
           <p className="text-lg text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            Claude、OpenAI、Gemini、OpenCode などに対応する Agent Skills を、日本語で検索・比較できる専門データベース。約 <strong>6,800 件</strong> を収録。
+            Claude、OpenAI、Gemini、OpenCode などに対応する Agent Skills を、日本語で検索・比較できる専門データベース。約{" "}
+            <strong>{stats.totalSkills.toLocaleString()} 件</strong> を収録。
           </p>
           <SearchBar />
           <p className="text-sm text-slate-500 mt-6">

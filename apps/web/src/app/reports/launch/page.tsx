@@ -8,7 +8,7 @@ import {
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
 
-export const revalidate = 3600;
+export const revalidate = 300;
 
 export const metadata = {
   title: "ローンチレポート | Agent Skills by ALSEL",

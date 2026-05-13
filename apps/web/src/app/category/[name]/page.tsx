@@ -6,6 +6,8 @@ import {
   CATEGORY_ICONS,
 } from "@/lib/meilisearch";
 
+export const revalidate = 300;
+
 type Params = Promise<{ name: string }>;
 
 export async function generateMetadata({ params }: { params: Params }) {

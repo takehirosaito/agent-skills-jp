@@ -2,7 +2,7 @@
 // 寛容ライセンス: 本文全文表示・ダウンロード可
 // その他: プレビューのみ・原本リンクで誘導
 
-const PERMISSIVE_LICENSES = new Set([
+export const PERMISSIVE_LICENSES = new Set([
   "MIT",
   "MIT-0",
   "Apache-2.0",

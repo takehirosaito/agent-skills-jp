@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CategoryTile } from "@/components/CategoryTile";
 import { getCategories } from "@/lib/meilisearch";
 
-export const revalidate = 3600;
+export const revalidate = 300;
 
 export const metadata = {
   title: "カテゴリ一覧 | Agent Skills by ALSEL",

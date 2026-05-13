@@ -1,11 +1,18 @@
 import { ImageResponse } from "next/og";
+import { getStats } from "@/lib/meilisearch";
 
-export const runtime = "edge";
-export const alt = "Agent Skills by ALSEL — AI時代のスキル大全。世界中のAgent Skillsを日本語で。";
+export const runtime = "nodejs";
+export const revalidate = 300;
+export const alt =
+  "Agent Skills by ALSEL — AI時代のスキル大全。世界中のAgent Skillsを日本語で。";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default async function Image() {
+export default async function OgImage() {
+  const stats = await getStats();
+  const count =
+    stats.totalSkills > 0 ? stats.totalSkills.toLocaleString() : "6,800";
+
   return new ImageResponse(
     (
       <div
@@ -14,14 +21,14 @@ export default async function Image() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
           background:
             "linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #c7d2fe 100%)",
           fontFamily: "sans-serif",
-          padding: 64,
+          padding: 72,
+          boxSizing: "border-box",
         }}
       >
+        {/* タグライン */}
         <div
           style={{
             display: "flex",
@@ -33,10 +40,12 @@ export default async function Image() {
         >
           AI時代のスキル大全。
         </div>
+
+        {/* ブランド名 */}
         <div
           style={{
             display: "flex",
-            fontSize: 88,
+            fontSize: 80,
             fontWeight: 800,
             color: "#0f172a",
             letterSpacing: "-0.04em",
@@ -46,27 +55,67 @@ export default async function Image() {
           <span>Agent Skills&nbsp;</span>
           <span style={{ color: "#2563eb" }}>by ALSEL</span>
         </div>
+
+        {/* メインコピー */}
         <div
           style={{
             display: "flex",
-            fontSize: 32,
-            color: "#475569",
-            marginTop: 36,
-            lineHeight: 1.4,
+            fontSize: 44,
+            fontWeight: 700,
+            color: "#1e293b",
+            marginTop: 40,
+            lineHeight: 1.3,
           }}
         >
-          約 6,800 件の Agent Skills を日本語で検索・比較
+          世界中の Agent Skills を、日本語で。
         </div>
+
+        {/* 件数カード */}
         <div
           style={{
-            fontSize: 24,
-            color: "#64748b",
-            marginTop: 48,
             display: "flex",
-            gap: 24,
+            alignItems: "flex-end",
+            gap: 16,
+            marginTop: 28,
           }}
         >
-          <span>agent-skills.jp</span>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 96,
+              fontWeight: 800,
+              color: "#2563eb",
+              letterSpacing: "-0.04em",
+              lineHeight: 1,
+            }}
+          >
+            {count}
+          </div>
+          <div
+            style={{
+              display: "flex",
+              fontSize: 32,
+              color: "#475569",
+              paddingBottom: 12,
+            }}
+          >
+            件 のスキルを収録
+          </div>
+        </div>
+
+        {/* スペーサー */}
+        <div style={{ flex: 1, display: "flex" }} />
+
+        {/* URL */}
+        <div
+          style={{
+            display: "flex",
+            fontSize: 26,
+            color: "#64748b",
+            fontWeight: 600,
+          }}
+        >
+          agent-skills.jp
         </div>
       </div>
     ),

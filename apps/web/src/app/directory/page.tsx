@@ -6,6 +6,8 @@ import {
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
 
+export const revalidate = 300;
+
 const PER_PAGE = 50;
 
 type SearchParams = Promise<{
