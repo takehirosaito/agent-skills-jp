@@ -1,0 +1,81 @@
+name: publish find-skills CLI
+
+# skills-index.json が変わったときに alsel-find-skills を npm に自動 publish する。
+# パッチバージョンを自動 bump して publish。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "skills-index.json"
+      - "packages/find-skills-cli/**"
+      - ".github/workflows/publish-find-skills.yml"
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "version bump (patch / minor / major)"
+        required: true
+        default: "patch"
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync bundled index
+        working-directory: packages/find-skills-cli
+        run: node scripts/sync-index.js
+
+      - name: Skip if no functional change
+        id: changes
+        working-directory: packages/find-skills-cli
+        run: |
+          # bundled JSON とパッケージファイルが直近コミットで変わったか確認
+          if git diff --quiet HEAD~1 -- packages/find-skills-cli skills-index.json; then
+            echo "no changes, skipping"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Bump version
+        if: steps.changes.outputs.skip != 'true'
+        working-directory: packages/find-skills-cli
+        run: |
+          BUMP="${{ github.event.inputs.bump || 'patch' }}"
+          npm version "$BUMP" --no-git-tag-version
+          VERSION=$(node -p "require('./package.json').version")
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+
+      - name: Commit version bump
+        if: steps.changes.outputs.skip != 'true'
+        run: |
+          git add packages/find-skills-cli/package.json
+          git commit -m "alsel-find-skills v${{ env.VERSION }} [skip ci]"
+          git push origin HEAD:main
+
+      - name: npm publish
+        if: steps.changes.outputs.skip != 'true'
+        working-directory: packages/find-skills-cli
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public

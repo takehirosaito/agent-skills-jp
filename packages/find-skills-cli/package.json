@@ -1,0 +1,43 @@
+{
+  "name": "alsel-find-skills",
+  "version": "0.1.0",
+  "description": "日本語の意図から Agent Skills (Claude Code / Codex / Gemini CLI / claude.ai) を発見する CLI。Agent Skills by ALSEL の約 4,000 件インデックスを内蔵。",
+  "keywords": [
+    "agent-skills",
+    "claude",
+    "claude-code",
+    "alsel",
+    "japanese",
+    "skill-discovery",
+    "rakuten",
+    "amazon",
+    "ec",
+    "seo"
+  ],
+  "homepage": "https://agent-skills.jp/find-skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takehirosaito/agent-skills-jp.git",
+    "directory": "packages/find-skills-cli"
+  },
+  "bugs": "mailto:info@alsel.co.jp",
+  "license": "MIT",
+  "author": "ALSEL Inc. <info@alsel.co.jp> (https://agent-skills.jp)",
+  "main": "lib/index.js",
+  "bin": {
+    "alsel-find-skills": "bin/cli.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "skills-index.json",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepublishOnly": "node scripts/sync-index.js",
+    "test": "node bin/cli.js 楽天SEO"
+  }
+}

@@ -46,3 +46,8 @@ yarn-error.log*
 
 # Vercel
 .vercel
+
+# alsel-find-skills CLI bundles a copy of skills-index.json at publish time
+# (via packages/find-skills-cli/scripts/sync-index.js). Keep the source-of-truth
+# only at repo root to avoid duplication.
+/packages/find-skills-cli/skills-index.json
