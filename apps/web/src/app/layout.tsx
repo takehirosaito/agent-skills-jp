@@ -60,10 +60,10 @@ export default async function RootLayout({
               <Image
                 src="/logo.svg"
                 alt="Agent Skills by ALSEL"
-                width={426}
-                height={240}
+                width={1672}
+                height={500}
                 priority
-                className="h-24 md:h-32 w-auto"
+                className="h-12 md:h-14 w-auto"
               />
             </Link>
             <nav className="flex items-center gap-6 text-sm text-slate-600">
