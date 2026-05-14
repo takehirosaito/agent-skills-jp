@@ -12,6 +12,13 @@ metadata:
 
 このスキルは、ユーザーが「○○のスキル探して」「○○できるスキルある?」と日本語で頼んだ時に、Agent Skills by ALSEL (https://agent-skills.jp) の検索 API を使ってスキルを発見します。
 
+## 動作環境について (重要)
+
+このスキルは **ローカル CLI 環境** (Claude Code / Codex CLI / Gemini CLI 等) で動作するよう設計されています。外部 HTTP 接続が必要なため:
+
+- **claude.ai (Web 版)** などの**サンドボックスで外部 HTTP が制限される環境**では動作しません。bash curl も web_fetch も `agent-skills.jp` に届かないため、必ず失敗します
+- そうした環境でユーザーが本スキルを呼んだ場合は、**「find-skills は Claude Code 等のローカル CLI 専用です。Web 版ではブラウザで https://agent-skills.jp を開いて直接検索してください」** とだけ案内して、無理に bash / web_fetch を繰り返し試行しないでください
+
 ## 使用場面
 
 以下のような時に使ってください:
