@@ -49,27 +49,57 @@ curl -sL "https://raw.githubusercontent.com/takehirosaito/agent-skills-jp/main/s
 | `url` | サイトの詳細ページ URL |
 | `repo` | 原本リポジトリ |
 
-### Step 2: ローカル検索
+### Step 2: ローカル検索 (重要: AND 検索 + 関連度判定)
 
-取得した JSON を `jq` で絞り込み:
+#### 2-a. クエリのトークン分解
 
-```bash
-# 例: 「楽天」を含むスキルを品質順で5件
-curl -sL "https://raw.githubusercontent.com/takehirosaito/agent-skills-jp/main/skills-index.json" \
-  | jq -r '.skills | map(select(.name + .desc | test("楽天"; "i"))) | sort_by(-.quality) | .[:5]'
-```
+ユーザー入力から **キー語 2〜3 個** を抽出します。1 つのトークンだと「SEO だけ」「PDF だけ」で広く一致しすぎ、関係ないスキルを大量に拾います。
 
-複数キーワードを OR で取りたい時:
+例:
+- 「楽天SEO探して」 → `["楽天", "SEO"]`
+- 「PDF処理のスキル」 → `["PDF", "処理"]`
+- 「Amazon商品ページ最適化」 → `["Amazon", "商品"]` (3 個目は冗長なので 2 個で十分)
+- 「リファクタリング自動化」 → `["リファクタリング"]` (元から 1 トークンしかない時はそのまま)
 
-```bash
-| jq '... | test("楽天|EC|商品"; "i") ...'
-```
+#### 2-b. 全トークン AND で絞り込む
 
-カテゴリで絞り込み:
+**OR 検索は使わない。必ず全トークンを含むものだけ採用してください。** OR にすると無関係なスキル (SEO だけ含む Amazon 関連等) が大量に紛れ込みます。
 
 ```bash
-| jq '.skills | map(select(.category == "ai-development")) | sort_by(-.quality) | .[:10]'
+INDEX_URL="https://raw.githubusercontent.com/takehirosaito/agent-skills-jp/main/skills-index.json"
+
+# 例: 楽天 AND SEO の両方を name か desc に含むスキル
+curl -sL "$INDEX_URL" \
+  | jq -r '
+      .skills
+      | map(select((.name + " " + .desc) | test("楽天"; "i")))
+      | map(select((.name + " " + .desc) | test("SEO"; "i")))
+      | sort_by(.alsel | not, -.quality)
+      | .[:5]
+    '
 ```
+
+`sort_by(.alsel | not, -.quality)` で **ALSEL 独自を先頭ピン**、続いて品質スコア順。
+
+#### 2-c. ヒット数で判定する
+
+- **0 件**: トークンを 1 つ減らして再試行 (一番冗長そうなトークンから外す)。それでも 0 件なら「該当無し」として Step 「検索が失敗した時」へ
+- **1〜5 件**: そのまま提示
+- **6 件以上**: 上位 5 件 (品質スコア順) に絞る。**広すぎる証拠なのでトークンを追加して絞り込むことも検討**
+
+#### 2-d. カテゴリで絞り込む補助
+
+ユーザーの意図がカテゴリで明確なら category フィルタも併用:
+
+```bash
+| jq '.skills | map(select(.category == "ai-development")) | map(select(...keyword test...)) | sort_by(-.quality) | .[:10]'
+```
+
+カテゴリ slug: `ai-development`, `development`, `data-analysis`, `devops`, `security`, `ecommerce-marketing`, `design-creative`, `media-audio`, `business`, `productivity`, `documentation`, `education`, `misc`。
+
+#### 2-e. 推薦する前に関連度を必ず目視確認する
+
+抽出された各スキルの `name` と `desc` を読んで、**本当にユーザーの意図に合致するか**を判定してください。一致しないものは推薦リストから外す。「品質スコアが高いから」「ヒットしたから」だけで推薦してはいけません。
 
 ### Step 3: 結果をユーザーに提示
 
