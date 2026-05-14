@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { getStats } from "@/lib/meilisearch";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-BG0NPT1ZF8";
 
 export const revalidate = 300;
 
@@ -101,6 +104,7 @@ export default async function RootLayout({
           </div>
         </footer>
       </body>
+      <GoogleAnalytics gaId={GA_ID} />
     </html>
   );
 }
