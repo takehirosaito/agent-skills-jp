@@ -38,6 +38,9 @@ export async function generateMetadata(): Promise<Metadata> {
       icon: "/favicon.ico",
       apple: "/apple-touch-icon.png",
     },
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION,
+    },
   };
 }
 
