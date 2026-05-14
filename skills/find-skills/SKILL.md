@@ -26,10 +26,10 @@ metadata:
 
 ### Step 1: クエリをそのまま CLI に渡す
 
-`Bash` ツールで `npx alsel-find-skills <query>` を実行します。`WebFetch` / `web_fetch` は使わない。
+`Bash` ツールで `npx -y alsel-find-skills@latest <query>` を実行します。`WebFetch` / `web_fetch` は使わない。
 
 ```bash
-npx -y alsel-find-skills "楽天SEO" --json
+npx -y alsel-find-skills@latest "楽天SEO" --json
 ```
 
 - `-y` (yes) は npx の初回確認プロンプトをスキップ
@@ -41,9 +41,9 @@ npx -y alsel-find-skills "楽天SEO" --json
 
 | 例 | 意味 |
 |---|---|
-| `npx -y alsel-find-skills "PDF 処理" --limit=10` | 上位 10 件まで |
-| `npx -y alsel-find-skills "エージェント" --category=ai-development` | カテゴリ絞り込み |
-| `npx -y alsel-find-skills -h` | ヘルプ |
+| `npx -y alsel-find-skills@latest "PDF 処理" --limit=10` | 上位 10 件まで |
+| `npx -y alsel-find-skills@latest "エージェント" --category=ai-development` | カテゴリ絞り込み |
+| `npx -y alsel-find-skills@latest -h` | ヘルプ |
 
 カテゴリ slug: `ai-development`, `development`, `data-analysis`, `devops`, `security`, `ecommerce-marketing`, `design-creative`, `media-audio`, `business`, `productivity`, `documentation`, `education`, `misc`
 
