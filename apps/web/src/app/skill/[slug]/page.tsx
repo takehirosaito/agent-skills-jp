@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import type { Metadata } from "next";
 import {
   getSkillBySlug,
   getRelatedSkills,
@@ -10,18 +11,48 @@ import { classifyLicense } from "@/lib/license";
 import { SkillCard } from "@/components/SkillCard";
 import { InstallCommand } from "@/components/InstallCommand";
 import { BodyToggle } from "@/components/BodyToggle";
+import { SITE_NAME, SITE_URL, canonical } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 
 export const revalidate = 86400;
 
 type Params = Promise<{ slug: string }>;
 
-export async function generateMetadata({ params }: { params: Params }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
   const { slug } = await params;
   const skill = await getSkillBySlug(slug);
-  if (!skill) return { title: "Not Found | Agent Skills by ALSEL" };
+  if (!skill) {
+    // layout の template が " | Agent Skills by ALSEL" を付ける
+    return { title: "Not Found" };
+  }
+  const description = (
+    skill.description_ja ||
+    skill.description_original ||
+    ""
+  ).slice(0, 160);
+  const url = canonical(`/skill/${skill.slug}`);
   return {
-    title: `${skill.name} | Agent Skills by ALSEL`,
-    description: (skill.description_ja ?? skill.description_original).slice(0, 150),
+    // layout の template が " | Agent Skills by ALSEL" を付与するので、スキル名のみ
+    title: skill.name,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${skill.name} | ${SITE_NAME}`,
+      description,
+      url,
+      siteName: SITE_NAME,
+      type: "article",
+      locale: "ja_JP",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${skill.name} | ${SITE_NAME}`,
+      description,
+    },
   };
 }
 
@@ -40,9 +71,48 @@ export default async function SkillPage({ params }: { params: Params }) {
   const categoryLabel = CATEGORY_LABELS[skill.category] ?? skill.category;
   const vendorLabel = VENDOR_LABELS[skill.vendor] ?? skill.vendor;
   const licensePolicy = classifyLicense(skill.license);
+  const url = canonical(`/skill/${skill.slug}`);
+  const skillDescription =
+    skill.description_ja || skill.description_original || "";
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: categoryLabel,
+        item: canonical(`/category/${skill.category}`),
+      },
+      { "@type": "ListItem", position: 3, name: skill.name, item: url },
+    ],
+  };
+
+  const softwareJsonLd: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": `${url}#software`,
+    name: skill.name,
+    description: skillDescription,
+    url,
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "Web",
+    inLanguage: "ja",
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    author: {
+      "@type": "Organization",
+      name: skill.author,
+      ...(skill.repo_url && !isOriginal ? { url: skill.repo_url } : {}),
+    },
+    ...(skill.license ? { license: skill.license } : {}),
+    ...(skill.last_updated ? { dateModified: skill.last_updated } : {}),
+  };
 
   return (
     <main className="max-w-4xl mx-auto py-12 px-6">
+      <JsonLd data={[breadcrumbJsonLd, softwareJsonLd]} />
       {/* パンくず */}
       <nav className="text-sm text-slate-500 mb-6">
         <Link href="/" className="hover:underline">

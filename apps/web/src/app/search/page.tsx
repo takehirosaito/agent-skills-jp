@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SearchBar } from "@/components/SearchBar";
 import { SkillCard } from "@/components/SkillCard";
 import {
@@ -6,12 +7,48 @@ import {
   CATEGORY_LABELS,
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
+import { SITE_NAME, canonical } from "@/lib/seo";
 
 type SearchParams = Promise<{
   q?: string;
   vendor?: string;
   category?: string;
 }>;
+
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}): Promise<Metadata> {
+  const { q = "" } = await searchParams;
+  const title = q
+    ? `「${q}」の検索結果`
+    : "検索";
+  const description = q
+    ? `「${q}」を含む Agent Skills を Agent Skills by ALSEL から検索した結果一覧。`
+    : "Agent Skills by ALSEL でスキルを検索。Claude、OpenAI、Gemini、OpenCode 対応の Agent Skills を、日本語の自然な言い回しで探せます。";
+  // 検索結果は重複ページが大量発生しうるので canonical は /search に統一
+  const url = canonical("/search");
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    robots: q ? { index: false, follow: true } : undefined,
+    openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      url,
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "ja_JP",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${SITE_NAME}`,
+      description,
+    },
+  };
+}
 
 export default async function SearchPage({
   searchParams,

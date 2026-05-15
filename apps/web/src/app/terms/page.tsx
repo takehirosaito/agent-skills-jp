@@ -1,6 +1,18 @@
-export const metadata = {
-  title: "利用規約 | Agent Skills by ALSEL",
-  description: "Agent Skills by ALSEL の利用規約",
+import type { Metadata } from "next";
+import { SITE_NAME, canonical } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "利用規約",
+  description: "Agent Skills by ALSEL の利用規約。",
+  alternates: { canonical: canonical("/terms") },
+  openGraph: {
+    title: `利用規約 | ${SITE_NAME}`,
+    description: "Agent Skills by ALSEL の利用規約。",
+    url: canonical("/terms"),
+    siteName: SITE_NAME,
+    type: "website",
+    locale: "ja_JP",
+  },
 };
 
 export default function TermsPage() {

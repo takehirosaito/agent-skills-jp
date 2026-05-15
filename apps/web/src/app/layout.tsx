@@ -5,6 +5,16 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { getStats } from "@/lib/meilisearch";
+import {
+  SITE_URL,
+  SITE_NAME,
+  SITE_DEFAULT_TITLE,
+  ORG_NAME,
+  ORG_LEGAL_NAME,
+  ORG_URL,
+  ORG_LOGO_URL,
+} from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -12,28 +22,35 @@ export const revalidate = 300;
 
 export async function generateMetadata(): Promise<Metadata> {
   const stats = await getStats();
-  const count = stats.totalSkills > 0
-    ? stats.totalSkills.toLocaleString()
-    : "6,800";
+  const count =
+    stats.totalSkills > 0 ? stats.totalSkills.toLocaleString() : "6,800";
+  const description = `世界中から収集した Agent Skills 約 ${count} 件を日本語で検索・比較。Claude、OpenAI、Gemini、OpenCode に対応するスキルを、用途・対応 AI・導入方法から探せる専門データベースです。`;
+  const ogDescription = `世界中から収集した Agent Skills 約 ${count} 件を日本語で検索・比較できる専門データベース。`;
+
   return {
     title: {
-      default: "Agent Skills by ALSEL｜AI時代のスキル大全",
-      template: "%s | Agent Skills by ALSEL",
+      default: SITE_DEFAULT_TITLE,
+      // 子ルートセグメントの `title` (文字列) にサフィックスを 1 回だけ付与する。
+      // 子ページ側では「ページ固有名のみ」を返すこと (例: skill.name, "カテゴリ一覧" など)。
+      template: `%s | ${SITE_NAME}`,
     },
-    description: `世界中から収集した Agent Skills 約 ${count} 件を日本語で検索・比較。Claude、OpenAI、Gemini、OpenCode に対応するスキルを、用途・対応 AI・導入方法から探せる専門データベースです。`,
-    metadataBase: new URL("https://agent-skills.jp"),
+    description,
+    metadataBase: new URL(SITE_URL),
+    alternates: {
+      canonical: "/",
+    },
     openGraph: {
-      title: "Agent Skills by ALSEL｜AI時代のスキル大全",
-      description: `世界中から収集した Agent Skills 約 ${count} 件を日本語で検索・比較できる専門データベース。`,
-      url: "https://agent-skills.jp",
-      siteName: "Agent Skills by ALSEL",
+      title: SITE_DEFAULT_TITLE,
+      description: ogDescription,
+      url: SITE_URL,
+      siteName: SITE_NAME,
       type: "website",
       locale: "ja_JP",
     },
     twitter: {
       card: "summary_large_image",
-      title: "Agent Skills by ALSEL｜AI時代のスキル大全",
-      description: `世界中から収集した Agent Skills 約 ${count} 件を日本語で検索・比較できる専門データベース。`,
+      title: SITE_DEFAULT_TITLE,
+      description: ogDescription,
     },
     icons: {
       icon: "/favicon.ico",
@@ -51,9 +68,44 @@ export default async function RootLayout({
   const stats = await getStats();
   const count = stats.totalSkills.toLocaleString();
 
+  // 全ページに乗せるサイト共通の構造化データ:
+  // - WebSite (potentialAction.SearchAction でサイト内検索を Google に伝える)
+  // - Organization (ALSEL Inc.)
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    name: SITE_NAME,
+    alternateName: ["agent-skills.jp", "Agent Skills"],
+    url: SITE_URL,
+    inLanguage: "ja",
+    description: "世界中の Agent Skills を日本語で検索・比較できる専門データベース。",
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: ORG_NAME,
+    legalName: ORG_LEGAL_NAME,
+    url: ORG_URL,
+    logo: ORG_LOGO_URL,
+    sameAs: [SITE_URL],
+  };
+
   return (
     <html lang="ja" className="h-full antialiased">
       <body className="min-h-full flex flex-col bg-white text-slate-900">
+        <JsonLd data={[websiteJsonLd, organizationJsonLd]} />
         <header className="border-b border-slate-200 bg-white sticky top-0 z-10">
           <div className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between gap-4">
             <Link

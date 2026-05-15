@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getStats } from "@/lib/meilisearch";
+import { SITE_NAME, canonical } from "@/lib/seo";
 
 export const revalidate = 300;
 
@@ -8,9 +9,25 @@ export async function generateMetadata(): Promise<Metadata> {
   const count = stats.totalSkills > 0
     ? stats.totalSkills.toLocaleString()
     : "6,800";
+  const description = `Agent Skills by ALSEL の運営方針、データソース、翻訳について、運営会社情報。現在 ${count} 件のスキルを収録。`;
+  const url = canonical("/about");
   return {
     title: "About",
-    description: `Agent Skills by ALSEL の運営方針、データソース、翻訳について、運営会社情報。現在 ${count} 件のスキルを収録。`,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `About | ${SITE_NAME}`,
+      description,
+      url,
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "ja_JP",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `About | ${SITE_NAME}`,
+      description,
+    },
   };
 }
 

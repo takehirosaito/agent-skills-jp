@@ -1,10 +1,14 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SkillCard } from "@/components/SkillCard";
 import {
   listSkills,
+  getStats,
   CATEGORY_LABELS,
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
+import { SITE_NAME, SITE_URL, canonical } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 
 export const revalidate = 300;
 
@@ -16,6 +20,32 @@ type SearchParams = Promise<{
   page?: string;
   sort?: string;
 }>;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const stats = await getStats();
+  const count =
+    stats.totalSkills > 0 ? stats.totalSkills.toLocaleString() : "6,800";
+  const title = "ディレクトリ";
+  const description = `Agent Skills by ALSEL に収録された全 ${count} 件のスキルを、品質スコア・GitHub Star・更新日でソートして一覧表示。Claude、OpenAI、Gemini、OpenCode 対応のスキルから絞り込み検索できます。`;
+  return {
+    title,
+    description,
+    alternates: { canonical: canonical("/directory") },
+    openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      url: canonical("/directory"),
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "ja_JP",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${SITE_NAME}`,
+      description,
+    },
+  };
+}
 
 export default async function DirectoryPage({
   searchParams,
@@ -35,8 +65,28 @@ export default async function DirectoryPage({
 
   const totalPages = Math.max(1, Math.ceil(result.total / PER_PAGE));
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "ホーム",
+        item: SITE_URL,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "ディレクトリ",
+        item: canonical("/directory"),
+      },
+    ],
+  };
+
   return (
     <main className="max-w-6xl mx-auto py-10 px-6">
+      <JsonLd data={breadcrumbJsonLd} />
       <h1 className="text-3xl font-bold mb-2">ディレクトリ</h1>
       <p className="text-slate-600 mb-6">
         全 <strong>{result.total.toLocaleString()}</strong> 件

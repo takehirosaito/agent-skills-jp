@@ -1,6 +1,18 @@
-export const metadata = {
-  title: "プライバシーポリシー | Agent Skills by ALSEL",
-  description: "Agent Skills by ALSEL の個人情報の取り扱い・クッキー利用について",
+import type { Metadata } from "next";
+import { SITE_NAME, canonical } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "プライバシーポリシー",
+  description: "Agent Skills by ALSEL の個人情報の取り扱い・クッキー利用について。",
+  alternates: { canonical: canonical("/privacy") },
+  openGraph: {
+    title: `プライバシーポリシー | ${SITE_NAME}`,
+    description: "Agent Skills by ALSEL の個人情報の取り扱い・クッキー利用について。",
+    url: canonical("/privacy"),
+    siteName: SITE_NAME,
+    type: "website",
+    locale: "ja_JP",
+  },
 };
 
 export default function PrivacyPage() {

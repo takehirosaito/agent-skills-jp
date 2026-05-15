@@ -1,7 +1,21 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { SITE_NAME, canonical } from "@/lib/seo";
 
-export const metadata = {
-  title: "スキルを投稿 | Agent Skills by ALSEL",
+export const metadata: Metadata = {
+  title: "スキルを投稿",
+  description:
+    "Agent Skills by ALSEL にスキルを掲載リクエスト。GitHub Issue から、あなたが作った SKILL.md を投稿できます。",
+  alternates: { canonical: canonical("/submit") },
+  openGraph: {
+    title: `スキルを投稿 | ${SITE_NAME}`,
+    description:
+      "Agent Skills by ALSEL にスキルを掲載リクエスト。GitHub Issue から、あなたが作った SKILL.md を投稿できます。",
+    url: canonical("/submit"),
+    siteName: SITE_NAME,
+    type: "website",
+    locale: "ja_JP",
+  },
 };
 
 export default function SubmitPage() {
