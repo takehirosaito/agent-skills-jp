@@ -2,15 +2,32 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getStats } from "@/lib/meilisearch";
 import { FindSkillsInstallTabs } from "@/components/FindSkillsInstallTabs";
+import { SITE_NAME, canonical } from "@/lib/seo";
 
 export const revalidate = 300;
 
 export async function generateMetadata(): Promise<Metadata> {
+  const title = "find-skills - AIエージェントから日本語で Agent Skills を探す";
+  const description =
+    "Claude Code、Codex、Gemini CLI に追加するだけで、日本語の意図から Agent Skills を発見できる「find-skills」スキル。日本最大の Agent Skills データベース「Agent Skills by ALSEL」と連携。";
+  const url = canonical("/find-skills");
   return {
-    title:
-      "find-skills - AIエージェントから日本語で Agent Skills を探す",
-    description:
-      "Claude Code、Codex、Gemini CLI に追加するだけで、日本語の意図から Agent Skills を発見できる「find-skills」スキル。日本最大の Agent Skills データベース「Agent Skills by ALSEL」と連携。",
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${title} | ${SITE_NAME}`,
+      description,
+      url,
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "ja_JP",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${SITE_NAME}`,
+      description,
+    },
   };
 }
 

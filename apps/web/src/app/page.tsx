@@ -9,6 +9,7 @@ import {
   getCategories,
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
+import { SITE_DEFAULT_TITLE, SITE_NAME, canonical } from "@/lib/seo";
 
 export const revalidate = 300;
 
@@ -17,9 +18,25 @@ export async function generateMetadata(): Promise<Metadata> {
   const count = stats.totalSkills > 0
     ? stats.totalSkills.toLocaleString()
     : "6,800";
+  const description = `世界中から収集した Agent Skills 約 ${count} 件を日本語で検索・比較。Claude、OpenAI、Gemini、OpenCode に対応するスキルを、用途・対応 AI・導入方法から探せる専門データベースです。`;
   return {
-    title: "Agent Skills by ALSEL｜AI時代のスキル大全",
-    description: `世界中から収集した Agent Skills 約 ${count} 件を日本語で検索・比較。Claude、OpenAI、Gemini、OpenCode に対応するスキルを、用途・対応 AI・導入方法から探せる専門データベースです。`,
+    // トップは title.template を適用させないため absolute を使う
+    title: { absolute: SITE_DEFAULT_TITLE },
+    description,
+    alternates: { canonical: canonical("/") },
+    openGraph: {
+      title: SITE_DEFAULT_TITLE,
+      description,
+      url: canonical("/"),
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "ja_JP",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: SITE_DEFAULT_TITLE,
+      description,
+    },
   };
 }
 

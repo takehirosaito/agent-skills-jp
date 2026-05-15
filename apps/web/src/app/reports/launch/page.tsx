@@ -1,4 +1,5 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SkillCard } from "@/components/SkillCard";
 import {
   getStats,
@@ -7,13 +8,24 @@ import {
   CATEGORY_ICONS,
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
+import { SITE_NAME, canonical } from "@/lib/seo";
 
 export const revalidate = 300;
 
-export const metadata = {
-  title: "ローンチレポート | Agent Skills by ALSEL",
+export const metadata: Metadata = {
+  title: "ローンチレポート",
   description:
-    "Agent Skills by ALSEL のローンチ時点での収集統計・カテゴリ分布・上位スキル",
+    "Agent Skills by ALSEL のローンチ時点での収集統計・カテゴリ分布・上位スキル。",
+  alternates: { canonical: canonical("/reports/launch") },
+  openGraph: {
+    title: `ローンチレポート | ${SITE_NAME}`,
+    description:
+      "Agent Skills by ALSEL のローンチ時点での収集統計・カテゴリ分布・上位スキル。",
+    url: canonical("/reports/launch"),
+    siteName: SITE_NAME,
+    type: "article",
+    locale: "ja_JP",
+  },
 };
 
 export default async function LaunchReportPage() {

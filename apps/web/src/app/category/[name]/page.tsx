@@ -1,21 +1,53 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { SkillCard } from "@/components/SkillCard";
 import {
   listSkills,
   CATEGORY_LABELS,
   CATEGORY_ICONS,
 } from "@/lib/meilisearch";
+import { SITE_NAME, SITE_URL, canonical } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 
 export const revalidate = 300;
 
 type Params = Promise<{ name: string }>;
 
-export async function generateMetadata({ params }: { params: Params }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
   const { name } = await params;
   const label = CATEGORY_LABELS[name] ?? name;
+  // metadata 生成時に件数を取得 (revalidate ありで再生成される)
+  const { total } = await listSkills({
+    category: name,
+    limit: 1,
+    pinOriginals: false,
+  });
+  const countStr = total.toLocaleString();
+  const description = `${label}に関する Agent Skills を ${countStr} 件収録。Claude、OpenAI、Gemini、OpenCode に対応するスキルを、用途・対応 AI・導入方法から探せます。`;
+  const url = canonical(`/category/${name}`);
+
   return {
-    title: `${label} | Agent Skills by ALSEL`,
-    description: `カテゴリ「${label}」のスキル一覧`,
+    // layout の template が " | Agent Skills by ALSEL" を付けるので、ここはカテゴリ名のみ
+    title: label,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: `${label} | ${SITE_NAME}`,
+      description,
+      url,
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "ja_JP",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${label} | ${SITE_NAME}`,
+      description,
+    },
   };
 }
 
@@ -24,9 +56,47 @@ export default async function CategoryPage({ params }: { params: Params }) {
   const result = await listSkills({ category: name, limit: 100 });
   const label = CATEGORY_LABELS[name] ?? name;
   const icon = CATEGORY_ICONS[name] ?? "📦";
+  const url = canonical(`/category/${name}`);
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "ホーム", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "カテゴリ一覧",
+        item: canonical("/category"),
+      },
+      { "@type": "ListItem", position: 3, name: label, item: url },
+    ],
+  };
+
+  const collectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${url}#collection`,
+    url,
+    name: `${label} の Agent Skills`,
+    description: `${label}に関する Agent Skills の一覧。`,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    inLanguage: "ja",
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: result.total,
+      itemListElement: result.hits.slice(0, 20).map((s, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: canonical(`/skill/${s.slug}`),
+        name: s.name,
+      })),
+    },
+  };
 
   return (
     <main className="max-w-6xl mx-auto py-10 px-6">
+      <JsonLd data={[breadcrumbJsonLd, collectionJsonLd]} />
       <Link
         href="/"
         className="text-sm text-slate-500 hover:underline"

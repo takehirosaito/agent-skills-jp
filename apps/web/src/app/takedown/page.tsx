@@ -1,9 +1,21 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import { SITE_NAME, canonical } from "@/lib/seo";
 
-export const metadata = {
-  title: "削除依頼 / Takedown | Agent Skills by ALSEL",
+export const metadata: Metadata = {
+  title: "削除依頼 / Takedown",
   description:
     "agent-skills.jp に掲載されているスキル情報の削除依頼フォーム。著作権者・代理人のご請求を受け付けます。",
+  alternates: { canonical: canonical("/takedown") },
+  openGraph: {
+    title: `削除依頼 / Takedown | ${SITE_NAME}`,
+    description:
+      "agent-skills.jp に掲載されているスキル情報の削除依頼フォーム。",
+    url: canonical("/takedown"),
+    siteName: SITE_NAME,
+    type: "website",
+    locale: "ja_JP",
+  },
 };
 
 const SUBJECT = encodeURIComponent("[削除依頼] agent-skills.jp");
