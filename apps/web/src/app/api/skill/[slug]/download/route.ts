@@ -8,6 +8,7 @@ import { NextResponse } from "next/server";
 import path from "node:path";
 import { promises as fs } from "node:fs";
 import { getSkillBySlug } from "@/lib/meilisearch";
+import { classifyLicense } from "@/lib/license";
 
 export const runtime = "nodejs";
 export const revalidate = 300;
@@ -74,6 +75,22 @@ export async function GET(
   const skill = await getSkillBySlug(slug);
   if (!skill) {
     return NextResponse.json({ error: "not found", slug }, { status: 404, headers: CORS });
+  }
+
+  // 寛容ライセンス以外は配布しない(UI の BodyToggle と同じ判定)
+  const policy = classifyLicense(skill.license);
+  if (!policy.canShowFull) {
+    return NextResponse.json(
+      {
+        error: "license_restricted",
+        message:
+          "このスキルは寛容ライセンスではないため、本サイトからは配布していません。原本リポジトリで全文をご確認ください。",
+        license: policy.label,
+        repo_url: skill.repo_url ?? null,
+        raw_url: skill.raw_url ?? null,
+      },
+      { status: 403, headers: CORS },
+    );
   }
 
   const en = skill.content_full ?? "";
