@@ -49,10 +49,9 @@ jobs:
 
       - name: Skip if no functional change
         id: changes
-        working-directory: packages/find-skills-cli
         run: |
-          # bundled JSON とパッケージファイルが直近コミットで変わったか確認
-          if git diff --quiet HEAD~1 -- packages/find-skills-cli skills-index.json; then
+          # ルートからの pathspec で diff を取る (`:/` プレフィックスで repo root を明示)
+          if git diff --quiet HEAD~1 -- :/packages/find-skills-cli :/skills-index.json; then
             echo "no changes, skipping"
             echo "skip=true" >> "$GITHUB_OUTPUT"
           fi
