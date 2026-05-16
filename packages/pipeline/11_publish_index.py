@@ -34,7 +34,8 @@ def _trim(s: str | None, n: int) -> str:
 
 def fetch_all():
     out = []
-    for off in range(0, 10000, 500):
+    # Meilisearch 側 pagination.maxTotalHits は 50000 まで開放済み
+    for off in range(0, 50000, 500):
         body = json.dumps({
             "q": "",
             "limit": 500,

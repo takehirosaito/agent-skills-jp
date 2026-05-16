@@ -13,7 +13,7 @@ metadata:
 
 ユーザーが「○○のスキル探して」「○○できるスキルある?」と日本語で頼んだ時に、Agent Skills by ALSEL からスキルを発見・推薦するスキル。
 
-データは **npm パッケージ `alsel-find-skills` に内蔵**された約 4,000 件のインデックスで、claude.ai サンドボックスを含む各種環境から `npx` 経由で実行可能。npm registry は claude.ai の bash_tool allowlist に入っているため、外部 HTTP fetch なしで動作します。
+データは **npm パッケージ `alsel-find-skills` に内蔵**された 11,000 件超のインデックスで、claude.ai サンドボックスを含む各種環境から `npx` 経由で実行可能。npm registry は claude.ai の bash_tool allowlist に入っているため、外部 HTTP fetch なしで動作します。
 
 ## 使用場面
 
