@@ -2,7 +2,7 @@
 
 日本語の意図から **Agent Skills** を発見する CLI。
 
-[Agent Skills by ALSEL](https://agent-skills.jp/) の約 4,000 件の Agent Skills インデックスを内蔵し、Claude Code / Codex / Gemini CLI / claude.ai (Web) いずれのエージェント環境からでも `npx alsel-find-skills <query>` でフル検索できる。
+[Agent Skills by ALSEL](https://agent-skills.jp/) の **11,000 件超** の Agent Skills インデックスを内蔵(うち **7,600 件超は寛容ライセンスで全文ダウンロード可**)し、Claude Code / Codex / Gemini CLI / claude.ai (Web) いずれのエージェント環境からでも `npx alsel-find-skills <query>` でフル検索できる。
 
 ## なぜ npm パッケージなのか
 
@@ -37,7 +37,7 @@ npx alsel-find-skills PDF 処理 --limit=10 --json
 
 ## データ
 
-`skills-index.json` に約 4,000 件のスキルメタデータを内蔵 (約 3 MB)。データは [Agent Skills by ALSEL](https://agent-skills.jp) の本番 Meilisearch から日次で更新され、GitHub Actions で patch バージョンを自動 publish。
+`skills-index.json` に **11,000 件超** のスキルメタデータを内蔵 (約 8 MB)。データは [Agent Skills by ALSEL](https://agent-skills.jp) の本番 Meilisearch から日次で更新され、GitHub Actions で patch バージョンを自動 publish。
 
 各スキルのフィールド:
 
