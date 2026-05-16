@@ -64,6 +64,7 @@ SETTINGS = {
         "is_internal",
         "is_off_topic",
         "is_duplicate",
+        "is_chinese_leak",
     ],
     "sortableAttributes": [
         "quality_score",
@@ -109,6 +110,7 @@ SETTINGS = {
         "is_internal",
         "is_off_topic",
         "is_duplicate",
+        "is_chinese_leak",
     ],
     "stopWords": [],
     # 日本語複合語(やる気・会計 等)は lindera が形態素分解するため、

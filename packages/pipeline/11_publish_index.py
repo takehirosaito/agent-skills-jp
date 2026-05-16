@@ -40,7 +40,7 @@ def fetch_all():
             "q": "",
             "limit": 500,
             "offset": off,
-            "filter": "is_template != true AND is_internal != true AND is_off_topic != true AND is_duplicate != true",
+            "filter": "is_template != true AND is_internal != true AND is_off_topic != true AND is_duplicate != true AND is_chinese_leak != true",
             "attributesToRetrieve": [
                 "slug", "name", "description_ja", "category", "vendor",
                 "quality_score", "license", "is_original", "repo_url", "raw_url",

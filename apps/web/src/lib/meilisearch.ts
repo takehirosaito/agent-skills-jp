@@ -16,12 +16,14 @@ const index = client.index("skills");
 // - is_internal: 特定組織の内部リポでしか使えないスキル (Claude 判定)
 // - is_off_topic: 文芸/占い/ゲームfan/思想家フレームワーク等 AI/dev/業務に無関係 (Claude 判定)
 // - is_duplicate: 同一スキルの fork コピー。canonical(最も star 多い等)1件のみ表示
+// - is_chinese_leak: 日本語翻訳に中国語が混入(ひらがな 0)。再翻訳待ち
 // Meilisearch の != は値が一致しないドキュメント (フィールド未定義含む) も返す。
 const EXCLUDE_HIDDEN = [
   "is_template != true",
   "is_internal != true",
   "is_off_topic != true",
   "is_duplicate != true",
+  "is_chinese_leak != true",
 ];
 
 export type Skill = {
