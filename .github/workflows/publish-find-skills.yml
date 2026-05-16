@@ -49,6 +49,8 @@ jobs:
 
       - name: Skip if no functional change
         id: changes
+        # push トリガーのみで skip 判定を行う。workflow_dispatch は常に publish する
+        if: github.event_name == 'push'
         run: |
           # ルートからの pathspec で diff を取る (`:/` プレフィックスで repo root を明示)
           if git diff --quiet HEAD~1 -- :/packages/find-skills-cli :/skills-index.json; then
