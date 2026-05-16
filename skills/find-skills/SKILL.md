@@ -1,6 +1,6 @@
 ---
 name: find-skills
-description: 日本語の意図から Agent Skills を発見する。「楽天SEOのスキル探して」「PDFを処理したい」「データ分析を自動化したい」などの日本語リクエストに対応。Claude Code (CLI)、Codex、Gemini CLI、claude.ai (Web) いずれでも動作。日本最大の Agent Skills データベース「Agent Skills by ALSEL」(約4,000件、全件日本語化) から、ユーザーの意図に合うスキルを推薦・インストール案内する。
+description: 日本語の意図から Agent Skills を発見する。「楽天SEOのスキル探して」「PDFを処理したい」「データ分析を自動化したい」などの日本語リクエストに対応。Claude Code (CLI)、Codex、Gemini CLI、claude.ai (Web) いずれでも動作。日本最大の Agent Skills データベース「Agent Skills by ALSEL」(11,000件超、全件日本語化、ダウンロード可能スキル8,600件超) から、ユーザーの意図に合うスキルを推薦・インストール案内する。
 license: MIT
 metadata:
   author: 株式会社ALSEL
