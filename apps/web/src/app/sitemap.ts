@@ -28,12 +28,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }),
   );
 
-  // 個別スキルページ (最大 5000 件まで)
+  // 個別スキルページ
+  // Meilisearch 側 pagination.maxTotalHits は 50000 まで開放済み
+  // (packages/pipeline/07_index.py)。Google sitemap の上限も 50000 URL/file
+  // なので、それを安全側の上限として走査する。これを超える規模になったら
+  // generateSitemaps による分割が必要。
+  const SKILL_URL_HARD_CAP = 50000;
   const skillUrls: MetadataRoute.Sitemap = [];
   try {
     const PAGE = 1000;
-    for (let offset = 0; offset < 5000; offset += PAGE) {
-      const r = await listSkills({ limit: PAGE, offset });
+    for (let offset = 0; offset < SKILL_URL_HARD_CAP; offset += PAGE) {
+      const r = await listSkills({
+        limit: PAGE,
+        offset,
+        pinOriginals: false,
+      });
       for (const s of r.hits) {
         skillUrls.push({
           url: `${SITE}/skill/${s.slug}`,
