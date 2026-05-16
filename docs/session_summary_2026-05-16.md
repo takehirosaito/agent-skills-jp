@@ -2,7 +2,7 @@
 
 > 開始: 2026-05-16 朝(takeha 帰宅前)
 > 完了: 2026-05-16(昼前)
-> 総コスト: **$67.25**(承認上限 $150 の 44.8%)
+> 総コスト: **$87.40**(承認上限 $150 の 58%、Phase 2 retry + Chinese-leak QA まで含む)
 > 連続実行スコープ: Step 1(API ライセンスゲート)→ Option A(既存救出)→ Option B(skills.sh top 10K)→ Phase 1(分類)→ Phase 2(本文翻訳)→ Phase 3(プレス v2 原稿)
 
 ---
@@ -105,11 +105,12 @@
 |---|---|---|---|
 | Option B Stage 5 | Anthropic Sonnet 4.6 | description 翻訳 6,620 件 | $17.95 |
 | Phase 1 | Anthropic Haiku 4.5 | リポ単位 is_internal/is_off_topic 分類 1,412 件 | $1.75 |
-| Phase 2 v3 | Anthropic Haiku 4.5(streaming) | SKILL.md 本文翻訳 5,205 件 | $47.47 |
+| Phase 2 v3 | Anthropic Haiku 4.5(streaming) | SKILL.md 本文翻訳 5,205 件(初回) | $47.47 |
+| Phase 2 retry | Anthropic Haiku 4.5 | クレジット復旧後 retry +1,792 件 | $20.10 |
 | 計測サンプル | Sonnet 4.6 / Haiku 4.5 | 各 1 件比較 | ~$0.08 |
-| **合計** | | | **$67.25** |
+| **合計** | | | **$87.40** |
 | **承認上限** | | | $150.00 |
-| **残予算** | | | **$82.75** |
+| **残予算** | | | **$62.60** |
 
 GitHub API・Meilisearch・Vercel デプロイは無料枠内、コスト発生なし。
 
