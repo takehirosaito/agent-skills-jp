@@ -1,6 +1,6 @@
 {
   "name": "alsel-find-skills",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "日本語の意図から Agent Skills (Claude Code / Codex / Gemini CLI / claude.ai) を発見する CLI。Agent Skills by ALSEL の約 4,000 件インデックスを内蔵。",
   "keywords": [
     "agent-skills",
