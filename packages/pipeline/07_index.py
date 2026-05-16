@@ -70,14 +70,18 @@ SETTINGS = {
         "last_updated",
         "content_length",
     ],
+    # ranking 順を「精度優先」に再構成
+    #   words → exactness → attribute を先に評価することで、
+    #   synonym/トークナイズ展開で広く拾われた中から、
+    #   完全一致 + name 一致のスキルが上位に来る。
     "rankingRules": [
         "words",
+        "exactness",
+        "attribute",
         "typo",
         "proximity",
-        "attribute",
         "sort",
         "quality_score:desc",
-        "exactness",
     ],
     "displayedAttributes": [
         "id",
@@ -105,18 +109,115 @@ SETTINGS = {
         "is_off_topic",
     ],
     "stopWords": [],
+    # 日本語複合語(やる気・会計 等)は lindera が形態素分解するため、
+    # dictionary に登録して1単語化したいフレーズを明示する。
+    # これによりトークナイズ後の AND マッチで他の語との誤マッチが減る。
+    "dictionary": [
+        # 業務系よく検索される複合語
+        "やる気", "会計", "経理", "簿記", "財務", "売上", "売り上げ", "収益",
+        "顧客", "カスタマー", "クライアント", "経営", "マネジメント",
+        "マーケティング", "販促", "営業", "広告",
+        # AI / dev 系
+        "エージェント", "プロンプト", "ワークフロー", "自動化",
+        "翻訳", "要約", "校正", "校閲", "編集",
+        "テスト", "デプロイ", "リファクタ", "リファクタリング",
+        "ドキュメント", "ドキュメンテーション", "コードレビュー",
+        "セキュリティ", "認証", "暗号化",
+        "デザイン", "ユーザー体験", "アクセシビリティ",
+        "画像", "動画", "音声", "音楽",
+        # JP固有 EC
+        "楽天市場", "楽天SEO", "Amazon.co.jp", "ヤフオク",
+        # その他カタカナ複合
+        "モチベーション", "アナリティクス",
+    ],
     "synonyms": {
-        "ai": ["artificial intelligence", "人工知能"],
+        # Core abbreviations / Latin <-> JP
+        "ai": ["artificial intelligence", "人工知能", "AI"],
         "ec": ["e-commerce", "ecommerce", "イーコマース"],
         "llm": ["language model", "大規模言語モデル"],
-        # 楽天市場/楽天/Rakuten は lindera が「楽天市場」を1単語として扱うため明示
         "rakuten": ["楽天", "楽天市場", "Rakuten"],
-        "楽天": ["楽天市場", "rakuten", "Rakuten", "rakuten-seo", "rakuten-rms"],
+        "楽天": ["楽天市場", "rakuten", "Rakuten"],
         "楽天市場": ["楽天", "rakuten"],
-        "amazon": ["アマゾン", "Amazon.co.jp", "amzn"],
-        "アマゾン": ["amazon", "Amazon"],
-        "seo": ["SEO", "検索最適化", "search engine optimization"],
-        "csv": ["CSV", "ファイル"],
+        "amazon": ["アマゾン", "Amazon.co.jp"],
+        "アマゾン": ["amazon"],
+        "seo": ["SEO", "検索最適化"],
+
+        # Motivation
+        "やる気": ["モチベーション", "motivation", "モチベ"],
+        "モチベーション": ["やる気", "motivation", "モチベ"],
+        "motivation": ["やる気", "モチベーション"],
+
+        # Accounting / Finance
+        "会計": ["accounting", "経理", "簿記"],
+        "accounting": ["会計", "経理", "簿記"],
+        "経理": ["accounting", "会計", "簿記"],
+        "簿記": ["accounting", "会計", "bookkeeping"],
+        "財務": ["finance"],
+        "finance": ["財務"],
+
+        # Customer
+        "顧客": ["customer", "カスタマー"],
+        "customer": ["顧客", "カスタマー"],
+        "カスタマー": ["customer", "顧客"],
+
+        # Sales
+        "売上": ["売り上げ", "revenue", "sales"],
+        "売り上げ": ["売上"],
+        "revenue": ["売上", "sales"],
+        "sales": ["売上"],
+
+        # Management
+        "マネジメント": ["management"],
+        "management": ["マネジメント"],
+
+        # Marketing
+        "マーケティング": ["marketing"],
+        "marketing": ["マーケティング"],
+
+        # Dev
+        "開発": ["development"],
+        "development": ["開発"],
+
+        # Testing
+        "テスト": ["test", "testing"],
+        "testing": ["テスト"],
+
+        # Deploy
+        "デプロイ": ["deploy", "deployment"],
+        "deployment": ["デプロイ", "deploy"],
+
+        # Docs
+        "ドキュメント": ["docs", "documentation"],
+        "documentation": ["docs", "ドキュメント"],
+
+        # Agent
+        "エージェント": ["agent"],
+        "プロンプト": ["prompt"],
+
+        # Workflow / Automation
+        "ワークフロー": ["workflow"],
+        "workflow": ["ワークフロー"],
+        "自動化": ["automation"],
+        "automation": ["自動化"],
+
+        # Design
+        "デザイン": ["design"],
+        "design": ["デザイン"],
+
+        # Security
+        "セキュリティ": ["security"],
+        "security": ["セキュリティ"],
+
+        # Excel
+        "エクセル": ["excel", "xlsx"],
+        "excel": ["エクセル", "xlsx"],
+
+        # Translation
+        "翻訳": ["translation"],
+        "translation": ["翻訳"],
+
+        # File formats
+        "csv": ["CSV"],
     },
     "typoTolerance": {
         "enabled": True,
