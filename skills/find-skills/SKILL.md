@@ -1,6 +1,6 @@
 ---
 name: find-skills
-description: 日本語の意図から Agent Skills を発見する。「楽天SEOのスキル探して」「PDFを処理したい」「データ分析を自動化したい」などの日本語リクエストに対応。Claude Code (CLI)、Codex、Gemini CLI、claude.ai (Web) いずれでも動作。日本最大の Agent Skills データベース「Agent Skills by ALSEL」(11,000件超、全件日本語化、ダウンロード可能スキル8,600件超) から、ユーザーの意図に合うスキルを推薦・インストール案内する。
+description: 日本語の意図から Agent Skills を発見する。「楽天SEOのスキル探して」「PDFを処理したい」「データ分析を自動化したい」などの日本語リクエストに対応。Claude Code (CLI)、Codex、Gemini CLI、claude.ai (Web) いずれでも動作。日本最大の Agent Skills データベース「Agent Skills by ALSEL」(10,000件超、全件日本語化、ダウンロード可能スキル7,000件超) から、ユーザーの意図に合うスキルを推薦・インストール案内する。
 license: MIT
 metadata:
   author: 株式会社ALSEL
@@ -13,7 +13,7 @@ metadata:
 
 ユーザーが「○○のスキル探して」「○○できるスキルある?」と日本語で頼んだ時に、Agent Skills by ALSEL からスキルを発見・推薦するスキル。
 
-データは **npm パッケージ `alsel-find-skills` に内蔵**された 11,000 件超のインデックスで、claude.ai サンドボックスを含む各種環境から `npx` 経由で実行可能。npm registry は claude.ai の bash_tool allowlist に入っているため、外部 HTTP fetch なしで動作します。
+データは **npm パッケージ `alsel-find-skills` に内蔵**された 10,000 件超のインデックスで、claude.ai サンドボックスを含む各種環境から `npx` 経由で実行可能。npm registry は claude.ai の bash_tool allowlist に入っているため、外部 HTTP fetch なしで動作します。
 
 ## 使用場面
 
