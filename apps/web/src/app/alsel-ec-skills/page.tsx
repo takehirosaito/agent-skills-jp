@@ -99,9 +99,15 @@ export default async function AlselEcSkillsPage() {
             <a
               key={cat.id}
               href={`#${cat.id}`}
-              className="block p-3 bg-white border border-slate-200 rounded-lg hover:border-amber-400 hover:shadow transition"
+              className="block p-3 bg-white border border-slate-200 rounded-lg hover:shadow transition"
+              style={{ borderLeftWidth: "4px", borderLeftColor: cat.color }}
             >
-              <div className="text-2xl mb-1">{cat.icon}</div>
+              <div
+                className="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-sm mb-2"
+                style={{ backgroundColor: cat.bg, color: cat.color }}
+              >
+                {cat.mark}
+              </div>
               <div className="font-bold text-sm">{cat.label}</div>
               <div className="text-xs text-slate-500">{items.length}スキル</div>
             </a>
@@ -115,8 +121,13 @@ export default async function AlselEcSkillsPage() {
         if (items.length === 0) return null;
         return (
           <section key={cat.id} id={cat.id} className="mb-14 scroll-mt-20">
-            <div className="flex items-baseline gap-3 mb-4 border-b border-slate-200 pb-3">
-              <span className="text-3xl">{cat.icon}</span>
+            <div className="flex items-center gap-3 mb-4 border-b border-slate-200 pb-3">
+              <div
+                className="w-11 h-11 rounded-lg flex items-center justify-center font-bold text-lg shrink-0"
+                style={{ backgroundColor: cat.bg, color: cat.color }}
+              >
+                {cat.mark}
+              </div>
               <h2 className="text-2xl font-bold">{cat.label}</h2>
               <span className="text-sm text-slate-500">
                 {items.length} スキル

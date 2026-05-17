@@ -20,79 +20,108 @@ export type AlselEcCategoryId =
 export type AlselEcCategory = {
   id: AlselEcCategoryId;
   label: string;
-  icon: string;
+  /** タイル左上に表示する短いマーク（ロゴ代わりの文字/記号） */
+  mark: string;
+  /** ブランドを連想させるアクセントカラー（Tailwind hex） */
+  color: string;
+  /** タイル背景の淡い色 */
+  bg: string;
   desc: string;
   count: number;
 };
 
+/**
+ * 各カテゴリのカラーは主要モール/業界のブランドカラーを参考にした
+ * 「それっぽい色」を採用。商標ロゴは使わず、頭文字または記号でロゴ風に表示。
+ */
 export const ALSEL_EC_CATEGORIES: AlselEcCategory[] = [
   {
     id: "amazon",
     label: "Amazon",
-    icon: "📦",
+    mark: "a.",
+    color: "#FF9900",
+    bg: "#FFF7ED",
     desc: "A+コンテンツ・フラットファイル・SP広告・タイトル改善ほか",
     count: 15,
   },
   {
     id: "rakuten",
     label: "楽天市場",
-    icon: "🛒",
+    mark: "R",
+    color: "#BF0000",
+    bg: "#FEF2F2",
     desc: "RMS日次パトロール・RPP・SS準備・商品名/キャッチコピーほか",
     count: 20,
   },
   {
     id: "shopify",
     label: "Shopify",
-    icon: "🟢",
+    mark: "S",
+    color: "#5E8E3E",
+    bg: "#F0FDF4",
     desc: "Liquid/Metafields・CVR診断・SEO・放棄カートメールほか",
     count: 10,
   },
   {
     id: "yahoo",
     label: "Yahoo!ショッピング",
-    icon: "🟣",
+    mark: "Y!",
+    color: "#7C3AED",
+    bg: "#F5F3FF",
     desc: "PayPay施策・優良配送・CSV検証・アイテムマッチ広告ほか",
     count: 10,
   },
   {
     id: "other-cart",
     label: "他カート",
-    icon: "🏪",
+    mark: "○",
+    color: "#475569",
+    bg: "#F8FAFC",
     desc: "BASE/STORES・futureshop・makeshop 商品ページ・メールほか",
     count: 5,
   },
   {
     id: "legal",
     label: "法務・規約",
-    icon: "⚖️",
+    mark: "§",
+    color: "#1E40AF",
+    bg: "#EFF6FF",
     desc: "薬機法・景表法・特商法・インボイス制度・返品ポリシーほか",
     count: 7,
   },
   {
     id: "data",
     label: "データ・CSV",
-    icon: "📊",
+    mark: "{ }",
+    color: "#0E7490",
+    bg: "#ECFEFF",
     desc: "JANコード・Shift_JIS/UTF-8・ネクストエンジン・GMC連携ほか",
     count: 6,
   },
   {
     id: "customer",
     label: "顧客対応・メール",
-    icon: "✉️",
+    mark: "@",
+    color: "#047857",
+    bg: "#ECFDF5",
     desc: "問合せ返信・配送遅延お詫び・FAQ作成・LINE/メルマガほか",
     count: 6,
   },
   {
     id: "ad",
     label: "広告・LP・SNS",
-    icon: "📢",
+    mark: "Ad",
+    color: "#DB2777",
+    bg: "#FDF2F8",
     desc: "Meta広告・SNS投稿・LP診断・インフルエンサー依頼ほか",
     count: 8,
   },
   {
     id: "master",
     label: "商品マスタ・分析",
-    icon: "🏷️",
+    mark: "▦",
+    color: "#B45309",
+    bg: "#FFFBEB",
     desc: "SKU命名・粗利計算・在庫・季節カレンダー・ベネフィット化ほか",
     count: 13,
   },
@@ -138,12 +167,6 @@ const AD_SLUGS = new Set([
 ]);
 
 const OTHER_CART_PREFIXES = ["base-", "futureshop-", "makeshop-"];
-
-const LEGACY_SLUGS = new Set([
-  "rakuten-seo",
-  "amazon-seo-jp",
-  "rakuten-bulk-control-csv",
-]);
 
 /**
  * ALSEL独自EC実務スキルのslugを10カテゴリに分類する。

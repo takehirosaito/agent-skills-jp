@@ -196,6 +196,7 @@ export async function getFeaturedSkills(limit: number) {
 /**
  * ALSEL独自スキルかつ category=ecommerce-marketing のスキル全件を取得。
  * /alsel-ec-skills 特集ページとトップページのEC特集セクションで使用。
+ * 注: slug は Meilisearch の sortable に含まれていないため quality_score のみで並べる。
  */
 export async function getAlselEcSkills(): Promise<Skill[]> {
   try {
@@ -205,7 +206,7 @@ export async function getAlselEcSkills(): Promise<Skill[]> {
         'category = "ecommerce-marketing"',
         ...EXCLUDE_HIDDEN,
       ],
-      sort: ["quality_score:desc", "slug:asc"],
+      sort: ["quality_score:desc"],
       limit: 200,
     });
     return result.hits as unknown as Skill[];

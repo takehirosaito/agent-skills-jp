@@ -171,10 +171,16 @@ export default async function HomePage() {
                 <Link
                   key={cat.id}
                   href={`/alsel-ec-skills#${cat.id}`}
-                  className="block p-4 bg-white border border-amber-200 rounded-lg hover:shadow-md hover:border-amber-400 transition"
+                  className="block p-4 bg-white border border-slate-200 rounded-lg hover:shadow-md transition group"
+                  style={{ borderLeftWidth: "4px", borderLeftColor: cat.color }}
                 >
-                  <div className="text-3xl mb-2">{cat.icon}</div>
-                  <div className="font-bold text-sm leading-snug">
+                  <div
+                    className="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-base mb-3"
+                    style={{ backgroundColor: cat.bg, color: cat.color }}
+                  >
+                    {cat.mark}
+                  </div>
+                  <div className="font-bold text-sm leading-snug text-slate-900">
                     {cat.label}
                   </div>
                   <div className="text-xs text-slate-500 mt-1">
