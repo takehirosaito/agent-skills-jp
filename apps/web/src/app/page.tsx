@@ -164,26 +164,26 @@ export default async function HomePage() {
             楽天・Amazon・Shopify・Yahoo!・法務・データ・広告まで、EC運用の現場でそのまま使えるスキルを{" "}
             {alselEc.length} 件、カテゴリ別にまとめています。
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {ALSEL_EC_CATEGORIES.map((cat) => {
               const count = alselEcCounts[cat.id] ?? 0;
               return (
                 <Link
                   key={cat.id}
                   href={`/alsel-ec-skills#${cat.id}`}
-                  className="block p-4 bg-white border border-slate-200 rounded-lg hover:shadow-md transition group"
-                  style={{ borderLeftWidth: "4px", borderLeftColor: cat.color }}
+                  className="block p-6 bg-white border border-slate-200 rounded-xl hover:shadow-md transition group"
+                  style={{ borderLeftWidth: "5px", borderLeftColor: cat.color }}
                 >
                   <div
-                    className="w-10 h-10 rounded-lg flex items-center justify-center font-bold text-base mb-3"
+                    className="w-16 h-16 rounded-xl flex items-center justify-center font-bold text-2xl mb-4"
                     style={{ backgroundColor: cat.bg, color: cat.color }}
                   >
                     {cat.mark}
                   </div>
-                  <div className="font-bold text-sm leading-snug text-slate-900">
+                  <div className="font-bold text-lg leading-snug text-slate-900">
                     {cat.label}
                   </div>
-                  <div className="text-xs text-slate-500 mt-1">
+                  <div className="text-sm text-slate-500 mt-1.5">
                     {count} スキル
                   </div>
                 </Link>

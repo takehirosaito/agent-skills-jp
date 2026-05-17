@@ -92,24 +92,24 @@ export default async function AlselEcSkillsPage() {
       </div>
 
       {/* カテゴリ目次 */}
-      <div className="mb-12 grid grid-cols-2 md:grid-cols-5 gap-3">
+      <div className="mb-12 grid grid-cols-2 md:grid-cols-5 gap-4">
         {ALSEL_EC_CATEGORIES.map((cat) => {
           const items = grouped[cat.id] ?? [];
           return (
             <a
               key={cat.id}
               href={`#${cat.id}`}
-              className="block p-3 bg-white border border-slate-200 rounded-lg hover:shadow transition"
-              style={{ borderLeftWidth: "4px", borderLeftColor: cat.color }}
+              className="block p-5 bg-white border border-slate-200 rounded-xl hover:shadow transition"
+              style={{ borderLeftWidth: "5px", borderLeftColor: cat.color }}
             >
               <div
-                className="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-sm mb-2"
+                className="w-14 h-14 rounded-xl flex items-center justify-center font-bold text-xl mb-3"
                 style={{ backgroundColor: cat.bg, color: cat.color }}
               >
                 {cat.mark}
               </div>
-              <div className="font-bold text-sm">{cat.label}</div>
-              <div className="text-xs text-slate-500">{items.length}スキル</div>
+              <div className="font-bold text-base text-slate-900">{cat.label}</div>
+              <div className="text-sm text-slate-500 mt-1">{items.length} スキル</div>
             </a>
           );
         })}
@@ -121,19 +121,19 @@ export default async function AlselEcSkillsPage() {
         if (items.length === 0) return null;
         return (
           <section key={cat.id} id={cat.id} className="mb-14 scroll-mt-20">
-            <div className="flex items-center gap-3 mb-4 border-b border-slate-200 pb-3">
+            <div className="flex items-center gap-4 mb-4 border-b border-slate-200 pb-4">
               <div
-                className="w-11 h-11 rounded-lg flex items-center justify-center font-bold text-lg shrink-0"
+                className="w-14 h-14 rounded-xl flex items-center justify-center font-bold text-2xl shrink-0"
                 style={{ backgroundColor: cat.bg, color: cat.color }}
               >
                 {cat.mark}
               </div>
-              <h2 className="text-2xl font-bold">{cat.label}</h2>
-              <span className="text-sm text-slate-500">
+              <h2 className="text-3xl font-bold">{cat.label}</h2>
+              <span className="text-base text-slate-500">
                 {items.length} スキル
               </span>
             </div>
-            <p className="text-sm text-slate-600 mb-5">{cat.desc}</p>
+            <p className="text-base text-slate-600 mb-6">{cat.desc}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {items.map((skill) => (
                 <SkillCard key={skill.id} skill={skill} />
