@@ -97,6 +97,124 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ALSEL EC AI 大型誘導セクション（最優先導線） */}
+      <section
+        className="relative py-20 px-6 overflow-hidden"
+        style={{
+          background:
+            "linear-gradient(135deg, #0f172a 0%, #1e1b3a 45%, #3a2a14 100%)",
+        }}
+      >
+        {/* 装飾：右上のゴールド発光 */}
+        <div
+          className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
+          style={{ backgroundColor: "#C9A84C" }}
+        />
+        <div
+          className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full opacity-10 blur-3xl pointer-events-none"
+          style={{ backgroundColor: "#C9A84C" }}
+        />
+
+        <div className="relative max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div
+              className="inline-flex items-center gap-2 px-4 py-1.5 mb-5 rounded-full text-sm font-bold text-slate-900"
+              style={{ backgroundColor: "#C9A84C" }}
+            >
+              ⭐ EC事業者の方へ・ALSEL公式
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight text-white">
+              EC の売上を、
+              <br className="md:hidden" />
+              <span style={{ color: "#C9A84C" }}>AI で加速する。</span>
+            </h2>
+            <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              19年・5,000社のEC支援ノウハウを{" "}
+              <span style={{ color: "#C9A84C" }} className="font-bold">
+                {alselEc.length} 本のAIスキル
+              </span>{" "}
+              に体系化。
+              <br className="hidden md:inline" />
+              「使えるAI運用」まで{" "}
+              <span className="font-bold text-white">ALSEL が伴走支援</span>
+              します。
+            </p>
+          </div>
+
+          {/* 数字訴求 3カード */}
+          <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto mb-12">
+            <div className="text-center">
+              <div
+                className="text-4xl md:text-6xl font-black mb-1"
+                style={{ color: "#C9A84C" }}
+              >
+                19
+              </div>
+              <div className="text-xs md:text-sm text-slate-400 font-medium">
+                年の伴走実績
+              </div>
+            </div>
+            <div className="text-center">
+              <div
+                className="text-4xl md:text-6xl font-black mb-1"
+                style={{ color: "#C9A84C" }}
+              >
+                5,000<span className="text-2xl md:text-4xl">+</span>
+              </div>
+              <div className="text-xs md:text-sm text-slate-400 font-medium">
+                社のEC支援
+              </div>
+            </div>
+            <div className="text-center">
+              <div
+                className="text-4xl md:text-6xl font-black mb-1"
+                style={{ color: "#C9A84C" }}
+              >
+                {alselEc.length}
+              </div>
+              <div className="text-xs md:text-sm text-slate-400 font-medium">
+                AIスキル収録
+              </div>
+            </div>
+          </div>
+
+          {/* メインCTA */}
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center max-w-2xl mx-auto">
+            <a
+              href="https://alsel.co.jp/pages/alsel-ecai-lp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg hover:shadow-2xl hover:scale-[1.02] transition"
+              style={{ backgroundColor: "#C9A84C", color: "#0f172a" }}
+            >
+              ALSEL EC AI を見る ↗
+            </a>
+            <a
+              href="https://alsel.co.jp/pages/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base md:text-lg border-2 hover:bg-white/5 transition text-white"
+              style={{ borderColor: "#C9A84C" }}
+            >
+              無料で相談する ↗
+            </a>
+          </div>
+
+          <p className="text-center text-xs text-slate-500 mt-6">
+            運営：株式会社ALSEL（
+            <a
+              href="https://alsel.co.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-slate-300"
+            >
+              alsel.co.jp
+            </a>
+            ）
+          </p>
+        </div>
+      </section>
+
       {/* find-skills CTA (AIエージェントから直接使う) */}
       <section className="py-12 px-6 bg-slate-900 text-white">
         <div className="max-w-5xl mx-auto">
@@ -189,51 +307,6 @@ export default async function HomePage() {
                 </Link>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* ALSEL EC AI への誘導CTA */}
-      <section className="py-12 px-6 bg-slate-900 text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 justify-between">
-            <div className="flex-1">
-              <div
-                className="inline-block px-2.5 py-0.5 mb-3 rounded-full text-xs font-bold text-slate-900"
-                style={{ backgroundColor: "#C9A84C" }}
-              >
-                EC事業者の方へ
-              </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
-                ALSELのEC × AI コンサルティングで、
-                <br className="hidden md:inline" />
-                スキルを「使いこなす運用」まで支援します。
-              </h2>
-              <p className="text-slate-300 leading-relaxed text-sm md:text-base">
-                Agent Skillsを社内に導入したい、自社のEC運用をAIで再設計したい、
-                ALSELの19年・5,000社のノウハウを実装支援込みで欲しい——
-                そんな方向けに、ALSEL EC AI コンサルティングをご用意しています。
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 shrink-0 md:min-w-[260px]">
-              <a
-                href="https://alsel.co.jp/pages/alsel-ecai-lp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium hover:opacity-90"
-                style={{ backgroundColor: "#C9A84C", color: "#0f172a" }}
-              >
-                ALSEL EC AI を見る ↗
-              </a>
-              <a
-                href="https://alsel.co.jp/pages/contact"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-slate-700 rounded-lg text-sm text-slate-300 hover:bg-slate-800"
-              >
-                お問い合わせ ↗
-              </a>
-            </div>
           </div>
         </div>
       </section>
