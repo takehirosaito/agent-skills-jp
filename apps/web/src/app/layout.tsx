@@ -138,25 +138,77 @@ export default async function RootLayout({
         </header>
         <div className="flex-1">{children}</div>
         <footer className="border-t border-slate-200 mt-12">
-          <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between gap-4 text-sm text-slate-600">
+          <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-slate-600">
             <div>
-              <div className="font-bold text-slate-900">Agent Skills by ALSEL</div>
+              <div className="font-bold text-slate-900 text-base">
+                Agent Skills by ALSEL
+              </div>
               <div className="mt-1 text-slate-500">AI時代のスキル大全。</div>
               {stats.totalSkills > 0 && (
                 <div className="mt-1 text-slate-500">
                   現在 <strong>{count}</strong> 件を収録
                 </div>
               )}
-              <div className="mt-2 text-xs">© 2026 ALSEL Inc. / 株式会社ALSEL</div>
+              <div className="mt-3 text-xs text-slate-500">
+                運営：株式会社ALSEL（19年・5,000社のEC支援実績）
+              </div>
+              <div className="mt-1 text-xs">© 2026 ALSEL Inc.</div>
             </div>
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
-              <Link href="/about" className="hover:text-slate-900">About</Link>
-              <Link href="/terms" className="hover:text-slate-900">利用規約</Link>
-              <Link href="/privacy" className="hover:text-slate-900">プライバシー</Link>
-              <Link href="/takedown" className="hover:text-slate-900">削除依頼</Link>
-              <a href="mailto:info@alsel.co.jp" className="hover:text-slate-900">
-                お問い合わせ
-              </a>
+
+            <div>
+              <div className="font-bold text-slate-900 mb-3">サイト内</div>
+              <div className="flex flex-col gap-2">
+                <Link href="/" className="hover:text-slate-900">トップ</Link>
+                <Link href="/alsel-ec-skills" className="hover:text-slate-900">
+                  ALSEL独自・EC実務スキル100選
+                </Link>
+                <Link href="/find-skills" className="hover:text-slate-900">
+                  find-skills（AIエージェント向け）
+                </Link>
+                <Link href="/directory" className="hover:text-slate-900">
+                  全スキル一覧
+                </Link>
+                <Link href="/about" className="hover:text-slate-900">About</Link>
+                <Link href="/terms" className="hover:text-slate-900">利用規約</Link>
+                <Link href="/privacy" className="hover:text-slate-900">プライバシー</Link>
+                <Link href="/takedown" className="hover:text-slate-900">削除依頼</Link>
+              </div>
+            </div>
+
+            <div>
+              <div className="font-bold text-slate-900 mb-3">株式会社ALSEL</div>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://alsel.co.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900"
+                >
+                  ALSEL コーポレートサイト ↗
+                </a>
+                <a
+                  href="https://alsel.co.jp/pages/alsel-ecai-lp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900"
+                >
+                  ALSEL EC AI（EC × AI コンサル） ↗
+                </a>
+                <a
+                  href="https://alsel.co.jp/pages/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900"
+                >
+                  ALSELへのお問い合わせ ↗
+                </a>
+                <a
+                  href="mailto:info@alsel.co.jp"
+                  className="hover:text-slate-900 text-slate-500 text-xs mt-1"
+                >
+                  サイトに関する問い合わせ：info@alsel.co.jp
+                </a>
+              </div>
             </div>
           </div>
         </footer>

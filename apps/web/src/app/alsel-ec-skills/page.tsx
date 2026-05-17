@@ -143,24 +143,66 @@ export default async function AlselEcSkillsPage() {
         );
       })}
 
-      {/* CTA */}
-      <section className="mt-16 p-8 bg-slate-900 text-white rounded-2xl text-center">
-        <h2 className="text-2xl font-bold mb-3">
-          まとめてAIエージェントに使わせる
-        </h2>
-        <p className="text-slate-300 mb-6 leading-relaxed">
-          <code className="px-1.5 py-0.5 bg-slate-800 rounded text-slate-100">find-skills</code>{" "}
-          を入れれば、Claude Code/Codex/Gemini CLIから日本語で
-          「楽天の薬機法チェックして」「JANコード見直したい」と頼むだけで
-          該当スキルが自動推薦・インストール案内されます。
-        </p>
-        <Link
-          href="/find-skills"
-          className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium hover:opacity-90"
-          style={{ backgroundColor: "#C9A84C", color: "#0f172a" }}
+      {/* CTA：find-skills（AIエージェント側）+ ALSEL EC AI（伴走支援側） */}
+      <section className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="p-8 bg-slate-900 text-white rounded-2xl">
+          <h2 className="text-xl md:text-2xl font-bold mb-3">
+            まとめてAIエージェントに使わせる
+          </h2>
+          <p className="text-slate-300 mb-6 leading-relaxed text-sm">
+            <code className="px-1.5 py-0.5 bg-slate-800 rounded text-slate-100">
+              find-skills
+            </code>{" "}
+            を入れれば、Claude Code/Codex/Gemini CLIから日本語で
+            「楽天の薬機法チェックして」「JANコード見直したい」と頼むだけで該当スキルが自動推薦されます。
+          </p>
+          <Link
+            href="/find-skills"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium hover:opacity-90"
+            style={{ backgroundColor: "#C9A84C", color: "#0f172a" }}
+          >
+            find-skills を入れる →
+          </Link>
+        </div>
+
+        <div
+          className="p-8 rounded-2xl border-2"
+          style={{ borderColor: "#C9A84C", backgroundColor: "#FFFBEB" }}
         >
-          find-skills を入れる →
-        </Link>
+          <div
+            className="inline-block px-2.5 py-0.5 mb-3 rounded-full text-xs font-bold text-slate-900"
+            style={{ backgroundColor: "#C9A84C" }}
+          >
+            EC事業者の方へ
+          </div>
+          <h2 className="text-xl md:text-2xl font-bold mb-3 text-slate-900">
+            ALSEL EC AI で「実装・運用」まで伴走
+          </h2>
+          <p className="text-slate-700 mb-6 leading-relaxed text-sm">
+            これらのスキルを自社EC運用に組み込みたい、
+            社員のAI活用を伴走支援してほしい——
+            ALSELが19年・5,000社の現場知見で実装まで支援します。
+          </p>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <a
+              href="https://alsel.co.jp/pages/alsel-ecai-lp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium hover:opacity-90"
+              style={{ backgroundColor: "#0f172a", color: "#fff" }}
+            >
+              ALSEL EC AI を見る ↗
+            </a>
+            <a
+              href="https://alsel.co.jp/pages/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium border border-slate-300 hover:bg-white text-slate-800"
+            >
+              お問い合わせ ↗
+            </a>
+          </div>
+        </div>
       </section>
     </main>
   );

@@ -193,6 +193,51 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ALSEL EC AI への誘導CTA */}
+      <section className="py-12 px-6 bg-slate-900 text-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 justify-between">
+            <div className="flex-1">
+              <div
+                className="inline-block px-2.5 py-0.5 mb-3 rounded-full text-xs font-bold text-slate-900"
+                style={{ backgroundColor: "#C9A84C" }}
+              >
+                EC事業者の方へ
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+                ALSELのEC × AI コンサルティングで、
+                <br className="hidden md:inline" />
+                スキルを「使いこなす運用」まで支援します。
+              </h2>
+              <p className="text-slate-300 leading-relaxed text-sm md:text-base">
+                Agent Skillsを社内に導入したい、自社のEC運用をAIで再設計したい、
+                ALSELの19年・5,000社のノウハウを実装支援込みで欲しい——
+                そんな方向けに、ALSEL EC AI コンサルティングをご用意しています。
+              </p>
+            </div>
+            <div className="flex flex-col gap-2 shrink-0 md:min-w-[260px]">
+              <a
+                href="https://alsel.co.jp/pages/alsel-ecai-lp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-medium hover:opacity-90"
+                style={{ backgroundColor: "#C9A84C", color: "#0f172a" }}
+              >
+                ALSEL EC AI を見る ↗
+              </a>
+              <a
+                href="https://alsel.co.jp/pages/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 border border-slate-700 rounded-lg text-sm text-slate-300 hover:bg-slate-800"
+              >
+                お問い合わせ ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* カテゴリ */}
       <section className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
