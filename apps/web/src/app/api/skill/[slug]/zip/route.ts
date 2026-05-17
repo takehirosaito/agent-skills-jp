@@ -9,6 +9,7 @@ import { NextResponse } from "next/server";
 import path from "node:path";
 import { promises as fs } from "node:fs";
 import JSZip from "jszip";
+import { track } from "@vercel/analytics/server";
 import { getSkillBySlug } from "@/lib/meilisearch";
 import { classifyLicense } from "@/lib/license";
 
@@ -92,6 +93,18 @@ export async function GET(
   }
 
   const buffer = await zip.generateAsync({ type: "arraybuffer" });
+
+  // ダウンロード計測（サーバーサイドVercel Analytics）。失敗してもDLは続行。
+  try {
+    await track("skill_download", {
+      slug,
+      type: "zip",
+      source: localDir ? "local" : "meilisearch",
+    });
+  } catch {
+    // analytics失敗時はDLを止めない
+  }
+
   return new NextResponse(buffer, {
     status: 200,
     headers: {

@@ -7,6 +7,7 @@
 import { NextResponse } from "next/server";
 import path from "node:path";
 import { promises as fs } from "node:fs";
+import { track } from "@vercel/analytics/server";
 import { getSkillBySlug } from "@/lib/meilisearch";
 import { classifyLicense } from "@/lib/license";
 
@@ -61,6 +62,16 @@ export async function GET(
   // 1) リポジトリ直下に同梱したスキル(find-skills など)を優先
   const local = await readLocalSkill(slug);
   if (local) {
+    try {
+      await track("skill_download", {
+        slug,
+        type: "md",
+        lang,
+        source: "local",
+      });
+    } catch {
+      // analytics失敗時はDLを止めない
+    }
     return new NextResponse(local, {
       status: 200,
       headers: {
@@ -104,6 +115,17 @@ export async function GET(
     const fm = en.match(/^---\s*\n[\s\S]*?\n---\s*\n/)?.[0] ?? "";
     body = fm + stripFrontmatter(ja);
     filename = `${slug}.ja.SKILL.md`;
+  }
+
+  try {
+    await track("skill_download", {
+      slug,
+      type: "md",
+      lang,
+      source: "meilisearch",
+    });
+  } catch {
+    // analytics失敗時はDLを止めない
   }
 
   return new NextResponse(body, {
