@@ -7,8 +7,14 @@ import {
   getStats,
   getFeaturedSkills,
   getCategories,
+  getAlselEcSkills,
   VENDOR_LABELS,
 } from "@/lib/meilisearch";
+import {
+  ALSEL_EC_CATEGORIES,
+  categorizeAlselEcSlug,
+  type AlselEcCategoryId,
+} from "@/lib/alsel-ec-categories";
 import { SITE_DEFAULT_TITLE, SITE_NAME, canonical } from "@/lib/seo";
 
 export const revalidate = 300;
@@ -41,11 +47,30 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function HomePage() {
-  const [stats, featured, categories] = await Promise.all([
+  const [stats, featured, categories, alselEc] = await Promise.all([
     getStats(),
     getFeaturedSkills(12),
     getCategories(),
+    getAlselEcSkills(),
   ]);
+
+  // ALSEL EC スキルをカテゴリ別に件数集計
+  const alselEcCounts: Record<AlselEcCategoryId, number> = {
+    amazon: 0,
+    rakuten: 0,
+    shopify: 0,
+    yahoo: 0,
+    "other-cart": 0,
+    legal: 0,
+    data: 0,
+    customer: 0,
+    ad: 0,
+    master: 0,
+  };
+  for (const s of alselEc) {
+    const cat = categorizeAlselEcSlug(s.slug);
+    alselEcCounts[cat]++;
+  }
 
   return (
     <main>
@@ -108,6 +133,56 @@ export default async function HomePage() {
                 📦 ZIP を直接ダウンロード
               </a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ALSEL独自・EC実務スキル100選（特集） */}
+      <section className="py-16 px-6 bg-gradient-to-br from-amber-50 via-white to-amber-50/40 border-y border-amber-200/60">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-baseline justify-between mb-2 gap-4 flex-wrap">
+            <div>
+              <div
+                className="inline-block px-2.5 py-0.5 mb-2 rounded-full text-xs font-bold text-slate-900"
+                style={{ backgroundColor: "#C9A84C" }}
+              >
+                ALSEL独自・EC特集
+              </div>
+              <h2 className="text-3xl font-bold">
+                日本のEC実務スキル {alselEc.length} 選
+              </h2>
+            </div>
+            <Link
+              href="/alsel-ec-skills"
+              className="text-sm text-amber-700 hover:underline font-medium"
+            >
+              特集ページで全件を見る →
+            </Link>
+          </div>
+          <p className="text-slate-600 mb-8 leading-relaxed">
+            19年・5,000社のEC支援知見をAgent Skillsに体系化。
+            楽天・Amazon・Shopify・Yahoo!・法務・データ・広告まで、EC運用の現場でそのまま使えるスキルを{" "}
+            {alselEc.length} 件、カテゴリ別にまとめています。
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            {ALSEL_EC_CATEGORIES.map((cat) => {
+              const count = alselEcCounts[cat.id] ?? 0;
+              return (
+                <Link
+                  key={cat.id}
+                  href={`/alsel-ec-skills#${cat.id}`}
+                  className="block p-4 bg-white border border-amber-200 rounded-lg hover:shadow-md hover:border-amber-400 transition"
+                >
+                  <div className="text-3xl mb-2">{cat.icon}</div>
+                  <div className="font-bold text-sm leading-snug">
+                    {cat.label}
+                  </div>
+                  <div className="text-xs text-slate-500 mt-1">
+                    {count} スキル
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

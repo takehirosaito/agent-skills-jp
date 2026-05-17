@@ -193,6 +193,27 @@ export async function getFeaturedSkills(limit: number) {
   }
 }
 
+/**
+ * ALSEL独自スキルかつ category=ecommerce-marketing のスキル全件を取得。
+ * /alsel-ec-skills 特集ページとトップページのEC特集セクションで使用。
+ */
+export async function getAlselEcSkills(): Promise<Skill[]> {
+  try {
+    const result = await index.search("", {
+      filter: [
+        "is_original = true",
+        'category = "ecommerce-marketing"',
+        ...EXCLUDE_HIDDEN,
+      ],
+      sort: ["quality_score:desc", "slug:asc"],
+      limit: 200,
+    });
+    return result.hits as unknown as Skill[];
+  } catch {
+    return [] as Skill[];
+  }
+}
+
 export async function getSkillBySlug(slug: string) {
   try {
     const res = await index.search("", {
