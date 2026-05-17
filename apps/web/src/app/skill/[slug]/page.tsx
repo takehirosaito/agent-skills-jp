@@ -29,11 +29,26 @@ export async function generateMetadata({
     // layout の template が " | Agent Skills by ALSEL" を付ける
     return { title: "Not Found" };
   }
-  const description = (
-    skill.description_ja ||
-    skill.description_original ||
-    ""
-  ).slice(0, 160);
+  // 対応AI情報を description 冒頭に付けて CTR を上げる。
+  // skill.vendor → 表示ラベル。"generic" は主要3AIに対応する旨を明示。
+  const vendorAILabel: Record<string, string> = {
+    claude: "Claude",
+    openai: "OpenAI Codex",
+    gemini: "Gemini CLI",
+    opencode: "OpenCode",
+    generic: "Claude / OpenAI Codex / Gemini CLI",
+  };
+  const aiLabel =
+    vendorAILabel[skill.vendor] ?? "Claude / OpenAI Codex / Gemini CLI";
+  const prefix = `${aiLabel} 対応のAgent Skill。`;
+  const rawDesc = skill.description_ja || skill.description_original || "";
+  const remaining = Math.max(0, 160 - prefix.length);
+  const description = rawDesc
+    ? `${prefix}${rawDesc.slice(0, remaining)}`
+    : `${prefix}${skill.name} を日本語で詳細・使い方を確認できます。`.slice(
+        0,
+        160,
+      );
   const url = canonical(`/skill/${skill.slug}`);
   return {
     // layout の template が " | Agent Skills by ALSEL" を付与するので、スキル名のみ

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { getStats } from "@/lib/meilisearch";
 import {
@@ -160,6 +161,7 @@ export default async function RootLayout({
           </div>
         </footer>
         <SpeedInsights />
+        <Analytics />
       </body>
       {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
     </html>
