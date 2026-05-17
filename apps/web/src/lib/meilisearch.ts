@@ -322,7 +322,8 @@ export async function listSkills(opts: {
         ? `(${baseFilter}) AND is_original != true`
         : "is_original != true";
       const [originals, rest] = await Promise.all([
-        index.search("", { filter: originalsFilter, sort: [sort], limit: 20 }),
+        // ALSEL独自スキルは全件（最大200件）先頭にピン留め
+        index.search("", { filter: originalsFilter, sort: [sort], limit: 200 }),
         index.search("", {
           filter: restFilter,
           sort: [sort],
