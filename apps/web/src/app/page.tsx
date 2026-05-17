@@ -99,7 +99,7 @@ export default async function HomePage() {
 
       {/* ALSEL EC AI 大型誘導セクション（最優先導線） */}
       <section
-        className="relative py-20 px-6 overflow-hidden border-y"
+        className="relative py-10 px-6 overflow-hidden border-y"
         style={{
           background:
             "linear-gradient(135deg, #FFFCF4 0%, #FAF3E0 55%, #F5E9C8 100%)",
@@ -108,29 +108,28 @@ export default async function HomePage() {
       >
         {/* 装飾：ゴールドの淡い発光 */}
         <div
-          className="absolute -top-32 -right-32 w-96 h-96 rounded-full opacity-30 blur-3xl pointer-events-none"
+          className="absolute -top-24 -right-24 w-72 h-72 rounded-full opacity-30 blur-3xl pointer-events-none"
           style={{ backgroundColor: "#C9A84C" }}
         />
         <div
-          className="absolute -bottom-32 -left-32 w-96 h-96 rounded-full opacity-15 blur-3xl pointer-events-none"
+          className="absolute -bottom-24 -left-24 w-72 h-72 rounded-full opacity-15 blur-3xl pointer-events-none"
           style={{ backgroundColor: "#C9A84C" }}
         />
 
         <div className="relative max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-6">
             <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 mb-5 rounded-full text-sm font-bold text-white shadow-sm"
+              className="inline-flex items-center gap-2 px-3 py-1 mb-3 rounded-full text-xs font-bold text-white shadow-sm"
               style={{ backgroundColor: "#0f172a" }}
             >
               <span style={{ color: "#C9A84C" }}>★</span>
               EC事業者の方へ・ALSEL公式
             </div>
             <h2
-              className="text-4xl md:text-6xl font-bold tracking-tight mb-6 leading-tight"
+              className="text-2xl md:text-4xl font-bold tracking-tight mb-3 leading-tight"
               style={{ color: "#0f172a" }}
             >
               EC の売上を、
-              <br className="md:hidden" />
               <span
                 style={{
                   background:
@@ -144,7 +143,7 @@ export default async function HomePage() {
               </span>
             </h2>
             <p
-              className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+              className="text-sm md:text-base max-w-3xl mx-auto leading-relaxed"
               style={{ color: "#475569" }}
             >
               19年・5,000社のEC支援ノウハウを{" "}
@@ -152,55 +151,80 @@ export default async function HomePage() {
                 {alselEc.length} 本のAIスキル
               </strong>{" "}
               に体系化。
-              <br className="hidden md:inline" />
               「使えるAI運用」まで{" "}
               <strong style={{ color: "#0f172a" }}>ALSEL が伴走支援</strong>
               します。
             </p>
           </div>
 
-          {/* 数字訴求 3カード */}
-          <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto mb-12">
+          {/* 数字訴求 3カード（横並び・コンパクト） */}
+          <div className="flex items-center justify-center gap-6 md:gap-12 mb-6 flex-wrap">
             <div className="text-center">
               <div
-                className="text-5xl md:text-7xl font-black mb-1 leading-none"
+                className="text-3xl md:text-5xl font-black leading-none"
                 style={{ color: "#B8902C" }}
               >
                 19
+                <span
+                  className="text-base md:text-lg ml-1"
+                  style={{ color: "#475569" }}
+                >
+                  年
+                </span>
               </div>
               <div
-                className="text-sm md:text-base font-bold"
+                className="text-xs md:text-sm font-bold mt-1"
                 style={{ color: "#475569" }}
               >
-                年の伴走実績
+                伴走実績
               </div>
             </div>
+            <div
+              className="hidden md:block w-px h-12"
+              style={{ backgroundColor: "#E8D9A8" }}
+            />
             <div className="text-center">
               <div
-                className="text-5xl md:text-7xl font-black mb-1 leading-none"
+                className="text-3xl md:text-5xl font-black leading-none"
                 style={{ color: "#B8902C" }}
               >
-                5,000<span className="text-3xl md:text-5xl">+</span>
+                5,000
+                <span
+                  className="text-base md:text-lg ml-1"
+                  style={{ color: "#475569" }}
+                >
+                  社+
+                </span>
               </div>
               <div
-                className="text-sm md:text-base font-bold"
+                className="text-xs md:text-sm font-bold mt-1"
                 style={{ color: "#475569" }}
               >
-                社のEC支援
+                EC支援
               </div>
             </div>
+            <div
+              className="hidden md:block w-px h-12"
+              style={{ backgroundColor: "#E8D9A8" }}
+            />
             <div className="text-center">
               <div
-                className="text-5xl md:text-7xl font-black mb-1 leading-none"
+                className="text-3xl md:text-5xl font-black leading-none"
                 style={{ color: "#B8902C" }}
               >
                 {alselEc.length}
+                <span
+                  className="text-base md:text-lg ml-1"
+                  style={{ color: "#475569" }}
+                >
+                  選
+                </span>
               </div>
               <div
-                className="text-sm md:text-base font-bold"
+                className="text-xs md:text-sm font-bold mt-1"
                 style={{ color: "#475569" }}
               >
-                AIスキル収録
+                AIスキル
               </div>
             </div>
           </div>
@@ -211,7 +235,7 @@ export default async function HomePage() {
               href="https://alsel.co.jp/pages/alsel-ecai-lp"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-lg hover:shadow-2xl hover:scale-[1.02] transition text-white"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold text-sm md:text-base shadow-lg hover:shadow-2xl hover:scale-[1.02] transition text-white"
               style={{ backgroundColor: "#0f172a" }}
             >
               ALSEL EC AI を見る ↗
@@ -220,34 +244,17 @@ export default async function HomePage() {
               href="https://alsel.co.jp/pages/contact"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-base md:text-lg shadow-md hover:shadow-xl hover:scale-[1.02] transition"
+              className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-bold text-sm md:text-base shadow-md hover:shadow-xl hover:scale-[1.02] transition"
               style={{ backgroundColor: "#C9A84C", color: "#0f172a" }}
             >
               無料で相談する ↗
             </a>
           </div>
-
-          <p
-            className="text-center text-sm mt-6"
-            style={{ color: "#64748b" }}
-          >
-            運営：株式会社ALSEL（
-            <a
-              href="https://alsel.co.jp/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:opacity-80"
-              style={{ color: "#0f172a" }}
-            >
-              alsel.co.jp
-            </a>
-            ）
-          </p>
         </div>
       </section>
 
       {/* find-skills CTA (AIエージェントから直接使う) */}
-      <section className="py-12 px-6 bg-slate-900 text-white">
+      <section className="py-6 px-6 bg-slate-900 text-white">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
             <div className="flex-1">
@@ -286,10 +293,10 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ALSEL独自・EC実務スキル100選（特集） */}
-      <section className="py-16 px-6 bg-gradient-to-br from-amber-50 via-white to-amber-50/40 border-y border-amber-200/60">
+      {/* ALSEL独自・EC実務スキル特集 */}
+      <section className="py-8 px-6 bg-gradient-to-br from-amber-50 via-white to-amber-50/40 border-y border-amber-200/60">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-baseline justify-between mb-2 gap-4 flex-wrap">
+          <div className="flex items-baseline justify-between mb-4 gap-4 flex-wrap">
             <div>
               <div
                 className="inline-block px-2.5 py-0.5 mb-2 rounded-full text-xs font-bold text-slate-900"
@@ -297,7 +304,7 @@ export default async function HomePage() {
               >
                 ALSEL独自・EC特集
               </div>
-              <h2 className="text-3xl font-bold">
+              <h2 className="text-2xl md:text-3xl font-bold">
                 日本のEC実務スキル {alselEc.length} 選
               </h2>
             </div>
@@ -308,11 +315,6 @@ export default async function HomePage() {
               特集ページで全件を見る →
             </Link>
           </div>
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            19年・5,000社のEC支援知見をAgent Skillsに体系化。
-            楽天・Amazon・Shopify・Yahoo!・法務・データ・広告まで、EC運用の現場でそのまま使えるスキルを{" "}
-            {alselEc.length} 件、カテゴリ別にまとめています。
-          </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {ALSEL_EC_CATEGORIES.map((cat) => {
               const count = alselEcCounts[cat.id] ?? 0;
@@ -343,9 +345,9 @@ export default async function HomePage() {
       </section>
 
       {/* カテゴリ */}
-      <section className="py-16 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">カテゴリから探す</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">カテゴリから探す</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {categories.map((cat) => (
               <CategoryTile
