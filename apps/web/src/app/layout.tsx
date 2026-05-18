@@ -170,6 +170,9 @@ export default async function RootLayout({
                 <Link href="/directory" className="hover:text-slate-900">
                   全スキル一覧
                 </Link>
+                <Link href="/why" className="hover:text-slate-900">
+                  Agent Skills by ALSEL を選ぶ理由
+                </Link>
                 <Link href="/about" className="hover:text-slate-900">About</Link>
                 <Link href="/terms" className="hover:text-slate-900">利用規約</Link>
                 <Link href="/privacy" className="hover:text-slate-900">プライバシー</Link>
