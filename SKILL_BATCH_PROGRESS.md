@@ -20,8 +20,11 @@
 - [x] Batch 4 広告・大型セール・実験（投入5/5・200×5・commit bca97e3）
 - [x] Batch 5 D2C・CRM・データ（投入5/5・200×5・commit a674434）
 - [x] Batch 6 ふるさと納税・B2B・ライブコマース（投入5/5・200×5・commit 1e98f9b）
-- [ ] Step 3 公開（skills-index.json再生成・push・30URL 200）
-- [ ] Step 4 完了報告（reports/agent-skills-30-task-final.md）
+- [x] Step 3 公開（skills-index.json 10260→10290 再生成・push d162918・Vercel Ready・30URL 200/30）
+- [x] Step 4 完了報告（reports/agent-skills-30-task-final.md）
+
+## 完了 ✅
+全30本 投入・本番200確認 完了。is_original 104→134。スキップ/失敗 0件。詳細は reports/agent-skills-30-task-final.md。
 
 ## バッチ別 slug
 - Batch1: amazon-global-selling-launch, shopify-markets-cross-border-setup, ebay-listing-optimization-jp, cross-border-hs-code-duty-estimator, taobao-tmall-entry-guide
