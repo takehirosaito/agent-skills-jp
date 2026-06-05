@@ -14,12 +14,12 @@
 ## 現在地
 - [x] Step 0 調査（reports/agent-skills-30-task-step0.md）
 - [x] Step 1 テーマ選定（reports/agent-skills-30-task-themes.md）
-- [ ] Batch 1 越境EC
-- [ ] Batch 2 Qoo10/モール拡張・海外SEO
-- [ ] Batch 3 物流・在庫・通関
-- [ ] Batch 4 広告・大型セール・実験
-- [ ] Batch 5 D2C・CRM・データ
-- [ ] Batch 6 ふるさと納税・B2B・ライブコマース
+- [x] Batch 1 越境EC（投入5/5・Meili検証5/5・本番URL 200×5・commit 2c4fc81）
+- [x] Batch 2 Qoo10/モール拡張・海外SEO（投入5/5・200×5・commit 9ca89ea）
+- [x] Batch 3 物流・在庫・通関（投入5/5・200×5・commit b992213）
+- [x] Batch 4 広告・大型セール・実験（投入5/5・200×5・commit bca97e3）
+- [x] Batch 5 D2C・CRM・データ（投入5/5・200×5・commit a674434）
+- [x] Batch 6 ふるさと納税・B2B・ライブコマース（投入5/5・200×5・commit 1e98f9b）
 - [ ] Step 3 公開（skills-index.json再生成・push・30URL 200）
 - [ ] Step 4 完了報告（reports/agent-skills-30-task-final.md）
 
@@ -32,4 +32,5 @@
 - Batch6: furusato-rakuten-listing, furusato-satofuru-listing, b2b-ec-quote-builder, b2b-credit-screening-checklist, live-commerce-script-planner
 
 ## ログ
-- (まだ無し)
+- Batch1: 5本作成→data/＋skills/両方に配置→09 SLUGS追加→prod Meili upsert(task33 succeeded)→Meili検証5/5→本番URL 200×5→commit 2c4fc81。再デプロイ不要で200化を確認。
+- Batch2: 5本→prod Meili upsert(task34)→検証5/5→200×5→commit 9ca89ea。注: ingestのslug指定はzshでword-split無効のため1個ずつ列挙する。
