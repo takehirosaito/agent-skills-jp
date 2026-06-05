@@ -1,0 +1,730 @@
+[
+ {
+  "name": "rakuten-seo",
+  "description_ja": "楽天市場の商品名・キャッチコピーをSEO最適化するスキル。「楽天SEO」「商品名最適化」「楽天の商品名」「キャッチコピー」「楽天のタイトル」「商品名を直して」「楽天検索対策」など、楽天市場の商品名やキャッチコピーの作成・改善・チェックに関するリクエストで必ずこのスキルを使う。既存の商品名の改善も、ゼロからの作成も対応。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア・ベビー・ペット・業務用など）に対応。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場の商品名・キャッチコピーをSEO最適化するスキル。「楽天SEO」「商品名最適化」「楽天の商品名」「キャッチコピー」「楽天のタイトル」「商品名を直して」「楽天検索対策」など、楽天市場の商品名やキャッチコピーの作成・改善・チェックに関するリクエストで必ずこのスキルを使う。既存の商品名の改善も、ゼロからの作成も対応。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア・ベビー・ペット・業務用など）に対応。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-seo"
+ },
+ {
+  "name": "amazon-seo-jp",
+  "description_ja": "Amazon.co.jp商品ページのSEO分析・最適化・自動採点スキル v2.0。 COSMO/Rufus/A10アルゴリズムに基づく採点。セラーセントラル出品レポート（.xlsm）を入力すると、 商品タイトル・箇条書き・検索キーワード・商品説明文を100点満点で採点し、 4項目すべての改善案を日本語で出力する。 トリガー: 「Amazon SEO」「商品ページ採点」「Amazon最適化」 「リスティング改善」「Amazon商品名」「箇条書き改善」 「COSMO対応」「Rufus最適化」「Amazon タイトル」\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon.co.jp商品ページのSEO分析・最適化・自動採点スキル v2.0。 COSMO/Rufus/A10アルゴリズムに基づく採点。セラーセントラル出品レポート（.xlsm）を入力すると、 商品タイトル・箇条書き・検索キーワード・商品説明文を100点満点で採点し、 4項目すべての改善案を日本語で出力する。 トリガー: 「Amazon SEO」「商品ページ採点」「Amazon最適化」 「リスティング改善」「Amazon商品名」「箇条書き改善」 「COSMO対応」「Rufus最適化」「Amazon タイトル」",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-seo-jp"
+ },
+ {
+  "name": "rakuten-bulk-control-csv",
+  "description_ja": "楽天RMSの一括登録/一括除外/一括更新用CSV（コントロールカラム,商品管理番号 の2列フォーマット）を作成するスキル。商品DL CSV・商品管理画面のコピペ・Excel・PDFなどから商品管理番号を抽出し、Shift-JIS+LF改行で出力する。「一括除外リスト作って」「楽天の除外CSV」「コントロールカラムnで」「2800円以下の商品をdで」「在庫0の商品を一括削除」「商品管理番号抜いてshift-jsで」「このフォーマットで」など、楽天RMSの商品一括処理用CSVを作るタスクで必ずこのスキルを使う。コントロールカラム値（n=新規/d=削除/u=更新）と抽出条件（全件・価格・在庫・販売状態など）をユーザー指示に応じて柔軟に切り替える。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天RMSの一括登録/一括除外/一括更新用CSV（コントロールカラム,商品管理番号 の2列フォーマット）を作成するスキル。商品DL CSV・商品管理画面のコピペ・Excel・PDFなどから商品管理番号を抽出し、Shift-JIS+LF改行で出力する。「一括除外リスト作って」「楽天の除外CSV」「コントロールカラムnで」「2800円以下の商品をdで」「在庫0の商品を一括削除」「商品管理番号抜いてshift-jsで」「このフォーマットで」など、楽天RMSの商品一括処理用CSVを作るタスクで必ずこのスキルを使う。コントロールカラム値（n=新規/d=削除/u=更新）と抽出条件（全件・価格・在庫・販売状態など）をユーザー指示に応じて柔軟に切り替える。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-bulk-control-csv"
+ },
+ {
+  "name": "find-skills",
+  "description_ja": "日本語の意図から Agent Skills を発見する。「楽天SEOのスキル探して」「PDFを処理したい」「データ分析を自動化したい」などの日本語リクエストに対応。Claude Code (CLI)、Codex、Gemini CLI、claude.ai (Web) いずれでも動作。日本最大の Agent Skills データベース「Agent Skills by ALSEL」(11,000件超、全件日本語化、ダウンロード可能スキル8,600件超) から、ユーザーの意図に合うスキルを推薦・インストール案内する。",
+  "description_original": "日本語の意図から Agent Skills を発見する。「楽天SEOのスキル探して」「PDFを処理したい」「データ分析を自動化したい」などの日本語リクエストに対応。Claude Code (CLI)、Codex、Gemini CLI、claude.ai (Web) いずれでも動作。日本最大の Agent Skills データベース「Agent Skills by ALSEL」(約4,000件、全件日本語化) から、ユーザーの意図に合うスキルを推薦・インストール案内する。",
+  "category": "productivity",
+  "slug": "find-skills"
+ },
+ {
+  "name": "amazon-a-plus-content-brief",
+  "description_ja": "Amazon A+コンテンツの構成・モジュール選定・画像指示・比較表・FAQを設計するスキル。「A+コンテンツ作って」「Aプラス構成」「ブランドストーリー」「比較表つきA+」「A+モジュール選定」「Amazonのページに画像入れたい」「A+のヘッダー画像」「A+コンテンツマネージャー」など、Amazon A+コンテンツの企画・設計・改善のリクエストで必ずこのスキルを使う。ベーシック17モジュール／Premium追加機能／画像サイズ規定／文字数目安／審査リジェクト要因を踏まえて、デザイナーに渡せるブリーフ形式で出力。あらゆるジャンル（家電・コスメ・食品・アパレル・日用品・ベビー・ペット等）に対応。※ブランドストア（マルチページ）の設計は別スキル `amazon-brand-store-planner`、タイトル・bullet改善は `amazon-title-bullet-rewriter-jp`、メイン画像のチェックは `amazon-main-image-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon A+コンテンツの構成・モジュール選定・画像指示・比較表・FAQを設計するスキル。「A+コンテンツ作って」「Aプラス構成」「ブランドストーリー」「比較表つきA+」「A+モジュール選定」「Amazonのページに画像入れたい」「A+のヘッダー画像」「A+コンテンツマネージャー」など、Amazon A+コンテンツの企画・設計・改善のリクエストで必ずこのスキルを使う。ベーシック17モジュール／Premium追加機能／画像サイズ規定／文字数目安／審査リジェクト要因を踏まえて、デザイナーに渡せるブリーフ形式で出力。あらゆるジャンル（家電・コスメ・食品・アパレル・日用品・ベビー・ペット等）に対応。※ブランドストア（マルチページ）の設計は別スキル `amazon-brand-store-planner`、タイトル・bullet改善は `amazon-title-bullet-rewriter-jp`、メイン画像のチェックは `amazon-main-image-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-a-plus-content-brief"
+ },
+ {
+  "name": "amazon-brand-store-planner",
+  "description_ja": "Amazonブランドストアのサイトマップ・ナビ・各ページ構成・タイル選定・バナー文言を設計するスキル。「Amazonブランドストア作って」「ストアページ設計」「ストアトップの構成」「ストアのナビ」「ショッパブル画像」「ストアバナー文言」「Amazon Storeの導線改善」「ストアのカテゴリページ」など、Amazonブランドストア（マルチページのブランド専用サイト）の企画・設計・改修のリクエストで必ずこのスキルを使う。商品数・商品ライン構成・モバイル前提でホーム／カテゴリ／サブカテゴリ／特集／ストーリーの階層を組む。あらゆるジャンルに対応。※商品ページ下部の A+コンテンツ（単一ASIN単位）は別スキル `amazon-a-plus-content-brief`、商品タイトル・bullet改善は `amazon-title-bullet-rewriter-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazonブランドストアのサイトマップ・ナビ・各ページ構成・タイル選定・バナー文言を設計するスキル。「Amazonブランドストア作って」「ストアページ設計」「ストアトップの構成」「ストアのナビ」「ショッパブル画像」「ストアバナー文言」「Amazon Storeの導線改善」「ストアのカテゴリページ」など、Amazonブランドストア（マルチページのブランド専用サイト）の企画・設計・改修のリクエストで必ずこのスキルを使う。商品数・商品ライン構成・モバイル前提でホーム／カテゴリ／サブカテゴリ／特集／ストーリーの階層を組む。あらゆるジャンルに対応。※商品ページ下部の A+コンテンツ（単一ASIN単位）は別スキル `amazon-a-plus-content-brief`、商品タイトル・bullet改善は `amazon-title-bullet-rewriter-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-brand-store-planner"
+ },
+ {
+  "name": "amazon-bullet-attribute-benefit",
+  "description_ja": "Amazonの商品箇条書き（bullet point）5項目を「属性→ベネフィット」の型で設計するスキル。「Amazon bullet作って」「商品箇条書き」「5箇条のコピー」「Amazon箇条書きを改善」「bulletの型」「属性ベネフィット」「255バイトに収めたい」「先頭1000バイトに主要KW」など、Amazon商品ページのbullet 5箇条の設計・改善のリクエストで必ずこのスキルを使う。1箇条255バイト・5箇条検索インデックスは先頭1,000バイト・カテゴリ別NG表現（薬機・景表）に対応。家電・コスメ・食品・アパレル・日用品・ベビー・ペット・サプリ等全ジャンル対応。※タイトル含む全体改善は別スキル `amazon-title-bullet-rewriter-jp`（本スキルはbulletの「型」専門）、検索キーワード設計は `amazon-search-term-builder-jp`、メイン画像は `amazon-main-image-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazonの商品箇条書き（bullet point）5項目を「属性→ベネフィット」の型で設計するスキル。「Amazon bullet作って」「商品箇条書き」「5箇条のコピー」「Amazon箇条書きを改善」「bulletの型」「属性ベネフィット」「255バイトに収めたい」「先頭1000バイトに主要KW」など、Amazon商品ページのbullet 5箇条の設計・改善のリクエストで必ずこのスキルを使う。1箇条255バイト・5箇条検索インデックスは先頭1,000バイト・カテゴリ別NG表現（薬機・景表）に対応。家電・コスメ・食品・アパレル・日用品・ベビー・ペット・サプリ等全ジャンル対応。※タイトル含む全体改善は別スキル `amazon-title-bullet-rewriter-jp`（本スキルはbulletの「型」専門）、検索キーワード設計は `amazon-search-term-builder-jp`、メイン画像は `amazon-main-image-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-bullet-attribute-benefit"
+ },
+ {
+  "name": "amazon-catalog-conflict-ticket-builder",
+  "description_ja": "Amazonカタログ／セラーサポート宛の修正依頼ケース文面を作成するスキル。「ブランド名修正依頼」「タイトル修正のチケット」「画像差し替え依頼」「カテゴリ誤分類を直したい」「ASIN統合・分割依頼」「商品情報の誤記訂正」「相乗りの偽物通報」「カタログ属性の誤り」「セラーサポートに送る文章」など、Amazonのカタログ・ASINの不整合をセラーサポート／Brand Registry／知的財産権侵害窓口に提出する文面作成のリクエストで必ずこのスキルを使う。8種別（ブランド名／タイトル／画像／カテゴリ／統合分割／誤記／真贋／属性）に対応し、必要な根拠資料・提出先・所要時間・件名・本文・添付リストを揃えた依頼文を出力。日本語前提だが英語版が必要な場合は併記。※ASIN復活そのもの（出品停止／非表示の自力解除）は別スキル `amazon-suppressed-listing-recovery`、親子バリエーション設計は `amazon-variation-parent-child-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazonカタログ／セラーサポート宛の修正依頼ケース文面を作成するスキル。「ブランド名修正依頼」「タイトル修正のチケット」「画像差し替え依頼」「カテゴリ誤分類を直したい」「ASIN統合・分割依頼」「商品情報の誤記訂正」「相乗りの偽物通報」「カタログ属性の誤り」「セラーサポートに送る文章」など、Amazonのカタログ・ASINの不整合をセラーサポート／Brand Registry／知的財産権侵害窓口に提出する文面作成のリクエストで必ずこのスキルを使う。8種別（ブランド名／タイトル／画像／カテゴリ／統合分割／誤記／真贋／属性）に対応し、必要な根拠資料・提出先・所要時間・件名・本文・添付リストを揃えた依頼文を出力。日本語前提だが英語版が必要な場合は併記。※ASIN復活そのもの（出品停止／非表示の自力解除）は別スキル `amazon-suppressed-listing-recovery`、親子バリエーション設計は `amazon-variation-parent-child-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-catalog-conflict-ticket-builder"
+ },
+ {
+  "name": "amazon-flat-file-validator-jp",
+  "description_ja": "Amazon.co.jpのフラットファイル（商品登録CSV／TSV）を検証するスキル。「Amazon出品ファイル検証」「フラットファイルのエラー」「商品登録CSVチェック」「item_type違反」「文字化け修正」「JANのエラー」「親子バリエーションが反映されない」「アップロード後にエラーが出た」「フラットファイル不備」など、Amazon.co.jpのフラットファイル作成・検証・エラー解析のリクエストで必ずこのスキルを使う。必須列／データ型／バイト数／ENUM／JANチェックデジット／親子バリエーション／文字コード／改行コードを検証し、エラー番号・原因・対処を出力。アップロード前の事前検証フロー、テスト登録、全件登録、登録後検証の4フェーズに対応。※JAN単体のチェックデジット検証は `jan-code-checker`、親子バリエーション設計の監査は `amazon-variation-parent-child-audit`、出品停止・非表示の復旧は `amazon-suppressed-listing-recovery`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon.co.jpのフラットファイル（商品登録CSV／TSV）を検証するスキル。「Amazon出品ファイル検証」「フラットファイルのエラー」「商品登録CSVチェック」「item_type違反」「文字化け修正」「JANのエラー」「親子バリエーションが反映されない」「アップロード後にエラーが出た」「フラットファイル不備」など、Amazon.co.jpのフラットファイル作成・検証・エラー解析のリクエストで必ずこのスキルを使う。必須列／データ型／バイト数／ENUM／JANチェックデジット／親子バリエーション／文字コード／改行コードを検証し、エラー番号・原因・対処を出力。アップロード前の事前検証フロー、テスト登録、全件登録、登録後検証の4フェーズに対応。※JAN単体のチェックデジット検証は `jan-code-checker`、親子バリエーション設計の監査は `amazon-variation-parent-child-audit`、出品停止・非表示の復旧は `amazon-suppressed-listing-recovery`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-flat-file-validator-jp"
+ },
+ {
+  "name": "amazon-main-image-checker",
+  "description_ja": "Amazonのメイン画像・サブ画像構成を規定準拠でチェックし、撮影／差し替え指示書を作るスキル。「Amazonのメイン画像を直したい」「サブ画像の構成」「画像が真っ白じゃない」「占有率85%」「画像規定違反」「CMYKがダメ」「画像差し替え依頼」「撮影ブリーフ作って」「サスペンドのリスクある画像」など、Amazon商品ページの画像チェック・差し替え指示・撮影発注のリクエストで必ずこのスキルを使う。純白RGB(255,255,255)／商品占有率85%以上／長辺1000px以上（推奨2000〜3000px）／sRGB／テキスト・ロゴ・枠なし／モデル可否のカテゴリ別ルール／サブ画像の機能配分（メイン／サイズ感／使用シーン／パッケージ／成分／FAQ／比較／保証）に対応。検索ランキング低下・サスペンドリスクを早期に検出。※A+コンテンツ画像は別スキル `amazon-a-plus-content-brief`、ブランドストア画像は `amazon-brand-store-planner`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazonのメイン画像・サブ画像構成を規定準拠でチェックし、撮影／差し替え指示書を作るスキル。「Amazonのメイン画像を直したい」「サブ画像の構成」「画像が真っ白じゃない」「占有率85%」「画像規定違反」「CMYKがダメ」「画像差し替え依頼」「撮影ブリーフ作って」「サスペンドのリスクある画像」など、Amazon商品ページの画像チェック・差し替え指示・撮影発注のリクエストで必ずこのスキルを使う。純白RGB(255,255,255)／商品占有率85%以上／長辺1000px以上（推奨2000〜3000px）／sRGB／テキスト・ロゴ・枠なし／モデル可否のカテゴリ別ルール／サブ画像の機能配分（メイン／サイズ感／使用シーン／パッケージ／成分／FAQ／比較／保証）に対応。検索ランキング低下・サスペンドリスクを早期に検出。※A+コンテンツ画像は別スキル `amazon-a-plus-content-brief`、ブランドストア画像は `amazon-brand-store-planner`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-main-image-checker"
+ },
+ {
+  "name": "amazon-profit-fee-checker",
+  "description_ja": "Amazonの利益・手数料を計算し、限界ACOS／許容CPCを算出するスキル。「Amazonの利益計算」「FBA手数料いくら」「販売手数料」「カテゴリ手数料率」「保管料」「広告のACOS上限」「限界CPC」「赤字になっていないか」「価格設定」「粗利チェック」など、Amazon.co.jpの販売手数料・成約料・FBA配送代行料・保管料・大口プラン按分・原価・返品損失・広告費を組み合わせた利益計算リクエストで必ずこのスキルを使う。2025年改定の手数料率・FBA料金体系に対応。売上総利益／広告費前営業利益／広告費後営業利益／限界ACOS／許容CPC／損益分岐を出力。あらゆるカテゴリ・価格帯に対応。※米国Amazonの利益計算は別スキル `amazon-us-localization-jp-brand`（規格・関税・税金の論点も含む）、広告構造の再設計は `amazon-sponsored-products-rebuilder`、検索語句から広告KW抽出は `amazon-sp-keyword-harvester`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazonの利益・手数料を計算し、限界ACOS／許容CPCを算出するスキル。「Amazonの利益計算」「FBA手数料いくら」「販売手数料」「カテゴリ手数料率」「保管料」「広告のACOS上限」「限界CPC」「赤字になっていないか」「価格設定」「粗利チェック」など、Amazon.co.jpの販売手数料・成約料・FBA配送代行料・保管料・大口プラン按分・原価・返品損失・広告費を組み合わせた利益計算リクエストで必ずこのスキルを使う。2025年改定の手数料率・FBA料金体系に対応。売上総利益／広告費前営業利益／広告費後営業利益／限界ACOS／許容CPC／損益分岐を出力。あらゆるカテゴリ・価格帯に対応。※米国Amazonの利益計算は別スキル `amazon-us-localization-jp-brand`（規格・関税・税金の論点も含む）、広告構造の再設計は `amazon-sponsored-products-rebuilder`、検索語句から広告KW抽出は `amazon-sp-keyword-harvester`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-profit-fee-checker"
+ },
+ {
+  "name": "amazon-review-qa-mining",
+  "description_ja": "Amazonのレビュー・Q&Aから購入前不安／満足要素／改善ポイントを抽出し、タイトル・bullet・A+・広告コピー・FAQへ反映するスキル。「レビュー分析」「Amazonのレビュー分析して」「Q&Aから改善点」「低評価の原因」「★1レビューの対応」「購入前不安の整理」「レビューからFAQ作って」「商品ページ改善ヒント」「競合レビュー分析」「ペルソナ把握」など、Amazonのカスタマーレビュー・カスタマーQ&Aを活用して商品ページ・広告・商品改善案を作るリクエストで必ずこのスキルを使う。5W2H／JTBD／FAB／FAQの4フレームでレビューを構造化し、改善位置（タイトル／bullet1〜5／A+モジュール／メイン画像／サブ画像／検索キーワード／広告コピー）まで紐づけて出力。あらゆるカテゴリ（家電・コスメ・食品・アパレル・日用品・ベビー・ペット等）に対応。※タイトル・bullet本文の書き直しは別スキル `amazon-title-bullet-rewriter-jp`、A+構成は `amazon-a-plus-content-brief`、検索KW生成は `amazon-search-term-builder-jp`、低評価による出品停止からの復旧は `amazon-suppressed-listing-recovery`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazonのレビュー・Q&Aから購入前不安／満足要素／改善ポイントを抽出し、タイトル・bullet・A+・広告コピー・FAQへ反映するスキル。「レビュー分析」「Amazonのレビュー分析して」「Q&Aから改善点」「低評価の原因」「★1レビューの対応」「購入前不安の整理」「レビューからFAQ作って」「商品ページ改善ヒント」「競合レビュー分析」「ペルソナ把握」など、Amazonのカスタマーレビュー・カスタマーQ&Aを活用して商品ページ・広告・商品改善案を作るリクエストで必ずこのスキルを使う。5W2H／JTBD／FAB／FAQの4フレームでレビューを構造化し、改善位置（タイトル／bullet1〜5／A+モジュール／メイン画像／サブ画像／検索キーワード／広告コピー）まで紐づけて出力。あらゆるカテゴリ（家電・コスメ・食品・アパレル・日用品・ベビー・ペット等）に対応。※タイトル・bullet本文の書き直しは別スキル `amazon-title-bullet-rewriter-jp`、A+構成は `amazon-a-plus-content-brief`、検索KW生成は `amazon-search-term-builder-jp`、低評価による出品停止からの復旧は `amazon-suppressed-listing-recovery`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-review-qa-mining"
+ },
+ {
+  "name": "amazon-search-term-builder-jp",
+  "description_ja": "Amazon.co.jp の `generic_keywords`（バックエンド検索キーワード／249バイト枠）を、重複なし・表記揺れ込み・ポリシー違反なしで設計するスキル。「Amazonの検索キーワード作って」「バックエンドキーワード」「search terms」「generic_keywords」「249バイト」「セラーセントラルのキーワード」「裏キーワード」「Amazonの隠しKW」「表記揺れKW」「商品が検索に出ない」など、Amazonのバックエンド検索キーワード設計・整理・違反チェックのリクエストで必ずこのスキルを使う。バイト計算（半角1／全角3）／タイトル・bullet既出語の自動除外／表記揺れ・同義語・用途語・属性語の優先順位／他社ブランド・薬機・景表違反語の機械チェックまで一気通貫で対応。あらゆるカテゴリ（家電・コスメ・食品・アパレル・日用品・ベビー・ペット等）に対応。※タイトル・bulletの書き直しは別スキル `amazon-title-bullet-rewriter-jp`、SP広告の検索語句レポート分析は `amazon-sp-keyword-harvester`、薬機・景表の表現チェック単体は `yakki-keihyo-expression-check`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon.co.jp の `generic_keywords`（バックエンド検索キーワード／249バイト枠）を、重複なし・表記揺れ込み・ポリシー違反なしで設計するスキル。「Amazonの検索キーワード作って」「バックエンドキーワード」「search terms」「generic_keywords」「249バイト」「セラーセントラルのキーワード」「裏キーワード」「Amazonの隠しKW」「表記揺れKW」「商品が検索に出ない」など、Amazonのバックエンド検索キーワード設計・整理・違反チェックのリクエストで必ずこのスキルを使う。バイト計算（半角1／全角3）／タイトル・bullet既出語の自動除外／表記揺れ・同義語・用途語・属性語の優先順位／他社ブランド・薬機・景表違反語の機械チェックまで一気通貫で対応。あらゆるカテゴリ（家電・コスメ・食品・アパレル・日用品・ベビー・ペット等）に対応。※タイトル・bulletの書き直しは別スキル `amazon-title-bullet-rewriter-jp`、SP広告の検索語句レポート分析は `amazon-sp-keyword-harvester`、薬機・景表の表現チェック単体は `yakki-keihyo-expression-check`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-search-term-builder-jp"
+ },
+ {
+  "name": "amazon-sp-keyword-harvester",
+  "description_ja": "Amazon SP広告（スポンサープロダクト）の検索語句レポートを分類し、追加KW（昇格）／除外KW（ネガティブ）／商品ページ反映KW／入札調整案を出すスキル。「Amazon広告の検索語句分析」「検索語句レポートを見て」「SP広告のKW抽出」「除外キーワード作って」「ネガティブKW」「ACOSが悪い検索語句」「無駄クリックを止めたい」「広告のKW整理」「オートから完全一致に昇格」「Top-of-Search入札」など、Amazonスポンサー広告の検索語句データを使った最適化リクエストで必ずこのスキルを使う。完全一致／フレーズ／部分一致／オートの4階層昇格設計、Negative Exact／Negative Phraseの使い分け、ACOS／CVR／クリック数の閾値判定、商品ページ（タイトル・bullet・generic_keywords）への反映候補抽出までを一気通貫で対応。あらゆるカテゴリに対応。※キャンペーン階層・予算配分の再設計は別スキル `amazon-sponsored-products-rebuilder`、generic_keywordsの設計は `amazon-search-term-builder-jp`、利益・許容CPCの計算は `amazon-profit-fee-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon SP広告（スポンサープロダクト）の検索語句レポートを分類し、追加KW（昇格）／除外KW（ネガティブ）／商品ページ反映KW／入札調整案を出すスキル。「Amazon広告の検索語句分析」「検索語句レポートを見て」「SP広告のKW抽出」「除外キーワード作って」「ネガティブKW」「ACOSが悪い検索語句」「無駄クリックを止めたい」「広告のKW整理」「オートから完全一致に昇格」「Top-of-Search入札」など、Amazonスポンサー広告の検索語句データを使った最適化リクエストで必ずこのスキルを使う。完全一致／フレーズ／部分一致／オートの4階層昇格設計、Negative Exact／Negative Phraseの使い分け、ACOS／CVR／クリック数の閾値判定、商品ページ（タイトル・bullet・generic_keywords）への反映候補抽出までを一気通貫で対応。あらゆるカテゴリに対応。※キャンペーン階層・予算配分の再設計は別スキル `amazon-sponsored-products-rebuilder`、generic_keywordsの設計は `amazon-search-term-builder-jp`、利益・許容CPCの計算は `amazon-profit-fee-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-sp-keyword-harvester"
+ },
+ {
+  "name": "amazon-sponsored-products-rebuilder",
+  "description_ja": "Amazon SP広告（スポンサープロダクト）のキャンペーン階層・命名規則・予算配分・入札戦略・移行手順をゼロから再設計するスキル。「Amazon広告の構造を作り直して」「SPキャンペーン設計」「キャンペーン階層整理」「指名と非指名を分けたい」「ASINターゲティング整理」「ポートフォリオ設計」「広告予算配分」「入札戦略（Down only／Up and down）」「Top-of-Search入札」「キャンペーン命名規則」「広告のリビルド」など、Amazon SP広告の構造再設計・リファクタリングのリクエストで必ずこのスキルを使う。最低CPC2円・最低日予算100円というAmazon制約を踏まえ、ポートフォリオ／キャンペーン／広告グループ／ターゲットの4階層と、オート・Manual-Exact・Manual-Phrase・Manual-Broad・Product-競合ASIN・Product-カテゴリの6キャンペーン型を組み合わせて出力。あらゆるカテゴリに対応。※検索語句レポートからKW昇格・除外を出すのは別スキル `amazon-sp-keyword-harvester`、利益計算・限界ACOSは `amazon-profit-fee-checker`、generic_keywords設計は `amazon-search-term-builder-jp`、A+構成は `amazon-a-plus-content-brief`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon SP広告（スポンサープロダクト）のキャンペーン階層・命名規則・予算配分・入札戦略・移行手順をゼロから再設計するスキル。「Amazon広告の構造を作り直して」「SPキャンペーン設計」「キャンペーン階層整理」「指名と非指名を分けたい」「ASINターゲティング整理」「ポートフォリオ設計」「広告予算配分」「入札戦略（Down only／Up and down）」「Top-of-Search入札」「キャンペーン命名規則」「広告のリビルド」など、Amazon SP広告の構造再設計・リファクタリングのリクエストで必ずこのスキルを使う。最低CPC2円・最低日予算100円というAmazon制約を踏まえ、ポートフォリオ／キャンペーン／広告グループ／ターゲットの4階層と、オート・Manual-Exact・Manual-Phrase・Manual-Broad・Product-競合ASIN・Product-カテゴリの6キャンペーン型を組み合わせて出力。あらゆるカテゴリに対応。※検索語句レポートからKW昇格・除外を出すのは別スキル `amazon-sp-keyword-harvester`、利益計算・限界ACOSは `amazon-profit-fee-checker`、generic_keywords設計は `amazon-search-term-builder-jp`、A+構成は `amazon-a-plus-content-brief`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-sponsored-products-rebuilder"
+ },
+ {
+  "name": "amazon-suppressed-listing-recovery",
+  "description_ja": "Amazon.co.jp の検索対象外・出品停止・ASINサスペンド・アカウントヘルス低下・ポリシー警告などの異常状態を診断し、復旧手順とPOA（是正計画書）を作成するスキル。「Amazonで出品停止になった」「検索対象外」「商品が表示されない」「suppressed listing」「ASINサスペンド」「アカウントヘルス警告」「真贋苦情」「知財侵害通報」「POA作って」「Plan of Action」「アカウント停止」「テイクダウン」など、Amazonリスティングの非表示・販売停止からの復旧リクエストで必ずこのスキルを使う。症状診断フローチャート（検索非表示／出品停止／ポリシー警告／アカウントヘルス／ASINサスペンド／アカウントサスペンド）、原因分類（画像／必須属性／価格／在庫／ポリシー／真贋／知財／安全性）、POA3点セット（問題認識・是正措置・再発防止策）、サポート問い合わせ文面までを一気通貫で出力。あらゆるカテゴリに対応。※カタログ統合・親子バリエーション設計は別スキル `amazon-variation-parent-child-audit`、フラットファイル形式チェックは `amazon-flat-file-validator-jp`、カタログ競合（相乗り）の交渉は `amazon-catalog-conflict-ticket-builder`、商品ページ表現の薬機・景表チェックは `yakki-keihyo-expression-check`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon.co.jp の検索対象外・出品停止・ASINサスペンド・アカウントヘルス低下・ポリシー警告などの異常状態を診断し、復旧手順とPOA（是正計画書）を作成するスキル。「Amazonで出品停止になった」「検索対象外」「商品が表示されない」「suppressed listing」「ASINサスペンド」「アカウントヘルス警告」「真贋苦情」「知財侵害通報」「POA作って」「Plan of Action」「アカウント停止」「テイクダウン」など、Amazonリスティングの非表示・販売停止からの復旧リクエストで必ずこのスキルを使う。症状診断フローチャート（検索非表示／出品停止／ポリシー警告／アカウントヘルス／ASINサスペンド／アカウントサスペンド）、原因分類（画像／必須属性／価格／在庫／ポリシー／真贋／知財／安全性）、POA3点セット（問題認識・是正措置・再発防止策）、サポート問い合わせ文面までを一気通貫で出力。あらゆるカテゴリに対応。※カタログ統合・親子バリエーション設計は別スキル `amazon-variation-parent-child-audit`、フラットファイル形式チェックは `amazon-flat-file-validator-jp`、カタログ競合（相乗り）の交渉は `amazon-catalog-conflict-ticket-builder`、商品ページ表現の薬機・景表チェックは `yakki-keihyo-expression-check`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-suppressed-listing-recovery"
+ },
+ {
+  "name": "amazon-title-bullet-rewriter-jp",
+  "description_ja": "Amazon.co.jp の商品タイトル・bullet（箇条書き5本）・商品説明文を、検索性とCVRの両面で書き直すスキル。「Amazonのタイトル直して」「商品名改善」「箇条書き作って」「bulletを書き直して」「Amazon SEO向けタイトル」「商品説明文をAmazon用に」「255バイト」「200字制限」「アパレル130字」「カメラ50字」「タイトル禁止語」「絵文字NG」「全大文字NG」など、Amazon.co.jp商品ページのコピー改善のリクエストで必ずこのスキルを使う。カテゴリ別文字数制限（一般200／アパレル130／カメラ50）、bullet 255バイト上限、検索インデックス先頭1,000バイトの優先配置、薬機・景表・他社商標の禁止語チェック、属性×ベネフィットのbullet構造、タイトルとbulletの役割分担までを一気通貫で対応。あらゆるカテゴリ（家電・コスメ・食品・アパレル・日用品・ベビー・ペット等）に対応。※bulletの属性×ベネフィット構造を単体で深掘りするのは別スキル `amazon-bullet-attribute-benefit`、generic_keywordsの249バイト設計は `amazon-search-term-builder-jp`、A+コンテンツ構成は `amazon-a-plus-content-brief`、メイン画像のチェックは `amazon-main-image-checker`、薬機・景表の表現チェック単体は `yakki-keihyo-expression-check`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon.co.jp の商品タイトル・bullet（箇条書き5本）・商品説明文を、検索性とCVRの両面で書き直すスキル。「Amazonのタイトル直して」「商品名改善」「箇条書き作って」「bulletを書き直して」「Amazon SEO向けタイトル」「商品説明文をAmazon用に」「255バイト」「200字制限」「アパレル130字」「カメラ50字」「タイトル禁止語」「絵文字NG」「全大文字NG」など、Amazon.co.jp商品ページのコピー改善のリクエストで必ずこのスキルを使う。カテゴリ別文字数制限（一般200／アパレル130／カメラ50）、bullet 255バイト上限、検索インデックス先頭1,000バイトの優先配置、薬機・景表・他社商標の禁止語チェック、属性×ベネフィットのbullet構造、タイトルとbulletの役割分担までを一気通貫で対応。あらゆるカテゴリ（家電・コスメ・食品・アパレル・日用品・ベビー・ペット等）に対応。※bulletの属性×ベネフィット構造を単体で深掘りするのは別スキル `amazon-bullet-attribute-benefit`、generic_keywordsの249バイト設計は `amazon-search-term-builder-jp`、A+コンテンツ構成は `amazon-a-plus-content-brief`、メイン画像のチェックは `amazon-main-image-checker`、薬機・景表の表現チェック単体は `yakki-keihyo-expression-check`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-title-bullet-rewriter-jp"
+ },
+ {
+  "name": "amazon-us-localization-jp-brand",
+  "description_ja": "日本ブランドが Amazon.com（米国Amazon）へ出品する際の商品ページを、英語タイトル・bullet・Description・Search Terms・単位換算・規格対応・規制対応まで含めてローカライズするスキル。「Amazon US向けに英語化して」「Amazon.com出品準備」「日本商品を米国向けに」「ヤード・ポンド換算」「FDA表記」「FCC認証」「Prop 65」「米国Amazon SEO」「日本ブランドの越境EC」「USタイトル」「USバレット」など、日本商品の米国Amazon出品リクエストで必ずこのスキルを使う。日本語→英語の直訳ではなく、米国購入者の検索意図・表現様式（数字訴求・KEY ATTRIBUTE先頭大文字・直接的表現）に合わせた現地化、ml→fl oz／g→oz／cm→inch／℃→℉の単位換算、PSE→UL/ETL／FCC／FDA／Prop 65（カリフォルニア州）など規格・規制への対応を一気通貫で出力。化粧品・食品・電化製品・アパレル・ホーム&キッチン等のカテゴリに対応。※Amazon.co.jp（日本）のタイトル・bulletは別スキル `amazon-title-bullet-rewriter-jp`、米国の利益計算・関税は別途要確認、A+コンテンツ構成は `amazon-a-plus-content-brief`、薬機・景表（日本）は `yakki-keihyo-expression-check`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "日本ブランドが Amazon.com（米国Amazon）へ出品する際の商品ページを、英語タイトル・bullet・Description・Search Terms・単位換算・規格対応・規制対応まで含めてローカライズするスキル。「Amazon US向けに英語化して」「Amazon.com出品準備」「日本商品を米国向けに」「ヤード・ポンド換算」「FDA表記」「FCC認証」「Prop 65」「米国Amazon SEO」「日本ブランドの越境EC」「USタイトル」「USバレット」など、日本商品の米国Amazon出品リクエストで必ずこのスキルを使う。日本語→英語の直訳ではなく、米国購入者の検索意図・表現様式（数字訴求・KEY ATTRIBUTE先頭大文字・直接的表現）に合わせた現地化、ml→fl oz／g→oz／cm→inch／℃→℉の単位換算、PSE→UL/ETL／FCC／FDA／Prop 65（カリフォルニア州）など規格・規制への対応を一気通貫で出力。化粧品・食品・電化製品・アパレル・ホーム&キッチン等のカテゴリに対応。※Amazon.co.jp（日本）のタイトル・bulletは別スキル `amazon-title-bullet-rewriter-jp`、米国の利益計算・関税は別途要確認、A+コンテンツ構成は `amazon-a-plus-content-brief`、薬機・景表（日本）は `yakki-keihyo-expression-check`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-us-localization-jp-brand"
+ },
+ {
+  "name": "amazon-variation-parent-child-audit",
+  "description_ja": "Amazon.co.jp の親子バリエーション（variation theme／parent-child）構造を診断し、誤った組合せ・選択肢表示不備・JAN重複・レビュー統合リスクを洗い出して修正案を出すスキル。「Amazonのバリエーション診断して」「親子関係がおかしい」「色サイズの組合せを直して」「variation_theme選び方」「SizeColor／ColorSize」「親子の整合チェック」「レビュー統合リスク」「バリエーション統合したい」「親ASINと子ASINの違い」「フラットファイルで親子作って」「relationship_type=variation」「子の選択肢が出ない」など、Amazon親子バリエーションの設計・監査・修正のリクエストで必ずこのスキルを使う。30項目監査チェックリスト（親5・子10・組合せ5・共通5・データ5）、カテゴリ別variation_theme ENUM（アパレル／靴／食品／家電／コスメ／バッグ／ペット／ベビー／スポーツ／文房具）、別商品統合NG・新カラー追加・廃番扱い・移行手順までを一気通貫で対応。あらゆるカテゴリに対応。※フラットファイルの形式チェックは別スキル `amazon-flat-file-validator-jp`、カタログ競合（相乗り）の交渉は `amazon-catalog-conflict-ticket-builder`、検索非表示・出品停止からの復旧は `amazon-suppressed-listing-recovery`、タイトル・bullet改善は `amazon-title-bullet-rewriter-jp`、米国Amazonのバリエーションは `amazon-us-localization-jp-brand`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Amazon.co.jp の親子バリエーション（variation theme／parent-child）構造を診断し、誤った組合せ・選択肢表示不備・JAN重複・レビュー統合リスクを洗い出して修正案を出すスキル。「Amazonのバリエーション診断して」「親子関係がおかしい」「色サイズの組合せを直して」「variation_theme選び方」「SizeColor／ColorSize」「親子の整合チェック」「レビュー統合リスク」「バリエーション統合したい」「親ASINと子ASINの違い」「フラットファイルで親子作って」「relationship_type=variation」「子の選択肢が出ない」など、Amazon親子バリエーションの設計・監査・修正のリクエストで必ずこのスキルを使う。30項目監査チェックリスト（親5・子10・組合せ5・共通5・データ5）、カテゴリ別variation_theme ENUM（アパレル／靴／食品／家電／コスメ／バッグ／ペット／ベビー／スポーツ／文房具）、別商品統合NG・新カラー追加・廃番扱い・移行手順までを一気通貫で対応。あらゆるカテゴリに対応。※フラットファイルの形式チェックは別スキル `amazon-flat-file-validator-jp`、カタログ競合（相乗り）の交渉は `amazon-catalog-conflict-ticket-builder`、検索非表示・出品停止からの復旧は `amazon-suppressed-listing-recovery`、タイトル・bullet改善は `amazon-title-bullet-rewriter-jp`、米国Amazonのバリエーションは `amazon-us-localization-jp-brand`。",
+  "category": "ecommerce-marketing",
+  "slug": "amazon-variation-parent-child-audit"
+ },
+ {
+  "name": "base-stores-product-registration",
+  "description_ja": "BASE / STORES（ネットショップ）の商品登録文案・画像構成・バリエーション設計・送料／配送説明を作るスキル。「BASEの商品ページ」「BASEの商品説明」「BASE商品登録」「STORESの商品ページ」「STORES商品登録」「ハンドメイドの商品ページ」「個人作家のEC」「ネットショップの商品ページ」「BASE Apps」「カテゴリ管理App」「商品オプションApp」など、BASE／STORES 上での商品ページ作成・改善・チェックに関するリクエストで使う。アパレル・ハンドメイドアクセサリー・食品ギフト・コスメ・デジタルコンテンツ等あらゆるジャンルに対応。BASE は画像最大20枚・カテゴリ3階層（カテゴリ管理App）・Apps拡張モデルなどの仕様前提で組み立てる。※楽天・Shopify・futureshop・MakeShop など他カート／モールの商品登録は別スキル（`rakuten-product-name-seo` `shopify-product-page-seo-jp` `futureshop-product-page-seo` `makeshop-product-page-copy`）。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "BASE / STORES（ネットショップ）の商品登録文案・画像構成・バリエーション設計・送料／配送説明を作るスキル。「BASEの商品ページ」「BASEの商品説明」「BASE商品登録」「STORESの商品ページ」「STORES商品登録」「ハンドメイドの商品ページ」「個人作家のEC」「ネットショップの商品ページ」「BASE Apps」「カテゴリ管理App」「商品オプションApp」など、BASE／STORES 上での商品ページ作成・改善・チェックに関するリクエストで使う。アパレル・ハンドメイドアクセサリー・食品ギフト・コスメ・デジタルコンテンツ等あらゆるジャンルに対応。BASE は画像最大20枚・カテゴリ3階層（カテゴリ管理App）・Apps拡張モデルなどの仕様前提で組み立てる。※楽天・Shopify・futureshop・MakeShop など他カート／モールの商品登録は別スキル（`rakuten-product-name-seo` `shopify-product-page-seo-jp` `futureshop-product-page-seo` `makeshop-product-page-copy`）。",
+  "category": "ecommerce-marketing",
+  "slug": "base-stores-product-registration"
+ },
+ {
+  "name": "bundle-set-product-planner",
+  "description_ja": "セット商品・まとめ買い・同梱・定期購入バンドルの企画を立てるスキル。「セット商品を考えて」「まとめ買い案」「お試しセット」「ギフトセット」「同梱提案」「定期バンドル」「セットの値引率」「松竹梅の3段階」「セット粗利を試算」「バンドル価格」など、複数商品を組み合わせた販売企画の立案・粗利検算・モール登録上の注意点出しに対応。化粧品・健食・食品・アパレル・家電など各ジャンル向け。※全体粗利の試算は別スキル `price-margin-simulator`、Amazon手数料に特化した試算は別スキル `amazon-profit-fee-checker`、送料無料閾値の試算は別スキル `free-shipping-threshold-calculator`、商品ベネフィット訴求文の作成は `product-benefit-copywriter`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "セット商品・まとめ買い・同梱・定期購入バンドルの企画を立てるスキル。「セット商品を考えて」「まとめ買い案」「お試しセット」「ギフトセット」「同梱提案」「定期バンドル」「セットの値引率」「松竹梅の3段階」「セット粗利を試算」「バンドル価格」など、複数商品を組み合わせた販売企画の立案・粗利検算・モール登録上の注意点出しに対応。化粧品・健食・食品・アパレル・家電など各ジャンル向け。※全体粗利の試算は別スキル `price-margin-simulator`、Amazon手数料に特化した試算は別スキル `amazon-profit-fee-checker`、送料無料閾値の試算は別スキル `free-shipping-threshold-calculator`、商品ベネフィット訴求文の作成は `product-benefit-copywriter`。",
+  "category": "ecommerce-marketing",
+  "slug": "bundle-set-product-planner"
+ },
+ {
+  "name": "competitor-page-summary",
+  "description_ja": "競合商品ページを10軸で分析し、定石／追従／差別化の3層に分類して勝ち筋・改善アクションまで落とし込むスキル。「競合分析」「競合ページ比較」「ライバル商品との差」「競合の訴求を整理」「勝ち筋を出して」「競合との差別化」「他社ページとの違い」「競合調査」「ベンチマーク」「比較表を作って」など、楽天・Amazon・Yahoo!・自社EC（Shopify）上の競合商品ページや広告との比較分析依頼で必ずこのスキルを使う。価格／オファー／訴求軸／見出し構造／画像／動画／レビュー／権威性／配送／法的整備の10軸で観測し、社内戦略資料としてそのまま使える比較表を出力する。あらゆるジャンル（食品・コスメ・健食・家電・アパレル・インテリア・ベビー・ペット・業務用）に対応。※自社レビューから訴求軸を抽出するのは別スキル `review-analysis-copy-angles`、楽天画像のテキスト占有率チェックは別スキル `rakuten-image-text-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "競合商品ページを10軸で分析し、定石／追従／差別化の3層に分類して勝ち筋・改善アクションまで落とし込むスキル。「競合分析」「競合ページ比較」「ライバル商品との差」「競合の訴求を整理」「勝ち筋を出して」「競合との差別化」「他社ページとの違い」「競合調査」「ベンチマーク」「比較表を作って」など、楽天・Amazon・Yahoo!・自社EC（Shopify）上の競合商品ページや広告との比較分析依頼で必ずこのスキルを使う。価格／オファー／訴求軸／見出し構造／画像／動画／レビュー／権威性／配送／法的整備の10軸で観測し、社内戦略資料としてそのまま使える比較表を出力する。あらゆるジャンル（食品・コスメ・健食・家電・アパレル・インテリア・ベビー・ペット・業務用）に対応。※自社レビューから訴求軸を抽出するのは別スキル `review-analysis-copy-angles`、楽天画像のテキスト占有率チェックは別スキル `rakuten-image-text-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "competitor-page-summary"
+ },
+ {
+  "name": "complaint-root-cause-cluster",
+  "description_ja": "お客様からのクレーム・問い合わせ・低評価レビューを「配送品質／商品品質／説明・期待値ズレ／カスタマー対応／システム・サイト不具合／その他」の6大カテゴリに分類し、根本原因と改善アクションを優先度付きで整理するスキル。「クレーム分析」「クレーム原因分類」「クレームを整理して」「問い合わせの傾向」「低評価レビューの原因」「再発防止策」「CS改善」「コールセンター入電分析」「カスタマー対応の改善点」「VOC分析」など、複数のクレーム・問い合わせデータを構造化して改善案に繋げる場面で使う。CSV／メール本文／レビュー全文／コール記録の自由テキスト入力に対応。※レビューへの個別返信文案は別スキル `review-reply-tone-controller`、配送遅延の個別謝罪は `delivery-delay-apology-builder`、お問い合わせ返信は `customer-inquiry-reply-ec`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "お客様からのクレーム・問い合わせ・低評価レビューを「配送品質／商品品質／説明・期待値ズレ／カスタマー対応／システム・サイト不具合／その他」の6大カテゴリに分類し、根本原因と改善アクションを優先度付きで整理するスキル。「クレーム分析」「クレーム原因分類」「クレームを整理して」「問い合わせの傾向」「低評価レビューの原因」「再発防止策」「CS改善」「コールセンター入電分析」「カスタマー対応の改善点」「VOC分析」など、複数のクレーム・問い合わせデータを構造化して改善案に繋げる場面で使う。CSV／メール本文／レビュー全文／コール記録の自由テキスト入力に対応。※レビューへの個別返信文案は別スキル `review-reply-tone-controller`、配送遅延の個別謝罪は `delivery-delay-apology-builder`、お問い合わせ返信は `customer-inquiry-reply-ec`。",
+  "category": "ecommerce-marketing",
+  "slug": "complaint-root-cause-cluster"
+ },
+ {
+  "name": "crossmall-inventory-sync-checker",
+  "description_ja": "クロスモール（CROSS MALL）など多モール在庫連携ツールで起きる在庫ズレ・SKU紐付けミス・ダブル販売・セット商品の在庫不整合を検出し、修正方針と再発防止運用までを示すスキル。「クロスモールの在庫ズレ」「在庫連携ミス」「ダブル販売」「売り越し」「オーバーセール」「楽天とAmazonで在庫が違う」「SKU紐付けが切れている」「マイナス在庫」「安全在庫の設定」「セット商品の在庫が合わない」「バリエーション親子の在庫不整合」「在庫が反映されない」「連携間隔30分」など、クロスモール／類似在庫連携SaaSで起きる在庫整合問題で使う。楽天RMS・Amazon SP-API・Yahoo!ショッピング・Shopify・自社倉庫の間の基準在庫整合に対応。※ネクストエンジン商品マスタの整形・コード正規化は別スキル `next-engine-product-master-cleaner`、モール間CSV列マッピングは `mall-to-mall-csv-mapper`、JANのチェックデジット検証は `jan-code-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "クロスモール（CROSS MALL）など多モール在庫連携ツールで起きる在庫ズレ・SKU紐付けミス・ダブル販売・セット商品の在庫不整合を検出し、修正方針と再発防止運用までを示すスキル。「クロスモールの在庫ズレ」「在庫連携ミス」「ダブル販売」「売り越し」「オーバーセール」「楽天とAmazonで在庫が違う」「SKU紐付けが切れている」「マイナス在庫」「安全在庫の設定」「セット商品の在庫が合わない」「バリエーション親子の在庫不整合」「在庫が反映されない」「連携間隔30分」など、クロスモール／類似在庫連携SaaSで起きる在庫整合問題で使う。楽天RMS・Amazon SP-API・Yahoo!ショッピング・Shopify・自社倉庫の間の基準在庫整合に対応。※ネクストエンジン商品マスタの整形・コード正規化は別スキル `next-engine-product-master-cleaner`、モール間CSV列マッピングは `mall-to-mall-csv-mapper`、JANのチェックデジット検証は `jan-code-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "crossmall-inventory-sync-checker"
+ },
+ {
+  "name": "csv-encoding-sjis-validator",
+  "description_ja": "EC用のCSVファイルが各モールの要求する文字コード（Shift_JIS／UTF-8／BOM有無）と改行コード（CRLF／LF）に適合しているか、文字化け・先頭0落ち・カンマやダブルクォート崩れ・Shift_JIS範囲外文字（機種依存・絵文字・①②／㍑等）が混入していないかを検証するスキル。「CSVが文字化け」「Shift_JISエラー」「UTF-8で開けない」「BOM付き／無し」「先頭0が消える」「Excelで開いて壊れた」「機種依存文字が混入」「楽天CSVのエンコード」「絵文字が含まれている」「改行コードが違う」など、ECモール向けCSVの文字コード・改行・形式不備の検出と修正で使う。楽天（Shift_JIS/CRLF）・Amazon（UTF-8/タブ区切り）・Yahoo（UTF-8/CRLF）・ネクストエンジン・クロスモール対応。※モール間のCSV列マッピングは別スキル `mall-to-mall-csv-mapper`、Amazonフラットファイルの属性エラーは `amazon-flat-file-validator-jp`、JANのチェックデジットは `jan-code-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "EC用のCSVファイルが各モールの要求する文字コード（Shift_JIS／UTF-8／BOM有無）と改行コード（CRLF／LF）に適合しているか、文字化け・先頭0落ち・カンマやダブルクォート崩れ・Shift_JIS範囲外文字（機種依存・絵文字・①②／㍑等）が混入していないかを検証するスキル。「CSVが文字化け」「Shift_JISエラー」「UTF-8で開けない」「BOM付き／無し」「先頭0が消える」「Excelで開いて壊れた」「機種依存文字が混入」「楽天CSVのエンコード」「絵文字が含まれている」「改行コードが違う」など、ECモール向けCSVの文字コード・改行・形式不備の検出と修正で使う。楽天（Shift_JIS/CRLF）・Amazon（UTF-8/タブ区切り）・Yahoo（UTF-8/CRLF）・ネクストエンジン・クロスモール対応。※モール間のCSV列マッピングは別スキル `mall-to-mall-csv-mapper`、Amazonフラットファイルの属性エラーは `amazon-flat-file-validator-jp`、JANのチェックデジットは `jan-code-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "csv-encoding-sjis-validator"
+ },
+ {
+  "name": "customer-inquiry-reply-ec",
+  "description_ja": "ECショップに届く顧客問い合わせメール・モール内メッセージの返信文を作成するスキル。「問い合わせ返信」「お客様対応メール」「カスタマー対応文」「サイズ質問への回答」「在庫切れ案内」「初期不良の返答」「クレーム初動返信」「規約根拠でのお断り文」「チャットメッセージ短文」など、受注前質問・配送問い合わせ・返品交換・クレーム対応の文面作成を依頼されたときに使う。楽天市場・Amazon・Yahoo!ショッピング・自社EC（Shopify/futureshop/BASE/STORES等）・LINE公式の各チャネルに対応し、チャネル別トーン・敬語レベル・エスカレーション判定（レベル1〜3）を踏まえて文面を生成する。※配送遅延・欠品・誤配送・破損の謝罪文に特化したい場合は別スキル `delivery-delay-apology-builder`、問い合わせ履歴からFAQを作る場合は `faq-from-inquiries-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ECショップに届く顧客問い合わせメール・モール内メッセージの返信文を作成するスキル。「問い合わせ返信」「お客様対応メール」「カスタマー対応文」「サイズ質問への回答」「在庫切れ案内」「初期不良の返答」「クレーム初動返信」「規約根拠でのお断り文」「チャットメッセージ短文」など、受注前質問・配送問い合わせ・返品交換・クレーム対応の文面作成を依頼されたときに使う。楽天市場・Amazon・Yahoo!ショッピング・自社EC（Shopify/futureshop/BASE/STORES等）・LINE公式の各チャネルに対応し、チャネル別トーン・敬語レベル・エスカレーション判定（レベル1〜3）を踏まえて文面を生成する。※配送遅延・欠品・誤配送・破損の謝罪文に特化したい場合は別スキル `delivery-delay-apology-builder`、問い合わせ履歴からFAQを作る場合は `faq-from-inquiries-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "customer-inquiry-reply-ec"
+ },
+ {
+  "name": "deadstock-clearance-planner",
+  "description_ja": "滞留在庫・デッドストック・賞味期限間近商品・型落ち品の処分計画を立てるスキル。「在庫処分したい」「滞留在庫」「売れ残り」「型落ち処分」「訳あり販売」「アウトレットに出したい」「賞味期限が近い」「廃棄するしかないか」「セールで売り切る」「在庫評価損」など、動かない在庫の出口戦略立案・シナリオ比較・段階値引き設計に対応。化粧品・食品・健食・アパレル・家電・雑貨など各ジャンル向け。※在庫の発注点予測は別スキル `reorder-point-forecast-lite`、在庫アラート発火後のアクション割振りは `inventory-alert-action-list`、セット商品としての出口戦略立案は `bundle-set-product-planner`、薬機法・景表法表現チェックは `yakki-keihyo-expression-check`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "滞留在庫・デッドストック・賞味期限間近商品・型落ち品の処分計画を立てるスキル。「在庫処分したい」「滞留在庫」「売れ残り」「型落ち処分」「訳あり販売」「アウトレットに出したい」「賞味期限が近い」「廃棄するしかないか」「セールで売り切る」「在庫評価損」など、動かない在庫の出口戦略立案・シナリオ比較・段階値引き設計に対応。化粧品・食品・健食・アパレル・家電・雑貨など各ジャンル向け。※在庫の発注点予測は別スキル `reorder-point-forecast-lite`、在庫アラート発火後のアクション割振りは `inventory-alert-action-list`、セット商品としての出口戦略立案は `bundle-set-product-planner`、薬機法・景表法表現チェックは `yakki-keihyo-expression-check`。",
+  "category": "ecommerce-marketing",
+  "slug": "deadstock-clearance-planner"
+ },
+ {
+  "name": "delivery-delay-apology-builder",
+  "description_ja": "配送遅延・欠品・誤配送・商品破損に対するお詫びメール文面を作成するスキル。「配送遅延のお詫び」「商品が届かない連絡」「欠品案内」「誤配送のお詫び」「破損対応メール」「お届け予定日超過の連絡」「在庫切れキャンセル連絡」「再入荷未定の謝罪文」「クール便遅延」「災害遅延」など、出荷後に発生したトラブルへの顧客通知文を依頼されたときに使う。6要素（事実・お詫び・原因・対応・期限・連絡先）を網羅し、補償段階A〜Eを踏まえた文面を生成。楽天・Amazon・Yahoo!・自社EC・LINEのチャネル別トーンに対応。※受注前質問・返品交換・クレーム初動など通常の問い合わせ返信は別スキル `customer-inquiry-reply-ec`、問い合わせ履歴のFAQ化は `faq-from-inquiries-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "配送遅延・欠品・誤配送・商品破損に対するお詫びメール文面を作成するスキル。「配送遅延のお詫び」「商品が届かない連絡」「欠品案内」「誤配送のお詫び」「破損対応メール」「お届け予定日超過の連絡」「在庫切れキャンセル連絡」「再入荷未定の謝罪文」「クール便遅延」「災害遅延」など、出荷後に発生したトラブルへの顧客通知文を依頼されたときに使う。6要素（事実・お詫び・原因・対応・期限・連絡先）を網羅し、補償段階A〜Eを踏まえた文面を生成。楽天・Amazon・Yahoo!・自社EC・LINEのチャネル別トーンに対応。※受注前質問・返品交換・クレーム初動など通常の問い合わせ返信は別スキル `customer-inquiry-reply-ec`、問い合わせ履歴のFAQ化は `faq-from-inquiries-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "delivery-delay-apology-builder"
+ },
+ {
+  "name": "ec-ad-creative-brief",
+  "description_ja": "EC広告クリエイティブブリーフをMeta／Google／LINE／Yahoo!／TikTok／X／YouTube Shortsの媒体別仕様に揃えて生成するスキル。「広告ブリーフを作って」「クリエイティブブリーフ」「広告画像の指示書」「広告コピー一式」「デザイナーに渡すブリーフ」「広告クリエイティブの企画」「媒体横断で広告を作って」「A/Bテスト案を出して」「広告コンセプト」など、媒体を横断した広告クリエイティブの企画・制作指示書の作成依頼で必ずこのスキルを使う。画像構成・コピー（プライマリ／見出し／説明）・訴求軸・媒体ポリシー上のNG表現・薬機法／景表法／ステマ規制チェックまで一括で出す。あらゆるジャンル（食品・コスメ・健食・家電・アパレル・ベビー・ペット）に対応。※Meta広告のテキスト特化生成は別スキル `meta-ad-copy-ec-jp`、LP全体構成は `ec-landing-page-outline`、FV特化診断は `lp-firstview-diagnosis`、SNS投稿生成は `ec-sns-post-generator`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "EC広告クリエイティブブリーフをMeta／Google／LINE／Yahoo!／TikTok／X／YouTube Shortsの媒体別仕様に揃えて生成するスキル。「広告ブリーフを作って」「クリエイティブブリーフ」「広告画像の指示書」「広告コピー一式」「デザイナーに渡すブリーフ」「広告クリエイティブの企画」「媒体横断で広告を作って」「A/Bテスト案を出して」「広告コンセプト」など、媒体を横断した広告クリエイティブの企画・制作指示書の作成依頼で必ずこのスキルを使う。画像構成・コピー（プライマリ／見出し／説明）・訴求軸・媒体ポリシー上のNG表現・薬機法／景表法／ステマ規制チェックまで一括で出す。あらゆるジャンル（食品・コスメ・健食・家電・アパレル・ベビー・ペット）に対応。※Meta広告のテキスト特化生成は別スキル `meta-ad-copy-ec-jp`、LP全体構成は `ec-landing-page-outline`、FV特化診断は `lp-firstview-diagnosis`、SNS投稿生成は `ec-sns-post-generator`。",
+  "category": "ecommerce-marketing",
+  "slug": "ec-ad-creative-brief"
+ },
+ {
+  "name": "ec-landing-page-outline",
+  "description_ja": "ECのランディングページ全体構成を9セクション標準（FV／共感／解決／証拠／比較／使用方法／FAQ／オファー／CTA）で設計するスキル。「LP構成を作って」「ランディングページの骨子」「LPの台割」「LPワイヤーフレーム」「LPアウトライン」「LPセクション設計」「LP全体の流れ」「LP台本」「ランディング設計」など、単発購入LP・定期購入LP・季節キャンペーンLPの全体構成設計依頼で必ずこのスキルを使う。セクション順・各セクションのコピー方針・特商法13項目／最終確認画面6項目（定期）／二重価格8週間ルール／No.1表記5項目／打消し表示7原則／薬機法カテゴリ別表現範囲まで一括で組み込む。あらゆるジャンル（食品・コスメ・健食・家電・アパレル）に対応。※FV1画面の詳細スコアリングは別スキル `lp-firstview-diagnosis`、広告クリエイティブブリーフは `ec-ad-creative-brief`、Shopifyセクションのコード生成は `shopify-section-idea-generator-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ECのランディングページ全体構成を9セクション標準（FV／共感／解決／証拠／比較／使用方法／FAQ／オファー／CTA）で設計するスキル。「LP構成を作って」「ランディングページの骨子」「LPの台割」「LPワイヤーフレーム」「LPアウトライン」「LPセクション設計」「LP全体の流れ」「LP台本」「ランディング設計」など、単発購入LP・定期購入LP・季節キャンペーンLPの全体構成設計依頼で必ずこのスキルを使う。セクション順・各セクションのコピー方針・特商法13項目／最終確認画面6項目（定期）／二重価格8週間ルール／No.1表記5項目／打消し表示7原則／薬機法カテゴリ別表現範囲まで一括で組み込む。あらゆるジャンル（食品・コスメ・健食・家電・アパレル）に対応。※FV1画面の詳細スコアリングは別スキル `lp-firstview-diagnosis`、広告クリエイティブブリーフは `ec-ad-creative-brief`、Shopifyセクションのコード生成は `shopify-section-idea-generator-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "ec-landing-page-outline"
+ },
+ {
+  "name": "ec-monthly-management-report",
+  "description_ja": "EC事業の月次経営レポート（売上・粗利・広告費・在庫・CVR・AOV・LTV・CPA・ROAS等）を作成するスキル。「EC月次レポート」「経営報告書」「KPIレポート」「売上分析」「チャネル別実績まとめ」「広告効率レポート」「在庫KPI」「LTV/CAC分析」「コホート分析」「次月施策提案」「経営者向けサマリー」など、EC事業の月次業績を経営者・責任者向けにまとめる作業で使う。楽天・Amazon・Yahoo!・自社ECの手数料構造を踏まえた実質粗利率、在庫回転率・滞留率・欠品損失、コホート別LTV、LTV/CAC比など、ECに固有の指標を網羅。前月比・前年比・異常値検出・要因分析・次月施策3-5個を1本のレポートに統合する。※個別KPI（広告単体・LTV単体）の深掘り分析や、モール別の運用レポートは別系列スキル。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "EC事業の月次経営レポート（売上・粗利・広告費・在庫・CVR・AOV・LTV・CPA・ROAS等）を作成するスキル。「EC月次レポート」「経営報告書」「KPIレポート」「売上分析」「チャネル別実績まとめ」「広告効率レポート」「在庫KPI」「LTV/CAC分析」「コホート分析」「次月施策提案」「経営者向けサマリー」など、EC事業の月次業績を経営者・責任者向けにまとめる作業で使う。楽天・Amazon・Yahoo!・自社ECの手数料構造を踏まえた実質粗利率、在庫回転率・滞留率・欠品損失、コホート別LTV、LTV/CAC比など、ECに固有の指標を網羅。前月比・前年比・異常値検出・要因分析・次月施策3-5個を1本のレポートに統合する。※個別KPI（広告単体・LTV単体）の深掘り分析や、モール別の運用レポートは別系列スキル。",
+  "category": "ecommerce-marketing",
+  "slug": "ec-monthly-management-report"
+ },
+ {
+  "name": "ec-product-master-cleaner-jp",
+  "description_ja": "EC商品マスタCSV／Excelの表記揺れ・空欄・重複・SKU不整合・禁止文字・エンコーディング崩れを一括チェック＆クレンジングするスキル。「商品マスタが汚い」「CSVを整理して」「表記揺れを統一」「全角半角を直して」「文字化けが起きた」「ShiftJISで弾かれる」「重複SKU」「機種依存文字」「商品名がモールでエラー」「マスタクレンジング」など、商品マスタデータの品質改善・正規化に対応。楽天／Amazon／Yahoo！ショッピング／Shopify／ネクストエンジンの主要列に対応。※JANのチェックデジット検証は別スキル `jan-code-checker`、SKU命名規則の設計は `sku-naming-rule-generator`、商品属性（カラー・サイズ等）の値正規化は `product-attribute-normalizer`、楽天ジャンルID選定は `rakuten-genre-id-selector`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "EC商品マスタCSV／Excelの表記揺れ・空欄・重複・SKU不整合・禁止文字・エンコーディング崩れを一括チェック＆クレンジングするスキル。「商品マスタが汚い」「CSVを整理して」「表記揺れを統一」「全角半角を直して」「文字化けが起きた」「ShiftJISで弾かれる」「重複SKU」「機種依存文字」「商品名がモールでエラー」「マスタクレンジング」など、商品マスタデータの品質改善・正規化に対応。楽天／Amazon／Yahoo！ショッピング／Shopify／ネクストエンジンの主要列に対応。※JANのチェックデジット検証は別スキル `jan-code-checker`、SKU命名規則の設計は `sku-naming-rule-generator`、商品属性（カラー・サイズ等）の値正規化は `product-attribute-normalizer`、楽天ジャンルID選定は `rakuten-genre-id-selector`。",
+  "category": "ecommerce-marketing",
+  "slug": "ec-product-master-cleaner-jp"
+ },
+ {
+  "name": "ec-sns-post-generator",
+  "description_ja": "EC事業者が自社運用するSNS投稿（Instagram／X／TikTok／Threads／YouTube Shorts）を媒体特性・拡散ロジック・薬機法／景表法／ステマ規制に揃えて生成するスキル。「SNS投稿を作って」「インスタの投稿文」「Xのポスト」「TikTok台本」「Threads投稿」「リール台本」「ストーリー文案」「ハッシュタグ案」「SNSキャンペーン投稿」「投稿カレンダー」など、EC事業者の自社SNS運用での投稿生成・投稿シリーズ設計依頼で必ずこのスキルを使う。媒体ごとの文字数（Instagram2200字／X140字／TikTok150字／Threads500字）・ハッシュタグ戦略・トーン・拡散ロジックに沿って投稿本文＋画像／動画指示＋ハッシュタグ案＋PR表記までセットで出す。あらゆるジャンル（食品・コスメ・健食・家電・アパレル）に対応。※インフルエンサーへの依頼書作成は別スキル `influencer-brief-generator`、Meta広告コピーは `meta-ad-copy-ec-jp`、楽天メルマガは `rakuten-mailmagazine-builder`、Shopifyブログ記事は `shopify-blog-content-planner`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "EC事業者が自社運用するSNS投稿（Instagram／X／TikTok／Threads／YouTube Shorts）を媒体特性・拡散ロジック・薬機法／景表法／ステマ規制に揃えて生成するスキル。「SNS投稿を作って」「インスタの投稿文」「Xのポスト」「TikTok台本」「Threads投稿」「リール台本」「ストーリー文案」「ハッシュタグ案」「SNSキャンペーン投稿」「投稿カレンダー」など、EC事業者の自社SNS運用での投稿生成・投稿シリーズ設計依頼で必ずこのスキルを使う。媒体ごとの文字数（Instagram2200字／X140字／TikTok150字／Threads500字）・ハッシュタグ戦略・トーン・拡散ロジックに沿って投稿本文＋画像／動画指示＋ハッシュタグ案＋PR表記までセットで出す。あらゆるジャンル（食品・コスメ・健食・家電・アパレル）に対応。※インフルエンサーへの依頼書作成は別スキル `influencer-brief-generator`、Meta広告コピーは `meta-ad-copy-ec-jp`、楽天メルマガは `rakuten-mailmagazine-builder`、Shopifyブログ記事は `shopify-blog-content-planner`。",
+  "category": "ecommerce-marketing",
+  "slug": "ec-sns-post-generator"
+ },
+ {
+  "name": "faq-from-inquiries-builder",
+  "description_ja": "顧客問い合わせ履歴・回答ログから、公開FAQ・商品ページQ&A・チャットボット用Q&A・社内対応マニュアルを抽出・整理するスキル。「問い合わせからFAQを作って」「よくある質問を整理して」「ヘルプセンターに載せるQ&A」「商品ページに追記する質問集」「チャットボット用Q&A作成」「過去問い合わせのクラスタリング」「対応マニュアル化」「FAQ優先度付け」「回答ぶれの統一」など、CRMや問い合わせ管理から知識ベースを作る作業で使う。頻度×売上影響×離脱阻止寄与度の3軸で優先度を判定し、4成果物（公開FAQ／商品ページ／チャットボット／社内マニュアル）に書き分ける。※個別の顧客問い合わせ返信は別スキル `customer-inquiry-reply-ec`、配送遅延・欠品の謝罪文は `delivery-delay-apology-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "顧客問い合わせ履歴・回答ログから、公開FAQ・商品ページQ&A・チャットボット用Q&A・社内対応マニュアルを抽出・整理するスキル。「問い合わせからFAQを作って」「よくある質問を整理して」「ヘルプセンターに載せるQ&A」「商品ページに追記する質問集」「チャットボット用Q&A作成」「過去問い合わせのクラスタリング」「対応マニュアル化」「FAQ優先度付け」「回答ぶれの統一」など、CRMや問い合わせ管理から知識ベースを作る作業で使う。頻度×売上影響×離脱阻止寄与度の3軸で優先度を判定し、4成果物（公開FAQ／商品ページ／チャットボット／社内マニュアル）に書き分ける。※個別の顧客問い合わせ返信は別スキル `customer-inquiry-reply-ec`、配送遅延・欠品の謝罪文は `delivery-delay-apology-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "faq-from-inquiries-builder"
+ },
+ {
+  "name": "free-shipping-threshold-calculator",
+  "description_ja": "送料無料閾値（送料無料ライン）を客単価・粗利・送料負担から設計するスキル。「送料無料ラインをいくらにすべきか」「全件送料無料できるか」「あと○○円で送料無料」「閾値を下げたい」「送料込みプラン」「送料負担が重い」「3980円ライン」「定期送料無料」「送料無料の損益分岐」など、送料無料化が事業粗利に与える影響を計算し、業界別の典型値も踏まえた閾値設計・シナリオ比較に対応。化粧品・健食・食品・雑貨・家電・アパレル各ジャンル対応。※全体粗利・価格戦略の試算は別スキル `price-margin-simulator`、Amazon手数料に特化した試算は `amazon-profit-fee-checker`、セット商品の粗利設計は `bundle-set-product-planner`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "送料無料閾値（送料無料ライン）を客単価・粗利・送料負担から設計するスキル。「送料無料ラインをいくらにすべきか」「全件送料無料できるか」「あと○○円で送料無料」「閾値を下げたい」「送料込みプラン」「送料負担が重い」「3980円ライン」「定期送料無料」「送料無料の損益分岐」など、送料無料化が事業粗利に与える影響を計算し、業界別の典型値も踏まえた閾値設計・シナリオ比較に対応。化粧品・健食・食品・雑貨・家電・アパレル各ジャンル対応。※全体粗利・価格戦略の試算は別スキル `price-margin-simulator`、Amazon手数料に特化した試算は `amazon-profit-fee-checker`、セット商品の粗利設計は `bundle-set-product-planner`。",
+  "category": "ecommerce-marketing",
+  "slug": "free-shipping-threshold-calculator"
+ },
+ {
+  "name": "futureshop-mailmagazine-builder",
+  "description_ja": "futureshop（コマースクリエイター対応）のメルマガ／ステップメール／システムメールの件名・本文・セグメント設計を作るスキル。「futureshopのメルマガ」「futureshopのメール配信」「コマースクリエイターのメール」「ステップメール設計」「件名のA/Bテスト」「休眠掘り起こしメール」「購入後フォロー」「レビュー依頼メール」「ステップメール3通」「セグメント別配信」「CRM PLUS連携」など、futureshop 上でのメール施策に関するリクエストで使う。新商品告知／キャンペーン告知／休眠掘り起こし／購入後フォロー／ステップメール／レビュー依頼の6パターンと、件名フォーミュラ（ベネフィット軸／緊急性軸／好奇心軸）を備える。特電法（配信停止・送信者情報）、景表法（二重価格8週間ルール・No.1の4要件）、薬機法（化粧品56効能・健食4分類）、ステマ規制（2023.10.1〜）を必ずチェック。※楽天R-Mail等のモール内メール配信は別、Shopify Email は別、makeshop メルマガは別カート。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "futureshop（コマースクリエイター対応）のメルマガ／ステップメール／システムメールの件名・本文・セグメント設計を作るスキル。「futureshopのメルマガ」「futureshopのメール配信」「コマースクリエイターのメール」「ステップメール設計」「件名のA/Bテスト」「休眠掘り起こしメール」「購入後フォロー」「レビュー依頼メール」「ステップメール3通」「セグメント別配信」「CRM PLUS連携」など、futureshop 上でのメール施策に関するリクエストで使う。新商品告知／キャンペーン告知／休眠掘り起こし／購入後フォロー／ステップメール／レビュー依頼の6パターンと、件名フォーミュラ（ベネフィット軸／緊急性軸／好奇心軸）を備える。特電法（配信停止・送信者情報）、景表法（二重価格8週間ルール・No.1の4要件）、薬機法（化粧品56効能・健食4分類）、ステマ規制（2023.10.1〜）を必ずチェック。※楽天R-Mail等のモール内メール配信は別、Shopify Email は別、makeshop メルマガは別カート。",
+  "category": "ecommerce-marketing",
+  "slug": "futureshop-mailmagazine-builder"
+ },
+ {
+  "name": "futureshop-product-page-seo",
+  "description_ja": "futureshop（コマースクリエイター対応）の商品ページ・商品グループページのSEO（タイトル／メタディスクリプション／h1／パンくず／商品グループ構造／構造化データ）を改善するスキル。「futureshopのSEO」「futureshopの商品ページ」「コマースクリエイターのSEO」「メイングループ設計」「商品グループ階層」「商品マスタCSVのSEOタイトル」「カテゴリページのSEO」「パンくず設計」「構造化データJSON-LD」「サイトマップXML」「Search Console」など、futureshop 上でのSEO最適化に関するリクエストで使う。商品マスタCSVのSEOタイトル・SEOディスクリプション列、CCテンプレートのフォールバック設定、商品グループの3〜5階層設計、Product schemaの設定までカバー。アパレル／コスメ／食品／雑貨など全ジャンル対応。※Shopify の商品ページSEO は別スキル `shopify-product-page-seo-jp`、楽天の商品名SEO は `rakuten-product-name-seo`、makeshop は `makeshop-product-page-copy`、汎用の検索ボリューム調査は別。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "futureshop（コマースクリエイター対応）の商品ページ・商品グループページのSEO（タイトル／メタディスクリプション／h1／パンくず／商品グループ構造／構造化データ）を改善するスキル。「futureshopのSEO」「futureshopの商品ページ」「コマースクリエイターのSEO」「メイングループ設計」「商品グループ階層」「商品マスタCSVのSEOタイトル」「カテゴリページのSEO」「パンくず設計」「構造化データJSON-LD」「サイトマップXML」「Search Console」など、futureshop 上でのSEO最適化に関するリクエストで使う。商品マスタCSVのSEOタイトル・SEOディスクリプション列、CCテンプレートのフォールバック設定、商品グループの3〜5階層設計、Product schemaの設定までカバー。アパレル／コスメ／食品／雑貨など全ジャンル対応。※Shopify の商品ページSEO は別スキル `shopify-product-page-seo-jp`、楽天の商品名SEO は `rakuten-product-name-seo`、makeshop は `makeshop-product-page-copy`、汎用の検索ボリューム調査は別。",
+  "category": "ecommerce-marketing",
+  "slug": "futureshop-product-page-seo"
+ },
+ {
+  "name": "gift-demand-keyword-builder",
+  "description_ja": "ギフト需要・季節需要・イベント需要の検索キーワードと訴求コピーを、配送スケジュール・のしマナー・贈答タブーまで含めて全チャネル横断で生成するスキル。「ギフトキーワード作って」「母の日の訴求」「お中元キーワード」「お歳暮ギフト」「敬老の日プレゼント」「父の日訴求」「内祝のコピー」「香典返し」「結婚祝」「出産祝」「ギフト需要を取りたい」「のし表書き」「贈答用ページ」「配送締切いつまで」など、季節イベント・冠婚葬祭のギフト需要に対応したキーワード設計・コピー設計・運用カレンダーの依頼で使う。Google／Yahoo!検索、Meta、楽天、Amazon、Yahoo!ショッピング、Shopify、LINE等の全チャネル横断対応。あらゆるジャンル（食品・スイーツ・酒・コスメ・雑貨・花・カタログギフト等）に対応。※楽天検索特化のギフトキーワードは別スキル `rakuten-gift-demand-keywords`、季節販促の全体カレンダーは `seasonal-sales-calendar-jp`、ギフトLP構成は `ec-landing-page-outline`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ギフト需要・季節需要・イベント需要の検索キーワードと訴求コピーを、配送スケジュール・のしマナー・贈答タブーまで含めて全チャネル横断で生成するスキル。「ギフトキーワード作って」「母の日の訴求」「お中元キーワード」「お歳暮ギフト」「敬老の日プレゼント」「父の日訴求」「内祝のコピー」「香典返し」「結婚祝」「出産祝」「ギフト需要を取りたい」「のし表書き」「贈答用ページ」「配送締切いつまで」など、季節イベント・冠婚葬祭のギフト需要に対応したキーワード設計・コピー設計・運用カレンダーの依頼で使う。Google／Yahoo!検索、Meta、楽天、Amazon、Yahoo!ショッピング、Shopify、LINE等の全チャネル横断対応。あらゆるジャンル（食品・スイーツ・酒・コスメ・雑貨・花・カタログギフト等）に対応。※楽天検索特化のギフトキーワードは別スキル `rakuten-gift-demand-keywords`、季節販促の全体カレンダーは `seasonal-sales-calendar-jp`、ギフトLP構成は `ec-landing-page-outline`。",
+  "category": "ecommerce-marketing",
+  "slug": "gift-demand-keyword-builder"
+ },
+ {
+  "name": "google-merchant-center-policy-diagnosis",
+  "description_ja": "Google Merchant Center／ショッピング広告で商品が不承認・警告になった原因を、ショッピング広告ポリシー・サイト品質ポリシー・データ品質要件の観点で診断するスキル。「Merchant Center不承認」「ショッピング広告が承認されない」「GMC警告」「ショッピング広告ポリシー違反」「サイトの透明性」「禁止コンテンツ」「健康・医療カテゴリで不承認」「アカウント停止された」「ランディングページ品質」「サイト審査落ち」など、GMCのポリシー判定が絡む問題で使う。広告ポリシー／審査基準／サイト要件の診断に特化。※フィード属性のエラー（GTIN・在庫・価格などのデータ品質）の修正は別スキル `merchant-center-feed-error-fixer`、薬機法・景表法の文言は `yakki-keihyo-expression-check`、特商法ページは `tokutei-shotorihiki-page-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Google Merchant Center／ショッピング広告で商品が不承認・警告になった原因を、ショッピング広告ポリシー・サイト品質ポリシー・データ品質要件の観点で診断するスキル。「Merchant Center不承認」「ショッピング広告が承認されない」「GMC警告」「ショッピング広告ポリシー違反」「サイトの透明性」「禁止コンテンツ」「健康・医療カテゴリで不承認」「アカウント停止された」「ランディングページ品質」「サイト審査落ち」など、GMCのポリシー判定が絡む問題で使う。広告ポリシー／審査基準／サイト要件の診断に特化。※フィード属性のエラー（GTIN・在庫・価格などのデータ品質）の修正は別スキル `merchant-center-feed-error-fixer`、薬機法・景表法の文言は `yakki-keihyo-expression-check`、特商法ページは `tokutei-shotorihiki-page-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "google-merchant-center-policy-diagnosis"
+ },
+ {
+  "name": "influencer-brief-generator",
+  "description_ja": "インフルエンサー／アンバサダー／モニター案件の依頼ブリーフを、ステマ規制（景表法5条3号・2023.10.1施行）対応の契約条項・PR表記要件・カテゴリ別NG表現リスト・投稿確認チェックリストまで一式生成するスキル。「インフルエンサーブリーフ」「PR投稿の指示書」「ステマ規制対応の契約書」「Paid Partnership」「Spark Ads」「有料プロモーション表示」「アンバサダー依頼文」「モニター案件」「タイアップ投稿」「PR表記の位置」「インフルエンサーへのNG表現リスト」「二次利用権」「競合排他」「インフルエンサー報酬」など、インフルエンサー／アンバサダー／モニター系の依頼書作成で使う。Instagram／TikTok／YouTube／X／Threads／ブログ／LINE 横断対応。あらゆるジャンル（化粧品・健食・食品・アパレル・家電・ベビー）に対応。※Meta広告の媒体特化コピー生成は別スキル `meta-ad-copy-ec-jp`、SNS自社投稿の作成は `ec-sns-post-generator`、広告クリエイティブ全般のブリーフは `ec-ad-creative-brief`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "インフルエンサー／アンバサダー／モニター案件の依頼ブリーフを、ステマ規制（景表法5条3号・2023.10.1施行）対応の契約条項・PR表記要件・カテゴリ別NG表現リスト・投稿確認チェックリストまで一式生成するスキル。「インフルエンサーブリーフ」「PR投稿の指示書」「ステマ規制対応の契約書」「Paid Partnership」「Spark Ads」「有料プロモーション表示」「アンバサダー依頼文」「モニター案件」「タイアップ投稿」「PR表記の位置」「インフルエンサーへのNG表現リスト」「二次利用権」「競合排他」「インフルエンサー報酬」など、インフルエンサー／アンバサダー／モニター系の依頼書作成で使う。Instagram／TikTok／YouTube／X／Threads／ブログ／LINE 横断対応。あらゆるジャンル（化粧品・健食・食品・アパレル・家電・ベビー）に対応。※Meta広告の媒体特化コピー生成は別スキル `meta-ad-copy-ec-jp`、SNS自社投稿の作成は `ec-sns-post-generator`、広告クリエイティブ全般のブリーフは `ec-ad-creative-brief`。",
+  "category": "ecommerce-marketing",
+  "slug": "influencer-brief-generator"
+ },
+ {
+  "name": "inventory-alert-action-list",
+  "description_ja": "在庫データから欠品・危険・過剰・滞留などのアラートを発火させ、SKU別の即時アクション（発注／販売制限／広告停止／値引き／セット化）リストを生成するスキル。「在庫アラートを出して」「欠品リスト」「過剰在庫」「滞留商品」「広告を止めるべきSKU」「発注すべき商品」「在庫切れ対応」「再入荷対応」「在庫アクションリスト」「ABC別の在庫対応」など、在庫状況の自動診断とアクション割振りに対応。楽天／Amazon／Yahoo！／Shopify／ネクストエンジン在庫データに対応。※発注点・安全在庫の予測算出に特化したのは別スキル `reorder-point-forecast-lite`、滞留商品の処分計画立案は `deadstock-clearance-planner`、セット商品化での消化は `bundle-set-product-planner`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "在庫データから欠品・危険・過剰・滞留などのアラートを発火させ、SKU別の即時アクション（発注／販売制限／広告停止／値引き／セット化）リストを生成するスキル。「在庫アラートを出して」「欠品リスト」「過剰在庫」「滞留商品」「広告を止めるべきSKU」「発注すべき商品」「在庫切れ対応」「再入荷対応」「在庫アクションリスト」「ABC別の在庫対応」など、在庫状況の自動診断とアクション割振りに対応。楽天／Amazon／Yahoo！／Shopify／ネクストエンジン在庫データに対応。※発注点・安全在庫の予測算出に特化したのは別スキル `reorder-point-forecast-lite`、滞留商品の処分計画立案は `deadstock-clearance-planner`、セット商品化での消化は `bundle-set-product-planner`。",
+  "category": "ecommerce-marketing",
+  "slug": "inventory-alert-action-list"
+ },
+ {
+  "name": "invoice-receipt-mail-template",
+  "description_ja": "領収書・請求書・納品書・適格請求書（インボイス）の発行依頼／再発行依頼／宛名変更依頼に対するメール返信・案内文を、インボイス制度の6要件・経過措置・電子帳簿保存法を踏まえて作成するスキル。「領収書の出し方」「インボイス対応の案内文」「適格請求書の文面」「請求書の宛名変更」「再発行依頼の返信」「経過措置の説明」「登録番号の書き方」「簡易インボイス」「個人事業主のインボイス対応」「電帳法と領収書」など、インボイス・領収書系のお問い合わせ返信や案内文作成で使う。BtoB／BtoC両方、楽天・Amazon・Yahoo・自社EC全モール対応。※特商法ページ全体の整備は別スキル `tokutei-shotorihiki-page-checker`、配送遅延の謝罪文は `delivery-delay-apology-builder`、一般的なお問い合わせ返信は `customer-inquiry-reply-ec`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "領収書・請求書・納品書・適格請求書（インボイス）の発行依頼／再発行依頼／宛名変更依頼に対するメール返信・案内文を、インボイス制度の6要件・経過措置・電子帳簿保存法を踏まえて作成するスキル。「領収書の出し方」「インボイス対応の案内文」「適格請求書の文面」「請求書の宛名変更」「再発行依頼の返信」「経過措置の説明」「登録番号の書き方」「簡易インボイス」「個人事業主のインボイス対応」「電帳法と領収書」など、インボイス・領収書系のお問い合わせ返信や案内文作成で使う。BtoB／BtoC両方、楽天・Amazon・Yahoo・自社EC全モール対応。※特商法ページ全体の整備は別スキル `tokutei-shotorihiki-page-checker`、配送遅延の謝罪文は `delivery-delay-apology-builder`、一般的なお問い合わせ返信は `customer-inquiry-reply-ec`。",
+  "category": "ecommerce-marketing",
+  "slug": "invoice-receipt-mail-template"
+ },
+ {
+  "name": "jan-code-checker",
+  "description_ja": "JAN／GTIN／EAN／UPC／ISBNなど商品識別コードの桁数・チェックデジット・重複・国コード・商品との紐付けを検証するスキル。「JANチェック」「チェックデジット確認」「JANの重複を見て」「GTIN妥当性」「EAN検証」「ISBN正しい？」「JANと商品名がズレてる」「インストアコードでいい？」「13桁か8桁か」「JANがない商品の登録」など、JAN／GTIN系の妥当性検証で使う。楽天カタログID／Amazon external_product_id／Yahoo product-code／Google Merchant GTIN／自社マスタの整合性確認まで対応。※Amazonフラットファイル全体の検証は別スキル `amazon-flat-file-validator-jp`、Google Merchant Centerのフィードエラー修正は `merchant-center-feed-error-fixer`、文字化け・SJIS問題は `csv-encoding-sjis-validator`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "JAN／GTIN／EAN／UPC／ISBNなど商品識別コードの桁数・チェックデジット・重複・国コード・商品との紐付けを検証するスキル。「JANチェック」「チェックデジット確認」「JANの重複を見て」「GTIN妥当性」「EAN検証」「ISBN正しい？」「JANと商品名がズレてる」「インストアコードでいい？」「13桁か8桁か」「JANがない商品の登録」など、JAN／GTIN系の妥当性検証で使う。楽天カタログID／Amazon external_product_id／Yahoo product-code／Google Merchant GTIN／自社マスタの整合性確認まで対応。※Amazonフラットファイル全体の検証は別スキル `amazon-flat-file-validator-jp`、Google Merchant Centerのフィードエラー修正は `merchant-center-feed-error-fixer`、文字化け・SJIS問題は `csv-encoding-sjis-validator`。",
+  "category": "ecommerce-marketing",
+  "slug": "jan-code-checker"
+ },
+ {
+  "name": "line-official-message-ec",
+  "description_ja": "LINE公式アカウントの配信メッセージ・リッチメニュー文言・ステップ配信シナリオ・セグメント別訴求文を作成するスキル。「LINE公式の配信文」「LINE販促メッセージ」「リッチメニュー文言」「セグメント別LINE文」「ステップ配信シナリオ」「友だち追加直後のウェルカム」「休眠復活LINE」「LINEクーポン配信」「カルーセル文言」「リッチメッセージ」など、LINE公式アカウントからの配信を作る作業で使う。料金プラン（コミュニケーション/ライト/スタンダード）の通数試算、配信時間帯・頻度・ブロック率対策、セグメント配信（新規・既存・休眠・VIP・購入直後）、6種のメッセージ形式（テキスト・画像・カード・カルーセル・クーポン・リッチメニュー）に対応。※メルマガ全体のキャンペーン設計は別スキル `mailmagazine-ec-campaign`、楽天/futureshopのカート別メルマガ入稿は別系列スキル。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "LINE公式アカウントの配信メッセージ・リッチメニュー文言・ステップ配信シナリオ・セグメント別訴求文を作成するスキル。「LINE公式の配信文」「LINE販促メッセージ」「リッチメニュー文言」「セグメント別LINE文」「ステップ配信シナリオ」「友だち追加直後のウェルカム」「休眠復活LINE」「LINEクーポン配信」「カルーセル文言」「リッチメッセージ」など、LINE公式アカウントからの配信を作る作業で使う。料金プラン（コミュニケーション/ライト/スタンダード）の通数試算、配信時間帯・頻度・ブロック率対策、セグメント配信（新規・既存・休眠・VIP・購入直後）、6種のメッセージ形式（テキスト・画像・カード・カルーセル・クーポン・リッチメニュー）に対応。※メルマガ全体のキャンペーン設計は別スキル `mailmagazine-ec-campaign`、楽天/futureshopのカート別メルマガ入稿は別系列スキル。",
+  "category": "ecommerce-marketing",
+  "slug": "line-official-message-ec"
+ },
+ {
+  "name": "lp-firstview-diagnosis",
+  "description_ja": "LPファーストビュー（FV）を Who／What／Why now／CTA／スマホ1画面適合／信頼要素／広告整合性／画像品質／法務リスク／視線の流れ の10項目で診断し、改善コピー・レイアウト指示まで出すスキル。「LPのファーストビュー診断して」「FV弱い？」「LP最初を改善」「CVR上がるFVにして」「広告とFVがズレてる」「LP最初の3秒」「ヒーロー画像」「FVのCTA」「FV診断」「LP冒頭スコアリング」「ファーストビューチェック」など、LPの最初の1画面の評価・改善依頼で使う。Shopify／楽天／Amazon／自社EC／LPの全プラットフォーム横断対応。あらゆるジャンル（化粧品・健食・食品・アパレル・家電・雑貨・サービス）に対応。※LP全体構成（ヘッダー〜フッター）の設計は別スキル `ec-landing-page-outline`、広告クリエイティブのブリーフは `ec-ad-creative-brief`、Meta広告コピー特化は `meta-ad-copy-ec-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "LPファーストビュー（FV）を Who／What／Why now／CTA／スマホ1画面適合／信頼要素／広告整合性／画像品質／法務リスク／視線の流れ の10項目で診断し、改善コピー・レイアウト指示まで出すスキル。「LPのファーストビュー診断して」「FV弱い？」「LP最初を改善」「CVR上がるFVにして」「広告とFVがズレてる」「LP最初の3秒」「ヒーロー画像」「FVのCTA」「FV診断」「LP冒頭スコアリング」「ファーストビューチェック」など、LPの最初の1画面の評価・改善依頼で使う。Shopify／楽天／Amazon／自社EC／LPの全プラットフォーム横断対応。あらゆるジャンル（化粧品・健食・食品・アパレル・家電・雑貨・サービス）に対応。※LP全体構成（ヘッダー〜フッター）の設計は別スキル `ec-landing-page-outline`、広告クリエイティブのブリーフは `ec-ad-creative-brief`、Meta広告コピー特化は `meta-ad-copy-ec-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "lp-firstview-diagnosis"
+ },
+ {
+  "name": "mailmagazine-ec-campaign",
+  "description_ja": "ECメルマガキャンペーン全体（件名・プリヘッダー・本文構成・商品導線・セグメント設計・配信時間・到達率対策）を設計するスキル。「ECメルマガを作って」「件名案を10個出して」「プリヘッダー案」「キャンペーンメール本文」「セグメント別メルマガ」「HTMLメール設計」「メルマガ配信企画」「ステップメール設計」「カート放棄メール」「メルマガA/Bテスト」など、メールマガジンの全体設計・コピー作成・配信計画に関わる作業で使う。BIMI/DKIM/DMARC・Gmail/Yahoo!の2024年新ガイドライン・特定電子メール法に準拠し、1スクロール領域設計・モバイル/ダークモード/画像オフ対応まで対応。※楽天市場メルマガ／futureshopメルマガなどモール・カート固有の入稿仕様は別系列スキル `rakuten-mailmagazine-builder` / `futureshop-mailmagazine-builder`、LINE公式アカウント配信は `line-official-message-ec`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ECメルマガキャンペーン全体（件名・プリヘッダー・本文構成・商品導線・セグメント設計・配信時間・到達率対策）を設計するスキル。「ECメルマガを作って」「件名案を10個出して」「プリヘッダー案」「キャンペーンメール本文」「セグメント別メルマガ」「HTMLメール設計」「メルマガ配信企画」「ステップメール設計」「カート放棄メール」「メルマガA/Bテスト」など、メールマガジンの全体設計・コピー作成・配信計画に関わる作業で使う。BIMI/DKIM/DMARC・Gmail/Yahoo!の2024年新ガイドライン・特定電子メール法に準拠し、1スクロール領域設計・モバイル/ダークモード/画像オフ対応まで対応。※楽天市場メルマガ／futureshopメルマガなどモール・カート固有の入稿仕様は別系列スキル `rakuten-mailmagazine-builder` / `futureshop-mailmagazine-builder`、LINE公式アカウント配信は `line-official-message-ec`。",
+  "category": "ecommerce-marketing",
+  "slug": "mailmagazine-ec-campaign"
+ },
+ {
+  "name": "makeshop-product-csv-validator",
+  "description_ja": "MakeShop（メイクショップ）の商品データCSV／オプションデータCSV／在庫CSVを検証して登録エラー原因を特定し、フリースペース1〜10の独自タグ差込みやCSV構造（文字コード／改行／BOM／ダブルクォートエスケープ）の事故を直すスキル。「MakeShop CSV」「メイクショップCSV」「商品CSVが上がらない」「オプションが表示されない」「フリースペースが反映されない」「列がずれる」「文字化け」「BOMありBOMなし」「Shift_JISとUTF-8」「JANコード先頭0が落ちる」「goods_id 重複」「列名認識されない」「価格差が反映されない」など、MakeShop CSV のアップロード・検証・修復に関するリクエストで使う。商品データCSV／オプションデータCSV／在庫CSVの構造、独自タグ（フリースペース1-10）のHTML差込み、文字コード変換（iconv／sed／awk）まで対応。※汎用のCSV文字コード変換は別スキル `csv-encoding-sjis-validator`、JANコードチェックデジット検証は `jan-code-checker`、商品ページコピー作成は `makeshop-product-page-copy`、楽天 normal-item.csv は `rakuten-csv-validator`。MakeShop の独自仕様（goods_id・分類ツリー・フリースペース1-10）に踏み込んで処理する。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "MakeShop（メイクショップ）の商品データCSV／オプションデータCSV／在庫CSVを検証して登録エラー原因を特定し、フリースペース1〜10の独自タグ差込みやCSV構造（文字コード／改行／BOM／ダブルクォートエスケープ）の事故を直すスキル。「MakeShop CSV」「メイクショップCSV」「商品CSVが上がらない」「オプションが表示されない」「フリースペースが反映されない」「列がずれる」「文字化け」「BOMありBOMなし」「Shift_JISとUTF-8」「JANコード先頭0が落ちる」「goods_id 重複」「列名認識されない」「価格差が反映されない」など、MakeShop CSV のアップロード・検証・修復に関するリクエストで使う。商品データCSV／オプションデータCSV／在庫CSVの構造、独自タグ（フリースペース1-10）のHTML差込み、文字コード変換（iconv／sed／awk）まで対応。※汎用のCSV文字コード変換は別スキル `csv-encoding-sjis-validator`、JANコードチェックデジット検証は `jan-code-checker`、商品ページコピー作成は `makeshop-product-page-copy`、楽天 normal-item.csv は `rakuten-csv-validator`。MakeShop の独自仕様（goods_id・分類ツリー・フリースペース1-10）に踏み込んで処理する。",
+  "category": "ecommerce-marketing",
+  "slug": "makeshop-product-csv-validator"
+ },
+ {
+  "name": "makeshop-product-page-copy",
+  "description_ja": "MakeShop（メイクショップ）の商品ページコピー（SEOタイトル／メタディスクリプション／商品名／商品説明本文／フリースペース1〜10のHTML差込みパーツ）を作成・改善するスキル。「MakeShop 商品ページ」「メイクショップ 商品説明」「フリースペース1」「フリースペース2 スペック表」「フリースペース3 使い方」「フリースペース5 FAQ」「フリースペース10 ブランドストーリー」「独自タグ差込み」「<!--MS:フリースペース1-->」「MakeShop SEOタイトル」「MakeShopの商品名」など、MakeShop 商品ページの本文・パーツ別HTMLコピー作成に関するリクエストで使う。化粧品／健康食品／アパレル／食品／雑貨／家電などジャンル別に、ベネフィット軸の本文構造とフリースペース1-10の役割分担を持つ。CSV連携（`makeshop-product-csv-validator` 併用）と薬機法／景表法／特商法／ステマ規制チェックを内蔵。※汎用のベネフィットコピー設計は別スキル `product-benefit-copywriter`、MakeShop CSVの構造検証は `makeshop-product-csv-validator`、楽天の商品名SEOは `rakuten-product-name-seo`、futureshopは `futureshop-product-page-seo`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "MakeShop（メイクショップ）の商品ページコピー（SEOタイトル／メタディスクリプション／商品名／商品説明本文／フリースペース1〜10のHTML差込みパーツ）を作成・改善するスキル。「MakeShop 商品ページ」「メイクショップ 商品説明」「フリースペース1」「フリースペース2 スペック表」「フリースペース3 使い方」「フリースペース5 FAQ」「フリースペース10 ブランドストーリー」「独自タグ差込み」「<!--MS:フリースペース1-->」「MakeShop SEOタイトル」「MakeShopの商品名」など、MakeShop 商品ページの本文・パーツ別HTMLコピー作成に関するリクエストで使う。化粧品／健康食品／アパレル／食品／雑貨／家電などジャンル別に、ベネフィット軸の本文構造とフリースペース1-10の役割分担を持つ。CSV連携（`makeshop-product-csv-validator` 併用）と薬機法／景表法／特商法／ステマ規制チェックを内蔵。※汎用のベネフィットコピー設計は別スキル `product-benefit-copywriter`、MakeShop CSVの構造検証は `makeshop-product-csv-validator`、楽天の商品名SEOは `rakuten-product-name-seo`、futureshopは `futureshop-product-page-seo`。",
+  "category": "ecommerce-marketing",
+  "slug": "makeshop-product-page-copy"
+ },
+ {
+  "name": "mall-to-mall-csv-mapper",
+  "description_ja": "楽天RMS（normal-item.csv）／Amazonフラットファイル／Yahoo!ショッピング商品CSV／Shopify products.csv の主要列を相互に対応付け、商品名・キャッチコピー・説明文・価格・在庫・画像・バリエーション・カテゴリ・配送の項目マッピング表と変換ルールを作るスキル。「楽天からYahoo!にCSV移行」「AmazonからShopifyに商品データを移したい」「楽天とShopifyの列対応」「Shopify→Amazonへ移行」「モール間の項目マッピング」「商品名の文字数を75字に切り詰め」「楽天HTMLからAmazonプレーンへ」「バリエーション構造の変換」「Yahoo!の禁止タグ除去」「ネクストエンジン経由の連携設計」など、モール間のCSV移行・並行運用設計で使う。文字コード（楽天SJIS／Amazon UTF-8タブ／Yahoo!SJIS／Shopify UTF-8）・HTML対応差・byte/文字数制限差・バリエーション構造（楽天項目選択肢／Amazon親子ASIN／Shopify Product+Variant／Yahoo!option）の変換に対応。※文字コード単体の検証は別スキル `csv-encoding-sjis-validator`、JANのチェックデジット検証は `jan-code-checker`、ネクストエンジン商品マスタの整形は `next-engine-product-master-cleaner`、Amazonフラットファイルの属性エラーは `amazon-flat-file-validator-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天RMS（normal-item.csv）／Amazonフラットファイル／Yahoo!ショッピング商品CSV／Shopify products.csv の主要列を相互に対応付け、商品名・キャッチコピー・説明文・価格・在庫・画像・バリエーション・カテゴリ・配送の項目マッピング表と変換ルールを作るスキル。「楽天からYahoo!にCSV移行」「AmazonからShopifyに商品データを移したい」「楽天とShopifyの列対応」「Shopify→Amazonへ移行」「モール間の項目マッピング」「商品名の文字数を75字に切り詰め」「楽天HTMLからAmazonプレーンへ」「バリエーション構造の変換」「Yahoo!の禁止タグ除去」「ネクストエンジン経由の連携設計」など、モール間のCSV移行・並行運用設計で使う。文字コード（楽天SJIS／Amazon UTF-8タブ／Yahoo!SJIS／Shopify UTF-8）・HTML対応差・byte/文字数制限差・バリエーション構造（楽天項目選択肢／Amazon親子ASIN／Shopify Product+Variant／Yahoo!option）の変換に対応。※文字コード単体の検証は別スキル `csv-encoding-sjis-validator`、JANのチェックデジット検証は `jan-code-checker`、ネクストエンジン商品マスタの整形は `next-engine-product-master-cleaner`、Amazonフラットファイルの属性エラーは `amazon-flat-file-validator-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "mall-to-mall-csv-mapper"
+ },
+ {
+  "name": "merchant-center-feed-error-fixer",
+  "description_ja": "Google Merchant Center（GMC）の商品フィードで発生する不承認・警告・通知を、必須属性欠落／値形式違反／画像クロール失敗／ランディングページ不一致／ポリシー違反の5系統に分類し、修正値と再アップロード手順までを示すスキル。「Merchant Centerのエラー」「GMC不承認」「商品フィードエラー」「Googleショッピングで承認されない」「Invalid GTIN」「Missing required attribute」「Image link crawl error」「Price mismatch」「Availability mismatch」「Promotional overlay」「Disapproved」「identifier_exists」「item_group_id」「google_product_category」「Schema.org Product」など、GMCのフィード品質エラーの原因特定と修正で使う。タイトル150字／説明5,000字／価格（通貨単位付き）／HTTPS／GTINチェックデジット／identifier_exists運用／画像要件（HTTPS・800×800以上・テキスト無し）／ランディングページとの価格・在庫・送料整合／衣料品のsize/color/age_group/gender必須／GMCポリシー（誇大表現・薬機法・偽造品）に対応。※GMCのカテゴリ別ポリシー診断・参入可否判定は別スキル `google-merchant-center-policy-diagnosis`、薬機法・景表法の表現修正は `yakki-keihyo-expression-check`、JANのチェックデジット計算は `jan-code-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Google Merchant Center（GMC）の商品フィードで発生する不承認・警告・通知を、必須属性欠落／値形式違反／画像クロール失敗／ランディングページ不一致／ポリシー違反の5系統に分類し、修正値と再アップロード手順までを示すスキル。「Merchant Centerのエラー」「GMC不承認」「商品フィードエラー」「Googleショッピングで承認されない」「Invalid GTIN」「Missing required attribute」「Image link crawl error」「Price mismatch」「Availability mismatch」「Promotional overlay」「Disapproved」「identifier_exists」「item_group_id」「google_product_category」「Schema.org Product」など、GMCのフィード品質エラーの原因特定と修正で使う。タイトル150字／説明5,000字／価格（通貨単位付き）／HTTPS／GTINチェックデジット／identifier_exists運用／画像要件（HTTPS・800×800以上・テキスト無し）／ランディングページとの価格・在庫・送料整合／衣料品のsize/color/age_group/gender必須／GMCポリシー（誇大表現・薬機法・偽造品）に対応。※GMCのカテゴリ別ポリシー診断・参入可否判定は別スキル `google-merchant-center-policy-diagnosis`、薬機法・景表法の表現修正は `yakki-keihyo-expression-check`、JANのチェックデジット計算は `jan-code-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "merchant-center-feed-error-fixer"
+ },
+ {
+  "name": "meta-ad-copy-ec-jp",
+  "description_ja": "Meta広告（Facebook／Instagram）のEC向けコピーを、プライマリテキスト125字／見出し40字／説明30字の文字数仕様・配信面別画像比率（1:1／4:5／9:16／1.91:1）・動画15秒以内＋字幕・Metaポリシー（個人属性断定／健康訴求）・薬機法／景表法／ステマ規制まで一括で揃えて生成するスキル。「Meta広告コピー」「Facebook広告」「Instagram広告」「FB／IG広告の本文」「リール広告」「ストーリー広告」「Meta広告でリジェクトされた」「個人属性断定の言い換え」「Meta広告のA/Bテスト案」「冒頭3秒の動画」「Paid Partnership」など、Meta広告コピーの作成・改善・リジェクト対応で使う。ターゲット別／ファネル段階別／クリエイティブ別のA/Bテスト案も出力。あらゆるジャンル（化粧品・健食・食品・家電・アパレル）に対応。Metaプライマリ125字・見出し40字・説明30字の仕様準拠。※媒体横断（Google／LINE／Yahoo!／TikTok等）の広告ブリーフは別スキル `ec-ad-creative-brief`、LP全体構成は `ec-landing-page-outline`、FV特化診断は `lp-firstview-diagnosis`、SNS自社投稿（オーガニック）は `ec-sns-post-generator`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Meta広告（Facebook／Instagram）のEC向けコピーを、プライマリテキスト125字／見出し40字／説明30字の文字数仕様・配信面別画像比率（1:1／4:5／9:16／1.91:1）・動画15秒以内＋字幕・Metaポリシー（個人属性断定／健康訴求）・薬機法／景表法／ステマ規制まで一括で揃えて生成するスキル。「Meta広告コピー」「Facebook広告」「Instagram広告」「FB／IG広告の本文」「リール広告」「ストーリー広告」「Meta広告でリジェクトされた」「個人属性断定の言い換え」「Meta広告のA/Bテスト案」「冒頭3秒の動画」「Paid Partnership」など、Meta広告コピーの作成・改善・リジェクト対応で使う。ターゲット別／ファネル段階別／クリエイティブ別のA/Bテスト案も出力。あらゆるジャンル（化粧品・健食・食品・家電・アパレル）に対応。Metaプライマリ125字・見出し40字・説明30字の仕様準拠。※媒体横断（Google／LINE／Yahoo!／TikTok等）の広告ブリーフは別スキル `ec-ad-creative-brief`、LP全体構成は `ec-landing-page-outline`、FV特化診断は `lp-firstview-diagnosis`、SNS自社投稿（オーガニック）は `ec-sns-post-generator`。",
+  "category": "ecommerce-marketing",
+  "slug": "meta-ad-copy-ec-jp"
+ },
+ {
+  "name": "next-engine-product-master-cleaner",
+  "description_ja": "ネクストエンジンの商品マスタ（goods_id／daihyou_shouhin_code／stock_goods_id／zaiko_su／jan／モール別SKU列）を整形・正規化し、表記ゆれ・重複・空欄・親子設計の破綻・モール側SKUとの紐付け不整合を検出して修正方針を出すスキル。「ネクストエンジンの商品マスタを整理」「goods_idの表記ゆれ」「商品コードを統一したい」「daihyou_shouhin_code 設定ミス」「stock_goods_idで在庫共有」「セット商品の構成情報」「バリエーション親子の在庫設計」「楽天商品管理番号とgoods_idの紐付け」「Amazon item_sku変更不可」「Shopify Variant SKU マッピング」「在庫加減算と上書きの違い」「商品コード変更の影響範囲」など、ネクストエンジン経由のモール連携前のマスタ品質チェックで使う。30字制約・SJIS/CR+LF前提・在庫加減算ロジック・stock_goods_idによる在庫共有設計・セット親子の循環参照検出に対応。※多モール在庫連携の事故検出は別スキル `crossmall-inventory-sync-checker`、モール間の列マッピング設計は `mall-to-mall-csv-mapper`、文字コード単体検証は `csv-encoding-sjis-validator`、JANチェックデジット検証は `jan-code-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ネクストエンジンの商品マスタ（goods_id／daihyou_shouhin_code／stock_goods_id／zaiko_su／jan／モール別SKU列）を整形・正規化し、表記ゆれ・重複・空欄・親子設計の破綻・モール側SKUとの紐付け不整合を検出して修正方針を出すスキル。「ネクストエンジンの商品マスタを整理」「goods_idの表記ゆれ」「商品コードを統一したい」「daihyou_shouhin_code 設定ミス」「stock_goods_idで在庫共有」「セット商品の構成情報」「バリエーション親子の在庫設計」「楽天商品管理番号とgoods_idの紐付け」「Amazon item_sku変更不可」「Shopify Variant SKU マッピング」「在庫加減算と上書きの違い」「商品コード変更の影響範囲」など、ネクストエンジン経由のモール連携前のマスタ品質チェックで使う。30字制約・SJIS/CR+LF前提・在庫加減算ロジック・stock_goods_idによる在庫共有設計・セット親子の循環参照検出に対応。※多モール在庫連携の事故検出は別スキル `crossmall-inventory-sync-checker`、モール間の列マッピング設計は `mall-to-mall-csv-mapper`、文字コード単体検証は `csv-encoding-sjis-validator`、JANチェックデジット検証は `jan-code-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "next-engine-product-master-cleaner"
+ },
+ {
+  "name": "price-margin-simulator",
+  "description_ja": "EC販売の価格・粗利を、仕入原価・送料・モール手数料・ポイント・クーポン・広告費・決済手数料・返品ロス込みで一括試算するスキル。「粗利を計算して」「この値段で売って利益出る？」「損益分岐値引率は？」「価格を下げたら粗利どうなる？」「ポイント原資込みで試算」「モール別に粗利比較」「セール時の粗利」「価格弾力性」「値下げシミュレーション」など、価格戦略の意思決定に必要な粗利試算に対応。楽天／Amazon／Yahoo！ショッピング／Shopify対応。※Amazon手数料・FBA手数料に特化した精密試算は別スキル `amazon-profit-fee-checker`、送料無料閾値の設計は `free-shipping-threshold-calculator`、セット商品の粗利設計は `bundle-set-product-planner`、在庫処分時のシナリオ別損益は `deadstock-clearance-planner`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "EC販売の価格・粗利を、仕入原価・送料・モール手数料・ポイント・クーポン・広告費・決済手数料・返品ロス込みで一括試算するスキル。「粗利を計算して」「この値段で売って利益出る？」「損益分岐値引率は？」「価格を下げたら粗利どうなる？」「ポイント原資込みで試算」「モール別に粗利比較」「セール時の粗利」「価格弾力性」「値下げシミュレーション」など、価格戦略の意思決定に必要な粗利試算に対応。楽天／Amazon／Yahoo！ショッピング／Shopify対応。※Amazon手数料・FBA手数料に特化した精密試算は別スキル `amazon-profit-fee-checker`、送料無料閾値の設計は `free-shipping-threshold-calculator`、セット商品の粗利設計は `bundle-set-product-planner`、在庫処分時のシナリオ別損益は `deadstock-clearance-planner`。",
+  "category": "ecommerce-marketing",
+  "slug": "price-margin-simulator"
+ },
+ {
+  "name": "product-attribute-normalizer",
+  "description_ja": "商品属性値（カラー・サイズ・素材・容量・産地・成分等）の表記揺れを正規化するスキル。「カラー名を統一して」「サイズ表記がバラバラ」「色名を整理」「素材表記の揺れ」「容量単位の統一」「属性値クレンジング」「絞り込み検索が効かない」「ブラックと黒が混在」「キャメルとブラウンを分けたい」「100mlと100ccの統一」など、属性値レベルでの値の正規化に対応。標準30色／アパレルサイズ／素材／容量・重量・寸法の単位、各モール属性スキーマに対応。※CSV全体の構造クレンジング（エンコーディング・空欄・重複等）は別スキル `ec-product-master-cleaner-jp`、SKU命名規則の設計は `sku-naming-rule-generator`、商品バリエーション軸設計は `variation-builder-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "商品属性値（カラー・サイズ・素材・容量・産地・成分等）の表記揺れを正規化するスキル。「カラー名を統一して」「サイズ表記がバラバラ」「色名を整理」「素材表記の揺れ」「容量単位の統一」「属性値クレンジング」「絞り込み検索が効かない」「ブラックと黒が混在」「キャメルとブラウンを分けたい」「100mlと100ccの統一」など、属性値レベルでの値の正規化に対応。標準30色／アパレルサイズ／素材／容量・重量・寸法の単位、各モール属性スキーマに対応。※CSV全体の構造クレンジング（エンコーディング・空欄・重複等）は別スキル `ec-product-master-cleaner-jp`、SKU命名規則の設計は `sku-naming-rule-generator`、商品バリエーション軸設計は `variation-builder-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "product-attribute-normalizer"
+ },
+ {
+  "name": "product-benefit-copywriter",
+  "description_ja": "商品の「特徴（Feature）」を「機能（Function）」「利点（Advantage）」「ベネフィット（Benefit）」の4階層で展開し、ファーストビュー〜CTAまでの商品ページコピー一式を生成する汎用スキル。「ベネフィットコピー」「商品ページのコピー」「商品の特徴を訴求に」「FAB変換」「USP整理」「機能をベネフィットに翻訳」「キャッチコピー」「サブコピー」「商品紹介文」「使用シーン」「お客様の声まとめ」「箇条書きの訴求」など、商品ページや広告で使うベネフィットコピーの作成依頼で使う。あらゆるジャンル（化粧品・医薬部外品・健食・食品・家電・アパレル・雑貨・サービス）に対応。薬機法／景表法／健康増進法／ステマ規制を踏まえた表現範囲内で出力する。※楽天市場のSEO最適化商品名・キャッチは別スキル `rakuten-seo`、MakeShopカートの商品ページコピーは `makeshop-product-page-copy`、FutureShopカートのSEO最適化は `futureshop-product-page-seo`、Amazonタイトル・箇条書きは `amazon-title-bullet-rewriter-jp`、楽天画像のテキスト占有率チェックは `rakuten-image-text-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "商品の「特徴（Feature）」を「機能（Function）」「利点（Advantage）」「ベネフィット（Benefit）」の4階層で展開し、ファーストビュー〜CTAまでの商品ページコピー一式を生成する汎用スキル。「ベネフィットコピー」「商品ページのコピー」「商品の特徴を訴求に」「FAB変換」「USP整理」「機能をベネフィットに翻訳」「キャッチコピー」「サブコピー」「商品紹介文」「使用シーン」「お客様の声まとめ」「箇条書きの訴求」など、商品ページや広告で使うベネフィットコピーの作成依頼で使う。あらゆるジャンル（化粧品・医薬部外品・健食・食品・家電・アパレル・雑貨・サービス）に対応。薬機法／景表法／健康増進法／ステマ規制を踏まえた表現範囲内で出力する。※楽天市場のSEO最適化商品名・キャッチは別スキル `rakuten-seo`、MakeShopカートの商品ページコピーは `makeshop-product-page-copy`、FutureShopカートのSEO最適化は `futureshop-product-page-seo`、Amazonタイトル・箇条書きは `amazon-title-bullet-rewriter-jp`、楽天画像のテキスト占有率チェックは `rakuten-image-text-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "product-benefit-copywriter"
+ },
+ {
+  "name": "rakuten-category-page-copy",
+  "description_ja": "楽天市場の店舗内カテゴリページ・特集ページのコピーを設計するスキル。「楽天カテゴリページ」「カテゴリの導入文」「カテゴリ説明を作って」「カテゴリページのSEO文」「特集ページの文章」「絞り込みカテゴリの紹介文」「カテゴリ下部の選び方ガイド」「楽天の店舗内ナビ文」など、店舗内カテゴリ・特集ページの上部導入文／下部SEO文／見出し／内部リンク文／バナー文言の作成・改善リクエストで使う。ロングテール語の格納と店舗内回遊・Google流入の補助を主目的に、季節・イベントを終了日とセットで運用する設計。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア・ベビー・ペット）に対応。※商品名・キャッチコピー単体の最適化は別スキル `rakuten-seo`、商品ページ本体の販売力診断は `rakuten-sales-copy-audit`、PC説明文HTML化は `rakuten-pc-description-html`、スマホ説明文HTML化は `rakuten-smartphone-description-html`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場の店舗内カテゴリページ・特集ページのコピーを設計するスキル。「楽天カテゴリページ」「カテゴリの導入文」「カテゴリ説明を作って」「カテゴリページのSEO文」「特集ページの文章」「絞り込みカテゴリの紹介文」「カテゴリ下部の選び方ガイド」「楽天の店舗内ナビ文」など、店舗内カテゴリ・特集ページの上部導入文／下部SEO文／見出し／内部リンク文／バナー文言の作成・改善リクエストで使う。ロングテール語の格納と店舗内回遊・Google流入の補助を主目的に、季節・イベントを終了日とセットで運用する設計。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア・ベビー・ペット）に対応。※商品名・キャッチコピー単体の最適化は別スキル `rakuten-seo`、商品ページ本体の販売力診断は `rakuten-sales-copy-audit`、PC説明文HTML化は `rakuten-pc-description-html`、スマホ説明文HTML化は `rakuten-smartphone-description-html`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-category-page-copy"
+ },
+ {
+  "name": "rakuten-coupon-planner",
+  "description_ja": "楽天市場のクーポン設計スキル。「楽天クーポン」「ショップクーポン」「クーポンを作って」「値引き率を決めたい」「クーポンの粗利影響」「最低購入金額を設計」「クーポン名と訴求文」「お買い物マラソン用クーポン」「SS用クーポン」「セット買いクーポン」など、楽天店舗のクーポン種別選定／値引き率／対象商品／粗利影響シミュレーション／訴求文／設定前チェックの設計リクエストで使う。粗利率と最低購入金額から赤字ライン・最適値引き率を算出し、ショップクーポン・商品単品クーポン・カテゴリクーポン・期間限定クーポンを使い分け。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※価格そのものの競合比較は別スキル `rakuten-price-compare-audit`、SS/マラソン全体の準備は `rakuten-super-sale-prep`、メルマガでのクーポン告知文は `rakuten-mailmagazine-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場のクーポン設計スキル。「楽天クーポン」「ショップクーポン」「クーポンを作って」「値引き率を決めたい」「クーポンの粗利影響」「最低購入金額を設計」「クーポン名と訴求文」「お買い物マラソン用クーポン」「SS用クーポン」「セット買いクーポン」など、楽天店舗のクーポン種別選定／値引き率／対象商品／粗利影響シミュレーション／訴求文／設定前チェックの設計リクエストで使う。粗利率と最低購入金額から赤字ライン・最適値引き率を算出し、ショップクーポン・商品単品クーポン・カテゴリクーポン・期間限定クーポンを使い分け。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※価格そのものの競合比較は別スキル `rakuten-price-compare-audit`、SS/マラソン全体の準備は `rakuten-super-sale-prep`、メルマガでのクーポン告知文は `rakuten-mailmagazine-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-coupon-planner"
+ },
+ {
+  "name": "rakuten-genre-id-selector",
+  "description_ja": "楽天ジャンルID（6桁半角数字）を商品情報から推定し、複数候補と選定理由・必須属性・誤登録リスクを整理するスキル。「楽天ジャンル選んで」「どのジャンルIDが正解か」「ジャンル登録ミスのリスクを知りたい」「複数候補から選ぶ判断軸」「楽天SEOに有利なジャンル」など、楽天市場の商品ジャンル選定リクエストで使う。主要ジャンルID（レディース100371／食品100227／インテリア100804／家電562637／美容100939など）と階層を踏まえ、属性整合・送料区分・違反リスクまで検討。※商品名／キャッチコピーの最適化は別スキル `rakuten-seo`、SKU設計は `rakuten-sku-variation-checker`、画像規定は `rakuten-image-text-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天ジャンルID（6桁半角数字）を商品情報から推定し、複数候補と選定理由・必須属性・誤登録リスクを整理するスキル。「楽天ジャンル選んで」「どのジャンルIDが正解か」「ジャンル登録ミスのリスクを知りたい」「複数候補から選ぶ判断軸」「楽天SEOに有利なジャンル」など、楽天市場の商品ジャンル選定リクエストで使う。主要ジャンルID（レディース100371／食品100227／インテリア100804／家電562637／美容100939など）と階層を踏まえ、属性整合・送料区分・違反リスクまで検討。※商品名／キャッチコピーの最適化は別スキル `rakuten-seo`、SKU設計は `rakuten-sku-variation-checker`、画像規定は `rakuten-image-text-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-genre-id-selector"
+ },
+ {
+  "name": "rakuten-gift-demand-keywords",
+  "description_ja": "楽天市場のギフト需要キーワードを年間イベント・受贈者属性・カテゴリ別に整理するスキル。「楽天のギフトキーワード」「母の日キーワード」「お中元・お歳暮の検索語」「誕生日プレゼント向け楽天SEO」「ギフト需要を捕まえたい」「年間ギフトカレンダー」など、楽天市場のギフトシーズン向け検索流入設計のリクエストで使う。バレンタイン／母の日／父の日／お中元／敬老／ハロウィン／クリスマス／お歳暮など主要イベントと、母／父／祖父母／同僚などの受贈者軸を組合せ、検索ピーク時期と文言切替タイミングまで設計。※全チャネル横断のギフトKW設計は別スキル `gift-demand-keyword-builder`、楽天キーワード全体マップは `rakuten-keyword-map-builder`、楽天イベント事前準備は `rakuten-super-sale-prep`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場のギフト需要キーワードを年間イベント・受贈者属性・カテゴリ別に整理するスキル。「楽天のギフトキーワード」「母の日キーワード」「お中元・お歳暮の検索語」「誕生日プレゼント向け楽天SEO」「ギフト需要を捕まえたい」「年間ギフトカレンダー」など、楽天市場のギフトシーズン向け検索流入設計のリクエストで使う。バレンタイン／母の日／父の日／お中元／敬老／ハロウィン／クリスマス／お歳暮など主要イベントと、母／父／祖父母／同僚などの受贈者軸を組合せ、検索ピーク時期と文言切替タイミングまで設計。※全チャネル横断のギフトKW設計は別スキル `gift-demand-keyword-builder`、楽天キーワード全体マップは `rakuten-keyword-map-builder`、楽天イベント事前準備は `rakuten-super-sale-prep`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-gift-demand-keywords"
+ },
+ {
+  "name": "rakuten-image-text-checker",
+  "description_ja": "楽天市場の商品画像の規定（テキスト占有率20%・枠禁止・サイズ700×700・背景制限）と画像内テキストの薬機法／景表法リスクを一次チェックするスキル。「楽天画像チェック」「画像内のテキスト占有率」「楽天画像の枠が入ってる」「商品画像のリスク確認」「画像のNG表現を見て」「楽天画像規定」など、楽天画像の規定違反リスク一次チェックのリクエストで使う。2024.6改定版（白基調／合成／写真背景OK）に対応。商品画像とサブ画像、スマホ表示の安全領域までカバー。※画像の企画ブリーフ生成は別スキル `rakuten-product-image-brief`、商品ページ全体の表現チェックは `yakki-keihyo-expression-check`、商品名・キャッチコピー監査は `rakuten-sales-copy-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場の商品画像の規定（テキスト占有率20%・枠禁止・サイズ700×700・背景制限）と画像内テキストの薬機法／景表法リスクを一次チェックするスキル。「楽天画像チェック」「画像内のテキスト占有率」「楽天画像の枠が入ってる」「商品画像のリスク確認」「画像のNG表現を見て」「楽天画像規定」など、楽天画像の規定違反リスク一次チェックのリクエストで使う。2024.6改定版（白基調／合成／写真背景OK）に対応。商品画像とサブ画像、スマホ表示の安全領域までカバー。※画像の企画ブリーフ生成は別スキル `rakuten-product-image-brief`、商品ページ全体の表現チェックは `yakki-keihyo-expression-check`、商品名・キャッチコピー監査は `rakuten-sales-copy-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-image-text-checker"
+ },
+ {
+  "name": "rakuten-keyword-map-builder",
+  "description_ja": "楽天市場の商品ページに使うキーワードを「指名語／用途／状況・属性／季節・贈答／類義語」の軸でマップ化するスキル。「楽天キーワード整理」「楽天のキーワードマップ作って」「商品名と説明文に使う検索語を体系化したい」「ジャンル別の頻出キーワードを並べて」「楽天SEOの軸出し」など、楽天検索流入用のキーワード設計のリクエストで使う。商品名（255byte／全角127字）・キャッチコピー（174byte／全角87字）・説明文（10,240byte）への配置案までセットで出す。※サジェスト由来の拡張は別スキル `rakuten-suggest-keyword-expander`、ギフト需要KWは `rakuten-gift-demand-keywords`、商品名チェック自体は `rakuten-seo`、RPP広告のKW評価は `rakuten-rpp-keyword-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場の商品ページに使うキーワードを「指名語／用途／状況・属性／季節・贈答／類義語」の軸でマップ化するスキル。「楽天キーワード整理」「楽天のキーワードマップ作って」「商品名と説明文に使う検索語を体系化したい」「ジャンル別の頻出キーワードを並べて」「楽天SEOの軸出し」など、楽天検索流入用のキーワード設計のリクエストで使う。商品名（255byte／全角127字）・キャッチコピー（174byte／全角87字）・説明文（10,240byte）への配置案までセットで出す。※サジェスト由来の拡張は別スキル `rakuten-suggest-keyword-expander`、ギフト需要KWは `rakuten-gift-demand-keywords`、商品名チェック自体は `rakuten-seo`、RPP広告のKW評価は `rakuten-rpp-keyword-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-keyword-map-builder"
+ },
+ {
+  "name": "rakuten-mailmagazine-builder",
+  "description_ja": "楽天市場の店舗メルマガ作成スキル。「楽天メルマガ」「楽天のメール配信」「店舗メルマガを作って」「メルマガ件名」「イベント告知メール」「販促メール」「SS告知メール」「お買い物マラソンメルマガ」「再購入促進メール」「新商品紹介メルマガ」など、楽天R-Mailの配信メルマガ件名／プリヘッダー／本文／商品導線／CTA／配信前チェックの作成リクエストで使う。配信目的別（新商品・再購入・イベント・在庫処分・休眠掘り起こし）に件名と本文の型を切替え、二重価格・ポイント表記・薬機景表リスクを事前に潰す。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※全モール横断のメルマガ設計や顧客セグメント設計は別スキル `mailmagazine-ec-campaign`、楽天クーポン本体の設計は `rakuten-coupon-planner`、SS全体準備は `rakuten-super-sale-prep`、LINE配信は別途。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場の店舗メルマガ作成スキル。「楽天メルマガ」「楽天のメール配信」「店舗メルマガを作って」「メルマガ件名」「イベント告知メール」「販促メール」「SS告知メール」「お買い物マラソンメルマガ」「再購入促進メール」「新商品紹介メルマガ」など、楽天R-Mailの配信メルマガ件名／プリヘッダー／本文／商品導線／CTA／配信前チェックの作成リクエストで使う。配信目的別（新商品・再購入・イベント・在庫処分・休眠掘り起こし）に件名と本文の型を切替え、二重価格・ポイント表記・薬機景表リスクを事前に潰す。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※全モール横断のメルマガ設計や顧客セグメント設計は別スキル `mailmagazine-ec-campaign`、楽天クーポン本体の設計は `rakuten-coupon-planner`、SS全体準備は `rakuten-super-sale-prep`、LINE配信は別途。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-mailmagazine-builder"
+ },
+ {
+  "name": "rakuten-pc-description-html",
+  "description_ja": "楽天市場PC版商品説明文のHTML生成スキル。「楽天PC用商品説明」「PC商品説明HTML」「楽天の商品ページを詳しく」「比較表つきの商品説明」「PC版の説明文を作って」「FAQ付き商品ページ」「PCの商品説明をリッチに」など、楽天RMSのPC用商品説明文（10,240byte）を、ファーストビュー・特徴・比較表・スペック・FAQ・クロージングのブロック構成でHTML化するリクエストで使う。table・font・br・img等の安全な範囲のHTMLタグで構築し、画像とテキストの役割分離・スマホ流用禁止・byte数厳守を徹底。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※スマホ用説明文（禁止タグが異なる）は別スキル `rakuten-smartphone-description-html`、商品ページ販売力診断は `rakuten-sales-copy-audit`、カテゴリページのコピーは `rakuten-category-page-copy`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場PC版商品説明文のHTML生成スキル。「楽天PC用商品説明」「PC商品説明HTML」「楽天の商品ページを詳しく」「比較表つきの商品説明」「PC版の説明文を作って」「FAQ付き商品ページ」「PCの商品説明をリッチに」など、楽天RMSのPC用商品説明文（10,240byte）を、ファーストビュー・特徴・比較表・スペック・FAQ・クロージングのブロック構成でHTML化するリクエストで使う。table・font・br・img等の安全な範囲のHTMLタグで構築し、画像とテキストの役割分離・スマホ流用禁止・byte数厳守を徹底。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※スマホ用説明文（禁止タグが異なる）は別スキル `rakuten-smartphone-description-html`、商品ページ販売力診断は `rakuten-sales-copy-audit`、カテゴリページのコピーは `rakuten-category-page-copy`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-pc-description-html"
+ },
+ {
+  "name": "rakuten-price-compare-audit",
+  "description_ja": "楽天市場での実質価格（送料・ポイント・クーポン込み）競合比較診断スキル。「楽天の価格を競合比較」「実質価格で負けてる？」「ポイント込みで価格戦略」「送料込みで比較」「楽天と他社の実質価格」「ポイント還元込みの勝ち負け」「クーポン込みの最安シミュレーション」「価格改定の粗利影響」など、楽天店舗での競合価格比較・実質負担額計算・価格戦略・粗利影響シミュレーションのリクエストで使う。表示価格だけでなく送料・ポイント原資・クーポン後価格・楽天手数料を含めた実質負担額で勝ち負けを判定し、値下げ／クーポン／ポイント／セット化のどれが最適かを粗利影響と合わせて提示。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※二重価格表示の景表法チェックは別スキル `yakki-keihyo-expression-check`、クーポン本体の設計は `rakuten-coupon-planner`、商品ページ販売力診断は `rakuten-sales-copy-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場での実質価格（送料・ポイント・クーポン込み）競合比較診断スキル。「楽天の価格を競合比較」「実質価格で負けてる？」「ポイント込みで価格戦略」「送料込みで比較」「楽天と他社の実質価格」「ポイント還元込みの勝ち負け」「クーポン込みの最安シミュレーション」「価格改定の粗利影響」など、楽天店舗での競合価格比較・実質負担額計算・価格戦略・粗利影響シミュレーションのリクエストで使う。表示価格だけでなく送料・ポイント原資・クーポン後価格・楽天手数料を含めた実質負担額で勝ち負けを判定し、値下げ／クーポン／ポイント／セット化のどれが最適かを粗利影響と合わせて提示。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※二重価格表示の景表法チェックは別スキル `yakki-keihyo-expression-check`、クーポン本体の設計は `rakuten-coupon-planner`、商品ページ販売力診断は `rakuten-sales-copy-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-price-compare-audit"
+ },
+ {
+  "name": "rakuten-product-image-brief",
+  "description_ja": "楽天市場の商品画像1〜20枚の構成案・撮影ブリーフ・デザインブリーフを設計するスキル。「楽天画像の企画」「商品画像の構成案」「画像ブリーフ作って」「商品画像20枚分の役割設計」「楽天の画像をCVRから設計したい」「メイン画像とサブ画像の役割分担」など、楽天向け商品画像企画リクエストで使う。検索結果CTR用のメイン、不安解消用のサブ、サイズ・スペック表、利用シーン、レビュー画像、比較表など役割別に出す。2024.6画像規定改定（背景3種OK／占有率20%／枠禁止）に準拠。※既存画像の規定チェックは別スキル `rakuten-image-text-checker`、商品ページHTMLは `rakuten-pc-description-html` / `rakuten-smartphone-description-html`、商品名は `rakuten-seo`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場の商品画像1〜20枚の構成案・撮影ブリーフ・デザインブリーフを設計するスキル。「楽天画像の企画」「商品画像の構成案」「画像ブリーフ作って」「商品画像20枚分の役割設計」「楽天の画像をCVRから設計したい」「メイン画像とサブ画像の役割分担」など、楽天向け商品画像企画リクエストで使う。検索結果CTR用のメイン、不安解消用のサブ、サイズ・スペック表、利用シーン、レビュー画像、比較表など役割別に出す。2024.6画像規定改定（背景3種OK／占有率20%／枠禁止）に準拠。※既存画像の規定チェックは別スキル `rakuten-image-text-checker`、商品ページHTMLは `rakuten-pc-description-html` / `rakuten-smartphone-description-html`、商品名は `rakuten-seo`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-product-image-brief"
+ },
+ {
+  "name": "rakuten-review-mining",
+  "description_ja": "楽天市場の商品レビューを分類・分析し、商品改善・ページ改善・広告訴求・FAQ化につなげるスキル。「楽天レビュー分析」「レビューから改善点」「レビューを広告コピーに」「低評価の原因分類」「レビューマイニング」「レビューの不満をFAQ化」「購入理由を抽出」「使用シーン分析」「競合レビュー比較」など、楽天レビューの本文・星評価・期間データを材料にした分類・改善提案・コピー化のリクエストで使う。購入理由／満足点／不満点／使用シーン／誤解の5軸で分類し、商品改善・同梱物改善・配送改善・ページ改善・広告訴求・FAQ化に振り分け。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※レビューへの返信文生成は別スキル `rakuten-review-reply-generator`、商品ページ全体の販売力診断は `rakuten-sales-copy-audit`、不満の根本原因クラスタリングは `complaint-root-cause-cluster`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場の商品レビューを分類・分析し、商品改善・ページ改善・広告訴求・FAQ化につなげるスキル。「楽天レビュー分析」「レビューから改善点」「レビューを広告コピーに」「低評価の原因分類」「レビューマイニング」「レビューの不満をFAQ化」「購入理由を抽出」「使用シーン分析」「競合レビュー比較」など、楽天レビューの本文・星評価・期間データを材料にした分類・改善提案・コピー化のリクエストで使う。購入理由／満足点／不満点／使用シーン／誤解の5軸で分類し、商品改善・同梱物改善・配送改善・ページ改善・広告訴求・FAQ化に振り分け。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※レビューへの返信文生成は別スキル `rakuten-review-reply-generator`、商品ページ全体の販売力診断は `rakuten-sales-copy-audit`、不満の根本原因クラスタリングは `complaint-root-cause-cluster`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-review-mining"
+ },
+ {
+  "name": "rakuten-review-reply-generator",
+  "description_ja": "楽天市場のレビューへの店舗返信文を生成するスキル。「楽天レビュー返信」「低評価レビューに返信」「レビューのお礼文」「店舗らしい返信」「クレーム返信文」「☆1への返信」「丁寧な返信文」「楽天ショップレビュー返信」など、楽天R-Mailレビュー返信機能で投稿する返信文の作成リクエストで使う。高評価／低評価／中評価／配送不満／品質不満／誤解／対応希望ありなど、レビューの感情と論点を整理し、店舗トーンに合わせた短文・標準・丁寧の複数パターンを生成。返金・補償を勝手に約束しない／個人情報に触れない／責任を断定しすぎない設計。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※レビュー分析・改善アクション抽出は別スキル `rakuten-review-mining`、クレームの根本原因分類は `complaint-root-cause-cluster`、配送遅延の謝罪メールは `delivery-delay-apology-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場のレビューへの店舗返信文を生成するスキル。「楽天レビュー返信」「低評価レビューに返信」「レビューのお礼文」「店舗らしい返信」「クレーム返信文」「☆1への返信」「丁寧な返信文」「楽天ショップレビュー返信」など、楽天R-Mailレビュー返信機能で投稿する返信文の作成リクエストで使う。高評価／低評価／中評価／配送不満／品質不満／誤解／対応希望ありなど、レビューの感情と論点を整理し、店舗トーンに合わせた短文・標準・丁寧の複数パターンを生成。返金・補償を勝手に約束しない／個人情報に触れない／責任を断定しすぎない設計。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※レビュー分析・改善アクション抽出は別スキル `rakuten-review-mining`、クレームの根本原因分類は `complaint-root-cause-cluster`、配送遅延の謝罪メールは `delivery-delay-apology-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-review-reply-generator"
+ },
+ {
+  "name": "rakuten-rms-daily-patrol",
+  "description_ja": "楽天市場RMSの日次パトロール（店舗トップ・商品ページ・RPP・在庫・イベント設定・レビュー・問い合わせ・違反点数）の異常検知設計スキル。「楽天毎日チェック」「RMSパトロール」「店舗の異常検知」「RPPと在庫を毎朝見たい」「日次チェックリスト」「楽天の朝ルーチン」「店長業務の標準化」「在庫アラート設計」など、楽天店舗の運用監視・異常検知・通知設計・SOP化のリクエストで使う。所要60-70分のチェック表、しきい値判定、Slack/LINE通知テンプレ、エスカレーションフローを生成。※RPPキーワード単体監査は別スキル `rakuten-rpp-keyword-audit`、画像規定チェックは `rakuten-image-text-checker`、レビュー返信生成は `rakuten-review-reply-generator`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場RMSの日次パトロール（店舗トップ・商品ページ・RPP・在庫・イベント設定・レビュー・問い合わせ・違反点数）の異常検知設計スキル。「楽天毎日チェック」「RMSパトロール」「店舗の異常検知」「RPPと在庫を毎朝見たい」「日次チェックリスト」「楽天の朝ルーチン」「店長業務の標準化」「在庫アラート設計」など、楽天店舗の運用監視・異常検知・通知設計・SOP化のリクエストで使う。所要60-70分のチェック表、しきい値判定、Slack/LINE通知テンプレ、エスカレーションフローを生成。※RPPキーワード単体監査は別スキル `rakuten-rpp-keyword-audit`、画像規定チェックは `rakuten-image-text-checker`、レビュー返信生成は `rakuten-review-reply-generator`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-rms-daily-patrol"
+ },
+ {
+  "name": "rakuten-rpp-exclusion-csv-builder",
+  "description_ja": "楽天RPPの除外商品／除外キーワードCSVを設計・生成するスキル。「RPP除外CSV作って」「広告除外したい商品をまとめて」「RPP除外キーワードCSV」「在庫切れ商品を広告から外したい」「商標KWを除外したい」「除外CSVのn/d/u指定方法」など、楽天RPPの除外リスト管理リクエストで使う。コントロールカラム（n/d/u）の指定、Shift_JIS/CR+LFの文字コード、商品管理番号・キーワードの形式整備、差分管理（追加/削除/更新）、適用前バックアップまでカバー。※キーワード評価・入札判断は別スキル `rakuten-rpp-keyword-audit`、商品ページCVR改善は `rakuten-sales-copy-audit`、SKU重複整理は `rakuten-sku-variation-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天RPPの除外商品／除外キーワードCSVを設計・生成するスキル。「RPP除外CSV作って」「広告除外したい商品をまとめて」「RPP除外キーワードCSV」「在庫切れ商品を広告から外したい」「商標KWを除外したい」「除外CSVのn/d/u指定方法」など、楽天RPPの除外リスト管理リクエストで使う。コントロールカラム（n/d/u）の指定、Shift_JIS/CR+LFの文字コード、商品管理番号・キーワードの形式整備、差分管理（追加/削除/更新）、適用前バックアップまでカバー。※キーワード評価・入札判断は別スキル `rakuten-rpp-keyword-audit`、商品ページCVR改善は `rakuten-sales-copy-audit`、SKU重複整理は `rakuten-sku-variation-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-rpp-exclusion-csv-builder"
+ },
+ {
+  "name": "rakuten-rpp-keyword-audit",
+  "description_ja": "楽天RPP（楽天プロモーションプラットフォーム）のキーワード単位監査スキル。「RPPキーワード見直し」「楽天広告のキーワード分析」「ROAS悪いKWを整理したい」「RPPの入札最適化」「広告のCPC上限を計算したい」「RPP実績CSV分析」など、楽天RPP広告のキーワード評価・入札判断・停止/除外/追加判断のリクエストで使う。粗利率とCVRから理論CPC上限を算出し、4象限マトリクスで「強化／維持／改善／停止」を判定する。2025.11以降の上限CPC方式（**商品一括20円以上／キーワード・商品名指定40円以上の2階層**）に準拠。※除外CSV生成は別スキル `rakuten-rpp-exclusion-csv-builder`、キーワード発見・拡張は `rakuten-suggest-keyword-expander` `rakuten-keyword-map-builder`、商品ページCVR改善は `rakuten-sales-copy-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天RPP（楽天プロモーションプラットフォーム）のキーワード単位監査スキル。「RPPキーワード見直し」「楽天広告のキーワード分析」「ROAS悪いKWを整理したい」「RPPの入札最適化」「広告のCPC上限を計算したい」「RPP実績CSV分析」など、楽天RPP広告のキーワード評価・入札判断・停止/除外/追加判断のリクエストで使う。粗利率とCVRから理論CPC上限を算出し、4象限マトリクスで「強化／維持／改善／停止」を判定する。2025.11以降の上限CPC方式（**商品一括20円以上／キーワード・商品名指定40円以上の2階層**）に準拠。※除外CSV生成は別スキル `rakuten-rpp-exclusion-csv-builder`、キーワード発見・拡張は `rakuten-suggest-keyword-expander` `rakuten-keyword-map-builder`、商品ページCVR改善は `rakuten-sales-copy-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-rpp-keyword-audit"
+ },
+ {
+  "name": "rakuten-sales-copy-audit",
+  "description_ja": "楽天市場の商品ページを売上・CVR目線で診断するスキル。「楽天の商品ページを診断」「このページ売れるか見て」「楽天のCVR改善点」「商品名とキャッチコピーを採点」「ファーストビュー診断」「楽天ページ販売力評価」「商品ページの致命傷チェック」「楽天商品ページの改善優先順位」など、楽天の商品名・キャッチコピー・PC/SP説明文・画像構成・価格設計を100点満点で採点し、致命的問題と改善優先順位を出すリクエストで使う。検索流入向け要素（タンタンサーチ）とCVR向け要素（信頼・差別化・購入不安解消）を分けて評価し、修正後のサンプル文言まで提示。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※薬機景表・楽天規約全般のリスク表現チェックは別スキル `yakki-keihyo-expression-check`、PC説明文HTML生成は `rakuten-pc-description-html`、スマホ説明文HTML生成は `rakuten-smartphone-description-html`、レビュー由来の改善は `rakuten-review-mining`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場の商品ページを売上・CVR目線で診断するスキル。「楽天の商品ページを診断」「このページ売れるか見て」「楽天のCVR改善点」「商品名とキャッチコピーを採点」「ファーストビュー診断」「楽天ページ販売力評価」「商品ページの致命傷チェック」「楽天商品ページの改善優先順位」など、楽天の商品名・キャッチコピー・PC/SP説明文・画像構成・価格設計を100点満点で採点し、致命的問題と改善優先順位を出すリクエストで使う。検索流入向け要素（タンタンサーチ）とCVR向け要素（信頼・差別化・購入不安解消）を分けて評価し、修正後のサンプル文言まで提示。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※薬機景表・楽天規約全般のリスク表現チェックは別スキル `yakki-keihyo-expression-check`、PC説明文HTML生成は `rakuten-pc-description-html`、スマホ説明文HTML生成は `rakuten-smartphone-description-html`、レビュー由来の改善は `rakuten-review-mining`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-sales-copy-audit"
+ },
+ {
+  "name": "rakuten-sku-variation-checker",
+  "description_ja": "楽天市場のSKU・バリエーション構造（親商品／子SKU、選択肢タイプ、選択肢項目）を診断するスキル。「楽天SKU整理」「バリエーション構造の見直し」「親子関係おかしい」「選択肢が多すぎて表示崩れ」「SKU命名規則」「色サイズ容量の組合せ」「バリエーション戦略」など、楽天SKU構造の設計・診断・修正案リクエストで使う。商品管理番号32byte・SKU管理番号32byte・半角英数・選択肢タイプ（プルダウン／カラー／テキスト）・在庫＆JAN紐付け・表示崩れリスクをカバー。※商品名・キャッチコピーは別スキル `rakuten-seo`、JANコード単体チェックは `jan-code-checker`、ジャンルID選定は `rakuten-genre-id-selector`、商品ページHTMLは `rakuten-pc-description-html`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場のSKU・バリエーション構造（親商品／子SKU、選択肢タイプ、選択肢項目）を診断するスキル。「楽天SKU整理」「バリエーション構造の見直し」「親子関係おかしい」「選択肢が多すぎて表示崩れ」「SKU命名規則」「色サイズ容量の組合せ」「バリエーション戦略」など、楽天SKU構造の設計・診断・修正案リクエストで使う。商品管理番号32byte・SKU管理番号32byte・半角英数・選択肢タイプ（プルダウン／カラー／テキスト）・在庫＆JAN紐付け・表示崩れリスクをカバー。※商品名・キャッチコピーは別スキル `rakuten-seo`、JANコード単体チェックは `jan-code-checker`、ジャンルID選定は `rakuten-genre-id-selector`、商品ページHTMLは `rakuten-pc-description-html`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-sku-variation-checker"
+ },
+ {
+  "name": "rakuten-smartphone-description-html",
+  "description_ja": "楽天市場SP（スマホ）版商品説明文のHTML生成スキル。「楽天スマホ用商品説明」「楽天SP説明文HTML」「RMSに入るスマホ説明文」「divやstyleなしで商品説明」「スマホ最適化商品ページ」「楽天モバイル説明文」「縦スクロール商品説明」「SP版の商品ページ」など、楽天RMSのSP用商品説明文（10,240byte／禁止タグあり）を、縦スクロール最適・禁止タグ回避・画像10枚以内の制約下でHTML化するリクエストで使う。div/script/iframe/form/input/styleを使わず、p/br/font/b/img/a/tableの安全タグで構築。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※PC版説明文（許可タグや構成が異なる）は別スキル `rakuten-pc-description-html`、商品ページ販売力診断は `rakuten-sales-copy-audit`、画像のテキスト占有率チェックは `rakuten-image-text-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天市場SP（スマホ）版商品説明文のHTML生成スキル。「楽天スマホ用商品説明」「楽天SP説明文HTML」「RMSに入るスマホ説明文」「divやstyleなしで商品説明」「スマホ最適化商品ページ」「楽天モバイル説明文」「縦スクロール商品説明」「SP版の商品ページ」など、楽天RMSのSP用商品説明文（10,240byte／禁止タグあり）を、縦スクロール最適・禁止タグ回避・画像10枚以内の制約下でHTML化するリクエストで使う。div/script/iframe/form/input/styleを使わず、p/br/font/b/img/a/tableの安全タグで構築。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※PC版説明文（許可タグや構成が異なる）は別スキル `rakuten-pc-description-html`、商品ページ販売力診断は `rakuten-sales-copy-audit`、画像のテキスト占有率チェックは `rakuten-image-text-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-smartphone-description-html"
+ },
+ {
+  "name": "rakuten-suggest-keyword-expander",
+  "description_ja": "楽天サジェスト（タンタンサーチ）由来のキーワードを「指名／用途／悩み／状況／季節／贈答／表記揺れ／類義語」の8軸で拡張するスキル。「楽天サジェスト拡張」「キーワード横展開して」「楽天で拾いたい検索語を増やしたい」「悩み系キーワード出して」「ロングテール拡張」「表記揺れリスト」など、既知のメインKWを起点にした拡張リクエストで使う。商品名／キャッチコピー／RPP／レビュー誘導での使い分けまで含む。※全体軸設計（指名・用途・状況・季節・類義）は別スキル `rakuten-keyword-map-builder`、ギフト需要KWは `rakuten-gift-demand-keywords`、RPP評価は `rakuten-rpp-keyword-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天サジェスト（タンタンサーチ）由来のキーワードを「指名／用途／悩み／状況／季節／贈答／表記揺れ／類義語」の8軸で拡張するスキル。「楽天サジェスト拡張」「キーワード横展開して」「楽天で拾いたい検索語を増やしたい」「悩み系キーワード出して」「ロングテール拡張」「表記揺れリスト」など、既知のメインKWを起点にした拡張リクエストで使う。商品名／キャッチコピー／RPP／レビュー誘導での使い分けまで含む。※全体軸設計（指名・用途・状況・季節・類義）は別スキル `rakuten-keyword-map-builder`、ギフト需要KWは `rakuten-gift-demand-keywords`、RPP評価は `rakuten-rpp-keyword-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-suggest-keyword-expander"
+ },
+ {
+  "name": "rakuten-super-sale-prep",
+  "description_ja": "楽天スーパーSALE・お買い物マラソンの全社準備チェックスキル。「スーパーSALE準備」「楽天SS前のチェックリスト」「お買い物マラソン前にやること」「SALE用販促計画」「楽天イベント準備」「マラソン在庫準備」「SSのクーポン・RPP・メルマガ整合」「イベント当日運用」「楽天SS振り返り」など、楽天SS（年4回・3/6/9/12月）／お買い物マラソンの前日までに必要な商品選定・在庫・価格・クーポン・RPP・メルマガ・店舗トップ更新／当日運用／終了後振り返りの設計リクエストで使う。逆算スケジュール（30日前〜当日〜翌日〜終了後）と粗利・在庫・運用負荷のバランスを含む。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※クーポン本体の設計は別スキル `rakuten-coupon-planner`、RPPキーワード監査は `rakuten-rpp-keyword-audit`、メルマガ本文は `rakuten-mailmagazine-builder`、商品ページ販売力診断は `rakuten-sales-copy-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天スーパーSALE・お買い物マラソンの全社準備チェックスキル。「スーパーSALE準備」「楽天SS前のチェックリスト」「お買い物マラソン前にやること」「SALE用販促計画」「楽天イベント準備」「マラソン在庫準備」「SSのクーポン・RPP・メルマガ整合」「イベント当日運用」「楽天SS振り返り」など、楽天SS（年4回・3/6/9/12月）／お買い物マラソンの前日までに必要な商品選定・在庫・価格・クーポン・RPP・メルマガ・店舗トップ更新／当日運用／終了後振り返りの設計リクエストで使う。逆算スケジュール（30日前〜当日〜翌日〜終了後）と粗利・在庫・運用負荷のバランスを含む。あらゆるジャンル（食品・ファッション・化粧品・家電・サプリ・インテリア）対応。※クーポン本体の設計は別スキル `rakuten-coupon-planner`、RPPキーワード監査は `rakuten-rpp-keyword-audit`、メルマガ本文は `rakuten-mailmagazine-builder`、商品ページ販売力診断は `rakuten-sales-copy-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "rakuten-super-sale-prep"
+ },
+ {
+  "name": "reorder-point-forecast-lite",
+  "description_ja": "平均日販・標準偏差・リードタイム・欠品許容率（安全係数）から、発注点・安全在庫・推奨発注量・機会損失額を算出する簡易在庫計算スキル。「発注点を計算して」「いつ発注すべき？」「安全在庫を出して」「リードタイムが長い商品の発注」「欠品リスクを試算」「EOQ」「経済的発注量」「適正在庫日数」「機会損失額」「賞味期限制約での発注」「シーズン商品の発注タイミング」「複数倉庫の安全在庫」など、発注タイミングと発注量を数値で出したい依頼で使う。あらゆるジャンル（化粧品・健食・食品・家電・アパレル・雑貨）に対応。賞味期限制約・トレンド変動・複数倉庫運用にも対応。※在庫アラートが発火した後の対応リストは別スキル `inventory-alert-action-list`（本スキルは発注タイミング算出、`inventory-alert-action-list` は欠品・滞留が発生した後のアクション設計）、在庫処分シナリオは `deadstock-clearance-planner`、複数モールの在庫一元化は `crossmall-inventory-sync-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "平均日販・標準偏差・リードタイム・欠品許容率（安全係数）から、発注点・安全在庫・推奨発注量・機会損失額を算出する簡易在庫計算スキル。「発注点を計算して」「いつ発注すべき？」「安全在庫を出して」「リードタイムが長い商品の発注」「欠品リスクを試算」「EOQ」「経済的発注量」「適正在庫日数」「機会損失額」「賞味期限制約での発注」「シーズン商品の発注タイミング」「複数倉庫の安全在庫」など、発注タイミングと発注量を数値で出したい依頼で使う。あらゆるジャンル（化粧品・健食・食品・家電・アパレル・雑貨）に対応。賞味期限制約・トレンド変動・複数倉庫運用にも対応。※在庫アラートが発火した後の対応リストは別スキル `inventory-alert-action-list`（本スキルは発注タイミング算出、`inventory-alert-action-list` は欠品・滞留が発生した後のアクション設計）、在庫処分シナリオは `deadstock-clearance-planner`、複数モールの在庫一元化は `crossmall-inventory-sync-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "reorder-point-forecast-lite"
+ },
+ {
+  "name": "return-policy-consistency-check",
+  "description_ja": "返品・交換・キャンセル・返金ポリシーが特商法／PL法／民法（契約不適合責任）／景表法と整合し、かつ商品ページ・特商法ページ・FAQ・利用規約・確認メール間で表記が矛盾していないかを検証するスキル。「返品ポリシーの整合性」「返品特約のチェック」「返金条件のブレ」「特商法と返品ページが矛盾」「PL法と返品の関係」「不良品の対応文」「お客都合の返品」「未使用未開封のみ」「クーリングオフ」「契約不適合責任」など、返品/返金/キャンセルの法務整合性チェックで使う。化粧品・食品・家電・アパレル・サプリ全ジャンル対応。※特商法ページ全体の網羅性は別スキル `tokutei-shotorihiki-page-checker`、薬機法／景表法は `yakki-keihyo-expression-check`、配送遅延の謝罪文は `delivery-delay-apology-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "返品・交換・キャンセル・返金ポリシーが特商法／PL法／民法（契約不適合責任）／景表法と整合し、かつ商品ページ・特商法ページ・FAQ・利用規約・確認メール間で表記が矛盾していないかを検証するスキル。「返品ポリシーの整合性」「返品特約のチェック」「返金条件のブレ」「特商法と返品ページが矛盾」「PL法と返品の関係」「不良品の対応文」「お客都合の返品」「未使用未開封のみ」「クーリングオフ」「契約不適合責任」など、返品/返金/キャンセルの法務整合性チェックで使う。化粧品・食品・家電・アパレル・サプリ全ジャンル対応。※特商法ページ全体の網羅性は別スキル `tokutei-shotorihiki-page-checker`、薬機法／景表法は `yakki-keihyo-expression-check`、配送遅延の謝罪文は `delivery-delay-apology-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "return-policy-consistency-check"
+ },
+ {
+  "name": "review-analysis-copy-angles",
+  "description_ja": "商品レビューから「訴求軸（コピーアングル）」「広告コピー」「LP見出し」「商品改善点」を量的・質的の両面で抽出するスキル。「レビューから訴求を抜き出して」「お客様の声をコピーに」「レビュー分析」「★4の不満点を改善に」「ネガティブレビュー活用」「リピーターの声」「贈答理由を抽出」「テキストマイニング」「レビューサマリー」「顧客の言葉でコピー作成」「ペルソナをレビューから」など、レビュー（楽天／Amazon／Yahoo!／自社EC）を起点に訴求コピー素材や改善点を抽出する依頼で使う。あらゆるジャンル（化粧品・健食・食品・家電・アパレル・雑貨）に対応。法令範囲内に変換した訴求コピーを出力する。※Amazonレビュー＋Q&A特化のマイニングは別スキル `amazon-review-qa-mining`、楽天レビュー特化は `rakuten-review-mining`、本スキルは全モール共通のレビュー起点コピー設計に専念。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "商品レビューから「訴求軸（コピーアングル）」「広告コピー」「LP見出し」「商品改善点」を量的・質的の両面で抽出するスキル。「レビューから訴求を抜き出して」「お客様の声をコピーに」「レビュー分析」「★4の不満点を改善に」「ネガティブレビュー活用」「リピーターの声」「贈答理由を抽出」「テキストマイニング」「レビューサマリー」「顧客の言葉でコピー作成」「ペルソナをレビューから」など、レビュー（楽天／Amazon／Yahoo!／自社EC）を起点に訴求コピー素材や改善点を抽出する依頼で使う。あらゆるジャンル（化粧品・健食・食品・家電・アパレル・雑貨）に対応。法令範囲内に変換した訴求コピーを出力する。※Amazonレビュー＋Q&A特化のマイニングは別スキル `amazon-review-qa-mining`、楽天レビュー特化は `rakuten-review-mining`、本スキルは全モール共通のレビュー起点コピー設計に専念。",
+  "category": "ecommerce-marketing",
+  "slug": "review-analysis-copy-angles"
+ },
+ {
+  "name": "review-reply-tone-controller",
+  "description_ja": "楽天／Amazon／Yahoo／自社EC／Shopifyなど各モールのレビュー（高評価／中評価／低評価／クレーム）への返信を、店舗ブランドのトーン（丁寧・親しみ・カジュアル・フォーマル）に合わせ、かつモール規約・薬機法・景表法・ステマ規制に違反しない形で生成するスキル。「レビュー返信のトーン調整」「ブランドのトーンで返信」「丁寧すぎないレビュー返信」「低評価レビューへの返信」「楽天のレビュー返信」「Amazonのレビュー対応」「全店共通のトーンガイド」など、レビュー返信の文章生成・トーン制御で使う。返信を書くたびにブランドトーンを統一する用途。※楽天レビュー特化の文面生成は `rakuten-review-reply-generator`、Yahoo特化は `yahoo-review-reply-generator`、クレームの構造分析は `complaint-root-cause-cluster`、配送遅延の個別謝罪は `delivery-delay-apology-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "楽天／Amazon／Yahoo／自社EC／Shopifyなど各モールのレビュー（高評価／中評価／低評価／クレーム）への返信を、店舗ブランドのトーン（丁寧・親しみ・カジュアル・フォーマル）に合わせ、かつモール規約・薬機法・景表法・ステマ規制に違反しない形で生成するスキル。「レビュー返信のトーン調整」「ブランドのトーンで返信」「丁寧すぎないレビュー返信」「低評価レビューへの返信」「楽天のレビュー返信」「Amazonのレビュー対応」「全店共通のトーンガイド」など、レビュー返信の文章生成・トーン制御で使う。返信を書くたびにブランドトーンを統一する用途。※楽天レビュー特化の文面生成は `rakuten-review-reply-generator`、Yahoo特化は `yahoo-review-reply-generator`、クレームの構造分析は `complaint-root-cause-cluster`、配送遅延の個別謝罪は `delivery-delay-apology-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "review-reply-tone-controller"
+ },
+ {
+  "name": "seasonal-sales-calendar-jp",
+  "description_ja": "日本ECの年間販促カレンダーを、商品ジャンル別に「イベント・モールセール・仕入リードタイム・配送制約・キャンペーン原資・広告予算配分」まで含めて設計するスキル。「年間販促カレンダー作って」「販促スケジュール」「楽天SS／お買い物マラソン対応」「Amazonプライムデー」「ブラックフライデー」「お中元のリードタイム」「クリスマス販促」「母の日企画」「シーズン商品の発注タイミング」「年間販促全体像」「販促リードタイム逆算」「年間ピーク予測」「販促予算配分」など、年間または特定シーズンの販促計画立案で使う。あらゆるジャンル（食品・スイーツ・酒・コスメ・健食・家電・アパレル・ベビー・ペット・雑貨）に対応。※ギフトイベントのキーワード設計は別スキル `gift-demand-keyword-builder`、楽天SS／お買い物マラソン特化の運用は `rakuten-event-runbook`、価格設定・粗利試算は `price-margin-simulator`、在庫の発注点計算は `reorder-point-forecast-lite`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "日本ECの年間販促カレンダーを、商品ジャンル別に「イベント・モールセール・仕入リードタイム・配送制約・キャンペーン原資・広告予算配分」まで含めて設計するスキル。「年間販促カレンダー作って」「販促スケジュール」「楽天SS／お買い物マラソン対応」「Amazonプライムデー」「ブラックフライデー」「お中元のリードタイム」「クリスマス販促」「母の日企画」「シーズン商品の発注タイミング」「年間販促全体像」「販促リードタイム逆算」「年間ピーク予測」「販促予算配分」など、年間または特定シーズンの販促計画立案で使う。あらゆるジャンル（食品・スイーツ・酒・コスメ・健食・家電・アパレル・ベビー・ペット・雑貨）に対応。※ギフトイベントのキーワード設計は別スキル `gift-demand-keyword-builder`、楽天SS／お買い物マラソン特化の運用は `rakuten-event-runbook`、価格設定・粗利試算は `price-margin-simulator`、在庫の発注点計算は `reorder-point-forecast-lite`。",
+  "category": "ecommerce-marketing",
+  "slug": "seasonal-sales-calendar-jp"
+ },
+ {
+  "name": "shopify-abandoned-cart-mail",
+  "description_ja": "Shopifyのカゴ落ち（カート放棄）に対する3通ステップメール・LINE誘導文・SMS文案を作成するスキル。「カゴ落ちメール」「カート放棄メール」「Abandoned Checkout」「ステップメール」「再アプローチメール」「カート復元」「Recovery URL」「LINE誘導」「件名案」「リカバリーメール」など、Shopifyでカートを放棄した顧客への自動メール／LINE／SMSの設計・文案作成・配信タイミング設計に関するリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※ストア全体のCVR診断・離脱要因分析は別スキル `shopify-cvr-diagnosis`、月次の数値レポートは `shopify-ga4-search-console-report`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Shopifyのカゴ落ち（カート放棄）に対する3通ステップメール・LINE誘導文・SMS文案を作成するスキル。「カゴ落ちメール」「カート放棄メール」「Abandoned Checkout」「ステップメール」「再アプローチメール」「カート復元」「Recovery URL」「LINE誘導」「件名案」「リカバリーメール」など、Shopifyでカートを放棄した顧客への自動メール／LINE／SMSの設計・文案作成・配信タイミング設計に関するリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※ストア全体のCVR診断・離脱要因分析は別スキル `shopify-cvr-diagnosis`、月次の数値レポートは `shopify-ga4-search-console-report`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-abandoned-cart-mail"
+ },
+ {
+  "name": "shopify-blog-content-planner",
+  "description_ja": "Shopifyブログの記事企画・執筆ブリーフ・内部リンク設計・Article schema設計までを行うスキル。「ブログ企画」「Shopifyブログ」「記事ネタ」「コンテンツマーケ」「コンテンツSEO」「執筆ブリーフ」「記事構成」「見出し設計」「H2設計」「内部リンク設計」「キーワード選定」「検索意図」「Article schema」「記事のJSON-LD」など、Shopifyのブログ／お役立ち記事／読み物コンテンツの企画・構成・執筆指示書の作成リクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※公開後の効果測定・順位レポートは別スキル `shopify-ga4-search-console-report`、商品ページ本体のSEOは `shopify-product-page-seo-jp`、コレクションページのSEOは `shopify-collection-seo-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Shopifyブログの記事企画・執筆ブリーフ・内部リンク設計・Article schema設計までを行うスキル。「ブログ企画」「Shopifyブログ」「記事ネタ」「コンテンツマーケ」「コンテンツSEO」「執筆ブリーフ」「記事構成」「見出し設計」「H2設計」「内部リンク設計」「キーワード選定」「検索意図」「Article schema」「記事のJSON-LD」など、Shopifyのブログ／お役立ち記事／読み物コンテンツの企画・構成・執筆指示書の作成リクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※公開後の効果測定・順位レポートは別スキル `shopify-ga4-search-console-report`、商品ページ本体のSEOは `shopify-product-page-seo-jp`、コレクションページのSEOは `shopify-collection-seo-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-blog-content-planner"
+ },
+ {
+  "name": "shopify-collection-seo-builder",
+  "description_ja": "ShopifyのコレクションページのSEO設計を行うスキル。「コレクションSEO」「コレクションページ最適化」「Smart Collection条件」「カテゴリページ」「絞り込み」「コレクション説明文」「BreadcrumbList」「パンくず」「Search & Discovery」「フィルター設計」「コレクションのメタタグ」「上部説明文」「下部説明文」など、Shopifyのコレクション（カテゴリ）ページのSEO設計・説明文ライティング・フィルター設計・パンくず構造化データに関するリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※商品ページ単体のSEOは別スキル `shopify-product-page-seo-jp`、ブログ記事の企画は `shopify-blog-content-planner`、効果測定は `shopify-ga4-search-console-report`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ShopifyのコレクションページのSEO設計を行うスキル。「コレクションSEO」「コレクションページ最適化」「Smart Collection条件」「カテゴリページ」「絞り込み」「コレクション説明文」「BreadcrumbList」「パンくず」「Search & Discovery」「フィルター設計」「コレクションのメタタグ」「上部説明文」「下部説明文」など、Shopifyのコレクション（カテゴリ）ページのSEO設計・説明文ライティング・フィルター設計・パンくず構造化データに関するリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※商品ページ単体のSEOは別スキル `shopify-product-page-seo-jp`、ブログ記事の企画は `shopify-blog-content-planner`、効果測定は `shopify-ga4-search-console-report`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-collection-seo-builder"
+ },
+ {
+  "name": "shopify-cvr-diagnosis",
+  "description_ja": "ShopifyストアのCVR（コンバージョン率）を診断し、改善施策をファネル単位で提案するスキル。「CVRが低い」「CVR診断」「コンバージョン率改善」「商品ページから買われない」「カート離脱」「チェックアウト離脱」「決済離脱」「モバイルで買われない」「ファネル分析」「離脱要因」「A/Bテスト案」「CRO」など、ShopifyストアのCVRや購入完了率の低下要因の特定・改善案作成リクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※カゴ落ち後のメール文案作成は別スキル `shopify-abandoned-cart-mail`、月次の数値レポートは `shopify-ga4-search-console-report`、商品ページのSEO最適化は `shopify-product-page-seo-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ShopifyストアのCVR（コンバージョン率）を診断し、改善施策をファネル単位で提案するスキル。「CVRが低い」「CVR診断」「コンバージョン率改善」「商品ページから買われない」「カート離脱」「チェックアウト離脱」「決済離脱」「モバイルで買われない」「ファネル分析」「離脱要因」「A/Bテスト案」「CRO」など、ShopifyストアのCVRや購入完了率の低下要因の特定・改善案作成リクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※カゴ落ち後のメール文案作成は別スキル `shopify-abandoned-cart-mail`、月次の数値レポートは `shopify-ga4-search-console-report`、商品ページのSEO最適化は `shopify-product-page-seo-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-cvr-diagnosis"
+ },
+ {
+  "name": "shopify-ga4-search-console-report",
+  "description_ja": "ShopifyストアのGA4・Search Consoleデータから月次／週次のEC改善レポートを作成するスキル。「月次レポート」「GA4レポート」「Search Consoleレポート」「サチコ」「セッション数」「PV」「直帰率」「CVR推移」「流入チャネル」「キーワード順位」「平均掲載順位」「クリック率」「インプレッション」「異常検知」「エグゼクティブサマリ」「経営層向けレポート」など、ShopifyのGA4／Google Search Consoleデータからの月次レポート・週次レポート作成・KPI推移分析・異常検知に関するリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※施策実行前のCVR診断は別スキル `shopify-cvr-diagnosis`、ブログ記事の企画は `shopify-blog-content-planner`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ShopifyストアのGA4・Search Consoleデータから月次／週次のEC改善レポートを作成するスキル。「月次レポート」「GA4レポート」「Search Consoleレポート」「サチコ」「セッション数」「PV」「直帰率」「CVR推移」「流入チャネル」「キーワード順位」「平均掲載順位」「クリック率」「インプレッション」「異常検知」「エグゼクティブサマリ」「経営層向けレポート」など、ShopifyのGA4／Google Search Consoleデータからの月次レポート・週次レポート作成・KPI推移分析・異常検知に関するリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※施策実行前のCVR診断は別スキル `shopify-cvr-diagnosis`、ブログ記事の企画は `shopify-blog-content-planner`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-ga4-search-console-report"
+ },
+ {
+  "name": "shopify-liquid-section-brief",
+  "description_ja": "ShopifyテーマのLiquidカスタムSectionを実装するためのブリーフ（仕様書）を作成するスキル。「Section仕様書」「Liquidセクション」「カスタムセクション」「schema設計」「block設計」「セクションのブロック」「Online Store 2.0」「Sections Everywhere」「Dawn theme カスタム」「JSON template」「セクションのスキーマ」「settings型」「preset設計」「受け入れ基準」「UAT」「実装ブリーフ」など、Shopifyテーマに追加するカスタムSection／Blockの仕様書・実装指示書の作成リクエストで必ずこのスキルを使う。Codex／Claude Code／外注エンジニアが実装可能なレベルまで詳細化する。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※どんなセクションを作るべきかの企画段階は別スキル `shopify-section-idea-generator-jp`、LP画像からの実装ブリーフは `shopify-lp-from-image-brief`、Metafieldデータ構造の設計は `shopify-metafields-structure`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ShopifyテーマのLiquidカスタムSectionを実装するためのブリーフ（仕様書）を作成するスキル。「Section仕様書」「Liquidセクション」「カスタムセクション」「schema設計」「block設計」「セクションのブロック」「Online Store 2.0」「Sections Everywhere」「Dawn theme カスタム」「JSON template」「セクションのスキーマ」「settings型」「preset設計」「受け入れ基準」「UAT」「実装ブリーフ」など、Shopifyテーマに追加するカスタムSection／Blockの仕様書・実装指示書の作成リクエストで必ずこのスキルを使う。Codex／Claude Code／外注エンジニアが実装可能なレベルまで詳細化する。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※どんなセクションを作るべきかの企画段階は別スキル `shopify-section-idea-generator-jp`、LP画像からの実装ブリーフは `shopify-lp-from-image-brief`、Metafieldデータ構造の設計は `shopify-metafields-structure`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-liquid-section-brief"
+ },
+ {
+  "name": "shopify-lp-from-image-brief",
+  "description_ja": "画像で作られたLPデザインをShopifyテーマでHTML/CSS/Liquid実装するためのブリーフ（実装指示書）を作成するスキル。「画像LPの実装ブリーフ」「LP分解」「LPをShopifyに載せる」「画像からLPコーディング」「画像LP仕様化」「Figma LP実装」「PSDからLP」「ランディングページの実装指示」「テキスト化／画像化判定」「LPのレスポンシブ設計」「LPの検収基準」「Codex向けLPブリーフ」「Claude Code向けLP指示」など、LP画像（Figma／PSD／JPG）からShopifyテーマへの実装指示書作成リクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※テーマ全体のSection仕様書は別スキル `shopify-liquid-section-brief`、企画段階のSection選定は `shopify-section-idea-generator-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "画像で作られたLPデザインをShopifyテーマでHTML/CSS/Liquid実装するためのブリーフ（実装指示書）を作成するスキル。「画像LPの実装ブリーフ」「LP分解」「LPをShopifyに載せる」「画像からLPコーディング」「画像LP仕様化」「Figma LP実装」「PSDからLP」「ランディングページの実装指示」「テキスト化／画像化判定」「LPのレスポンシブ設計」「LPの検収基準」「Codex向けLPブリーフ」「Claude Code向けLP指示」など、LP画像（Figma／PSD／JPG）からShopifyテーマへの実装指示書作成リクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※テーマ全体のSection仕様書は別スキル `shopify-liquid-section-brief`、企画段階のSection選定は `shopify-section-idea-generator-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-lp-from-image-brief"
+ },
+ {
+  "name": "shopify-metafields-structure",
+  "description_ja": "ShopifyのMetafield／Metaobjectのデータ構造を設計するスキル。「Metafield設計」「メタフィールド」「Metaobject」「成分情報の構造化」「サイズ表メタフィールド」「FAQメタフィールド」「商品スペック構造化」「名前空間設計」「namespace」「カスタム属性」「商品カスタムフィールド」「Matrixify」「Bulk Operations」「メタフィールド一括登録」など、Shopify商品／コレクション／顧客／注文／ページ等にカスタム属性を追加するデータ構造設計のリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※Liquid表示実装のセクション仕様書は別スキル `shopify-liquid-section-brief`、コレクションSEOは `shopify-collection-seo-builder`、商品ページSEOは `shopify-product-page-seo-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "ShopifyのMetafield／Metaobjectのデータ構造を設計するスキル。「Metafield設計」「メタフィールド」「Metaobject」「成分情報の構造化」「サイズ表メタフィールド」「FAQメタフィールド」「商品スペック構造化」「名前空間設計」「namespace」「カスタム属性」「商品カスタムフィールド」「Matrixify」「Bulk Operations」「メタフィールド一括登録」など、Shopify商品／コレクション／顧客／注文／ページ等にカスタム属性を追加するデータ構造設計のリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※Liquid表示実装のセクション仕様書は別スキル `shopify-liquid-section-brief`、コレクションSEOは `shopify-collection-seo-builder`、商品ページSEOは `shopify-product-page-seo-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-metafields-structure"
+ },
+ {
+  "name": "shopify-product-page-seo-jp",
+  "description_ja": "Shopifyの商品ページを日本語SEO向けに最適化するスキル。「商品名SEO」「Shopify商品ページSEO」「メタタイトル」「メタディスクリプション」「商品説明SEO」「商品ページのタイトル」「Shopifyの商品タイトル」「handle最適化」「URL設計」「301リダイレクト」「JSON-LD Product」「Product schema」「リッチリザルト」「商品ページの構造化データ」など、Shopifyの商品ページ単体のSEO最適化（タイトル・メタ・URL・説明文・構造化データ）に関するリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※コレクションページのSEOは別スキル `shopify-collection-seo-builder`、ブログ記事のSEOは `shopify-blog-content-planner`、商品スペックのメタフィールド構造化は `shopify-metafields-structure`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Shopifyの商品ページを日本語SEO向けに最適化するスキル。「商品名SEO」「Shopify商品ページSEO」「メタタイトル」「メタディスクリプション」「商品説明SEO」「商品ページのタイトル」「Shopifyの商品タイトル」「handle最適化」「URL設計」「301リダイレクト」「JSON-LD Product」「Product schema」「リッチリザルト」「商品ページの構造化データ」など、Shopifyの商品ページ単体のSEO最適化（タイトル・メタ・URL・説明文・構造化データ）に関するリクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆるジャンルに対応。※コレクションページのSEOは別スキル `shopify-collection-seo-builder`、ブログ記事のSEOは `shopify-blog-content-planner`、商品スペックのメタフィールド構造化は `shopify-metafields-structure`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-product-page-seo-jp"
+ },
+ {
+  "name": "shopify-section-idea-generator-jp",
+  "description_ja": "Shopifyテーマに追加するSectionアイデアを業種別・目的別に企画提案するスキル。「Sectionアイデア」「セクション提案」「Shopifyのセクション案」「テーマカスタマイズ案」「どんなセクションを追加すべき」「商品ページの構成提案」「トップページ構成」「Dawn theme カスタム案」「業種別Section」「目的別Section」「App Block 検討」など、Shopifyのストアにどんなセクションを追加すれば良いかの企画段階リクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆる業種に対応し、Dawn 標準で済むか／カスタム実装が必要か／App Blockで代替可能かまで判定する。※実装段階の詳細仕様書は別スキル `shopify-liquid-section-brief`、画像LPからの実装ブリーフは `shopify-lp-from-image-brief`、Metafield設計は `shopify-metafields-structure`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Shopifyテーマに追加するSectionアイデアを業種別・目的別に企画提案するスキル。「Sectionアイデア」「セクション提案」「Shopifyのセクション案」「テーマカスタマイズ案」「どんなセクションを追加すべき」「商品ページの構成提案」「トップページ構成」「Dawn theme カスタム案」「業種別Section」「目的別Section」「App Block 検討」など、Shopifyのストアにどんなセクションを追加すれば良いかの企画段階リクエストで必ずこのスキルを使う。化粧品・食品・ファッション・家電・サプリ等あらゆる業種に対応し、Dawn 標準で済むか／カスタム実装が必要か／App Blockで代替可能かまで判定する。※実装段階の詳細仕様書は別スキル `shopify-liquid-section-brief`、画像LPからの実装ブリーフは `shopify-lp-from-image-brief`、Metafield設計は `shopify-metafields-structure`。",
+  "category": "ecommerce-marketing",
+  "slug": "shopify-section-idea-generator-jp"
+ },
+ {
+  "name": "sku-naming-rule-generator",
+  "description_ja": "自社の商品コード／SKUコード／バリエーションコードの命名規則を、モール仕様・将来拡張性・既存資産との整合を踏まえて設計するスキル。「SKU命名規則」「商品コードのルール」「バリエーションコード」「SKUの桁数」「カラー軸・サイズ軸のコード」「シーズンコード」「マルチブランドの命名」「楽天とAmazonで統一」「在庫管理ツールのコード」「SKU入力ミス防止」「SKUの正規表現」など、商品コード・SKUコードの設計・改訂・統一の依頼で使う。あらゆるジャンル（化粧品・健食・食品・家電・アパレル・雑貨）に対応。楽天／Amazon／Yahoo!／Shopify／ネクストエンジン／Google Merchant Center横断対応。例示はすべて架空ブランド名（BRAND-NAME・BRD・BTN等）で行う。※バリエーションの軸選び・モール別バリエーション機能の使い分けは別スキル `variation-builder-jp`、楽天SKUプロジェクト特化のバリエーションチェックは `rakuten-sku-variation-checker`、商品マスタの一括クリーニングは `ec-product-master-cleaner-jp`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "自社の商品コード／SKUコード／バリエーションコードの命名規則を、モール仕様・将来拡張性・既存資産との整合を踏まえて設計するスキル。「SKU命名規則」「商品コードのルール」「バリエーションコード」「SKUの桁数」「カラー軸・サイズ軸のコード」「シーズンコード」「マルチブランドの命名」「楽天とAmazonで統一」「在庫管理ツールのコード」「SKU入力ミス防止」「SKUの正規表現」など、商品コード・SKUコードの設計・改訂・統一の依頼で使う。あらゆるジャンル（化粧品・健食・食品・家電・アパレル・雑貨）に対応。楽天／Amazon／Yahoo!／Shopify／ネクストエンジン／Google Merchant Center横断対応。例示はすべて架空ブランド名（BRAND-NAME・BRD・BTN等）で行う。※バリエーションの軸選び・モール別バリエーション機能の使い分けは別スキル `variation-builder-jp`、楽天SKUプロジェクト特化のバリエーションチェックは `rakuten-sku-variation-checker`、商品マスタの一括クリーニングは `ec-product-master-cleaner-jp`。",
+  "category": "ecommerce-marketing",
+  "slug": "sku-naming-rule-generator"
+ },
+ {
+  "name": "tokutei-shotorihiki-page-checker",
+  "description_ja": "通販ECサイトの「特定商取引法に基づく表記」ページと、定期購入の最終確認画面の必須項目・記載漏れ・表記ブレを検証するスキル。「特商法チェック」「特商法表記の不足」「特商法ページ作って」「定期購入の確認画面」「最終確認画面の必須項目」「サブスク表示の不備」「事業者情報の書き方」「返品特約」「販売価格の表示」「2022年特商法改正」など、特商法13項目・最終確認画面6項目・定期購入義務に関するチェックで使う。楽天／Amazon／Yahoo／Shopify／自社EC／Base／makeshopなど全プラットフォーム対応。※返品ポリシーの整合性は別スキル `return-policy-consistency-check`、薬機法／景表法は `yakki-keihyo-expression-check`、Google Merchant Centerのサイト品質ポリシーは `google-merchant-center-policy-diagnosis`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "通販ECサイトの「特定商取引法に基づく表記」ページと、定期購入の最終確認画面の必須項目・記載漏れ・表記ブレを検証するスキル。「特商法チェック」「特商法表記の不足」「特商法ページ作って」「定期購入の確認画面」「最終確認画面の必須項目」「サブスク表示の不備」「事業者情報の書き方」「返品特約」「販売価格の表示」「2022年特商法改正」など、特商法13項目・最終確認画面6項目・定期購入義務に関するチェックで使う。楽天／Amazon／Yahoo／Shopify／自社EC／Base／makeshopなど全プラットフォーム対応。※返品ポリシーの整合性は別スキル `return-policy-consistency-check`、薬機法／景表法は `yakki-keihyo-expression-check`、Google Merchant Centerのサイト品質ポリシーは `google-merchant-center-policy-diagnosis`。",
+  "category": "ecommerce-marketing",
+  "slug": "tokutei-shotorihiki-page-checker"
+ },
+ {
+  "name": "variation-builder-jp",
+  "description_ja": "商品のカラー・サイズ・容量・セット数などのバリエーション軸を、販売・在庫・モール仕様の3観点で最適化し、モール別の登録形式（楽天SKUプロジェクト／Amazon親子バリエーション／Yahoo!バリエーション／Shopify Variants）に変換するスキル。「バリエーション設計」「カラー軸とサイズ軸どっちが良い」「親子バリエーション」「Amazonのvariation_theme」「楽天SKUプロジェクト」「色違いを別商品にすべき？」「サイズ展開を絞りたい」「滞留しているバリエーション」「100バリエーション超」「軸の追加・削除」「カラー名の統一」など、バリエーションの軸選び・展開数・モール別登録形式の決定に使う。あらゆるジャンル（アパレル・コスメ・食品・雑貨・家電）に対応。汎用設計に専念し、楽天SKUプロジェクトの登録ミス・属性必須チェックは別スキルに委譲する。※楽天SKUプロジェクト特化のバリエーションチェッカー（属性必須・違反点数）は別スキル `rakuten-sku-variation-checker`、SKUコードの命名規則は `sku-naming-rule-generator`、Amazonのvariation_theme詳細チェックは `amazon-variation-parent-child-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "商品のカラー・サイズ・容量・セット数などのバリエーション軸を、販売・在庫・モール仕様の3観点で最適化し、モール別の登録形式（楽天SKUプロジェクト／Amazon親子バリエーション／Yahoo!バリエーション／Shopify Variants）に変換するスキル。「バリエーション設計」「カラー軸とサイズ軸どっちが良い」「親子バリエーション」「Amazonのvariation_theme」「楽天SKUプロジェクト」「色違いを別商品にすべき？」「サイズ展開を絞りたい」「滞留しているバリエーション」「100バリエーション超」「軸の追加・削除」「カラー名の統一」など、バリエーションの軸選び・展開数・モール別登録形式の決定に使う。あらゆるジャンル（アパレル・コスメ・食品・雑貨・家電）に対応。汎用設計に専念し、楽天SKUプロジェクトの登録ミス・属性必須チェックは別スキルに委譲する。※楽天SKUプロジェクト特化のバリエーションチェッカー（属性必須・違反点数）は別スキル `rakuten-sku-variation-checker`、SKUコードの命名規則は `sku-naming-rule-generator`、Amazonのvariation_theme詳細チェックは `amazon-variation-parent-child-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "variation-builder-jp"
+ },
+ {
+  "name": "yahoo-ad-keyword-planner",
+  "description_ja": "Yahoo!ショッピング広告（アイテムマッチ・PRオプション・検索広告）のキーワード計画と入札・予算・除外語の設計を行うスキル。「Yahoo広告のキーワード」「アイテムマッチ KW」「Yahoo!ショッピング広告」「除外キーワード」「広告予算配分」「CPC設計」「ROAS改善」「商標KW入札の可否」「マッチタイプ」などのリクエストで使う。指名／一般／用途／悩み／競合／除外の6分類で整理し、検索クエリレポートからの最適化ループも提示。※検索サジェストの抽出は別スキル `yahoo-search-suggest-builder`、PayPay施策設計は `yahoo-paypay-campaign-planner`、商品名最適化は `yahoo-shopping-seo-title`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピング広告（アイテムマッチ・PRオプション・検索広告）のキーワード計画と入札・予算・除外語の設計を行うスキル。「Yahoo広告のキーワード」「アイテムマッチ KW」「Yahoo!ショッピング広告」「除外キーワード」「広告予算配分」「CPC設計」「ROAS改善」「商標KW入札の可否」「マッチタイプ」などのリクエストで使う。指名／一般／用途／悩み／競合／除外の6分類で整理し、検索クエリレポートからの最適化ループも提示。※検索サジェストの抽出は別スキル `yahoo-search-suggest-builder`、PayPay施策設計は `yahoo-paypay-campaign-planner`、商品名最適化は `yahoo-shopping-seo-title`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-ad-keyword-planner"
+ },
+ {
+  "name": "yahoo-category-path-selector",
+  "description_ja": "Yahoo!ショッピングのストアカテゴリ（path）とプロダクトカテゴリ（product-category）を商品情報から選定し、選定理由とリスクを整理するスキル。「Yahooカテゴリ選び」「プロダクトカテゴリID」「path 設計」「ストアカテゴリ構造」「カテゴリ間違い」「リカテゴライズ」「商品分類」「カテゴリランキング露出」「カテゴリ廃止・統合の対応」などのリクエストで使う。誤分類による検索精度低下・CVR低下リスクを事前に潰すための判断材料を提供。※商品名のSEOチューニングは別スキル `yahoo-shopping-seo-title`、商品CSVの構造検証は `yahoo-product-csv-validator`、サジェスト調査は `yahoo-search-suggest-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピングのストアカテゴリ（path）とプロダクトカテゴリ（product-category）を商品情報から選定し、選定理由とリスクを整理するスキル。「Yahooカテゴリ選び」「プロダクトカテゴリID」「path 設計」「ストアカテゴリ構造」「カテゴリ間違い」「リカテゴライズ」「商品分類」「カテゴリランキング露出」「カテゴリ廃止・統合の対応」などのリクエストで使う。誤分類による検索精度低下・CVR低下リスクを事前に潰すための判断材料を提供。※商品名のSEOチューニングは別スキル `yahoo-shopping-seo-title`、商品CSVの構造検証は `yahoo-product-csv-validator`、サジェスト調査は `yahoo-search-suggest-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-category-path-selector"
+ },
+ {
+  "name": "yahoo-coupon-copy-builder",
+  "description_ja": "Yahoo!ショッピングのクーポン名・対象条件・バナー文言・商品ページ訴求文を作成するスキル。「Yahooクーポン文案」「クーポン名のつけ方」「クーポン訴求」「バナー文言」「カート離脱クーポン」「先着○○枚」「閾値設定」「クーポン併用条件」「クーポンの粗利検算」などのリクエストで使う。割引方式（金額OFF／%OFF／送料無料）・対象範囲（全商品／カテゴリ／商品個別）・適用条件（閾値／会員区分）の組み合わせを5要素テンプレで設計。※PayPay施策・ストアポイント設計は別スキル `yahoo-paypay-campaign-planner`、配送ポリシーは `yahoo-shipping-policy-checker`、商品名最適化は `yahoo-shopping-seo-title`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピングのクーポン名・対象条件・バナー文言・商品ページ訴求文を作成するスキル。「Yahooクーポン文案」「クーポン名のつけ方」「クーポン訴求」「バナー文言」「カート離脱クーポン」「先着○○枚」「閾値設定」「クーポン併用条件」「クーポンの粗利検算」などのリクエストで使う。割引方式（金額OFF／%OFF／送料無料）・対象範囲（全商品／カテゴリ／商品個別）・適用条件（閾値／会員区分）の組み合わせを5要素テンプレで設計。※PayPay施策・ストアポイント設計は別スキル `yahoo-paypay-campaign-planner`、配送ポリシーは `yahoo-shipping-policy-checker`、商品名最適化は `yahoo-shopping-seo-title`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-coupon-copy-builder"
+ },
+ {
+  "name": "yahoo-item-image-audit",
+  "description_ja": "Yahoo!ショッピングの商品画像（メイン画像／サブ画像／動画）について、視認性・テキスト占有率・スマホ表示・薬機景表抵触・他モール訴求の有無を監査するスキル。「Yahoo商品画像をチェック」「メイン画像の文字量」「画像のテキスト占有率」「スマホで読みづらい」「画像内の効能表現NG」「他モール訴求バッジ」「サブ画像の構成」「画像差し替えカレンダー」などのリクエストで使う。10枚標準構成テンプレと制作指示書も生成。※楽天モール向け画像チェックは別スキル `rakuten-image-text-checker`、商品名最適化は `yahoo-shopping-seo-title`、クーポン文案は `yahoo-coupon-copy-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピングの商品画像（メイン画像／サブ画像／動画）について、視認性・テキスト占有率・スマホ表示・薬機景表抵触・他モール訴求の有無を監査するスキル。「Yahoo商品画像をチェック」「メイン画像の文字量」「画像のテキスト占有率」「スマホで読みづらい」「画像内の効能表現NG」「他モール訴求バッジ」「サブ画像の構成」「画像差し替えカレンダー」などのリクエストで使う。10枚標準構成テンプレと制作指示書も生成。※楽天モール向け画像チェックは別スキル `rakuten-image-text-checker`、商品名最適化は `yahoo-shopping-seo-title`、クーポン文案は `yahoo-coupon-copy-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-item-image-audit"
+ },
+ {
+  "name": "yahoo-paypay-campaign-planner",
+  "description_ja": "Yahoo!ショッピングのPayPay／LYPプレミアム連動キャンペーン（5の付く日／プレミアムな日曜日／ゾロ目／超PayPay祭）とストアポイントを組み合わせた販促設計を行うスキル。「PayPay施策」「5の付く日」「LYPプレミアム」「ゾロ目クーポン」「超PayPay祭」「ストアポイント倍率」「PayPayステップ」「最大○○%還元」「販促カレンダー」などのリクエストで使う。トリプル（ストアポイント＋優良配送＋PayPayステップ）の設計と粗利検算もカバー。※クーポン文案の作成は別スキル `yahoo-coupon-copy-builder`、配送・優良配送の条件チェックは `yahoo-shipping-policy-checker`、広告KW計画は `yahoo-ad-keyword-planner`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピングのPayPay／LYPプレミアム連動キャンペーン（5の付く日／プレミアムな日曜日／ゾロ目／超PayPay祭）とストアポイントを組み合わせた販促設計を行うスキル。「PayPay施策」「5の付く日」「LYPプレミアム」「ゾロ目クーポン」「超PayPay祭」「ストアポイント倍率」「PayPayステップ」「最大○○%還元」「販促カレンダー」などのリクエストで使う。トリプル（ストアポイント＋優良配送＋PayPayステップ）の設計と粗利検算もカバー。※クーポン文案の作成は別スキル `yahoo-coupon-copy-builder`、配送・優良配送の条件チェックは `yahoo-shipping-policy-checker`、広告KW計画は `yahoo-ad-keyword-planner`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-paypay-campaign-planner"
+ },
+ {
+  "name": "yahoo-product-csv-validator",
+  "description_ja": "Yahoo!ショッピングの商品CSV／在庫CSV／オプションCSVの列名・文字コード・上限・整合性を検証するスキル。「Yahoo CSV エラー」「商品CSVアップロードでエラー」「Shift_JIS 文字化け」「列名のスペルミス」「全角75文字超え」「product-category 設定」「JAN欠損」「孤立在庫」「在庫CSV」「オプションCSV」「ヘッダー列が認識されない」などのリクエストで使う。Yahoo!のCSV仕様（Shift_JIS／CR+LF／ハイフン区切りヘッダー）に特化した一括点検と修正指示の出力。※商品名のSEO最適化は別スキル `yahoo-shopping-seo-title`、カテゴリ選定は `yahoo-category-path-selector`、楽天やAmazonのCSV検証はそれぞれ別スキル。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピングの商品CSV／在庫CSV／オプションCSVの列名・文字コード・上限・整合性を検証するスキル。「Yahoo CSV エラー」「商品CSVアップロードでエラー」「Shift_JIS 文字化け」「列名のスペルミス」「全角75文字超え」「product-category 設定」「JAN欠損」「孤立在庫」「在庫CSV」「オプションCSV」「ヘッダー列が認識されない」などのリクエストで使う。Yahoo!のCSV仕様（Shift_JIS／CR+LF／ハイフン区切りヘッダー）に特化した一括点検と修正指示の出力。※商品名のSEO最適化は別スキル `yahoo-shopping-seo-title`、カテゴリ選定は `yahoo-category-path-selector`、楽天やAmazonのCSV検証はそれぞれ別スキル。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-product-csv-validator"
+ },
+ {
+  "name": "yahoo-review-reply-generator",
+  "description_ja": "Yahoo!ショッピングの商品レビューおよびストアレビューへの返信文を生成するスキル。「Yahooレビュー返信」「低評価レビューの返事」「クレームレビュー返信」「星1への返信文」「配送遅延クレーム」「不良品レビュー」「梱包クレーム」「レビューに感謝の返信」などのリクエストで使う。星評価（1〜5星）／論点（配送／品質／梱包／対応／価格）別の対応テンプレと、責任転嫁・テンプレ感・レビュー特典訴求を避けた誠実トーンを生成。短文版（200〜300字）／標準版（400〜500字）／丁寧版（600〜800字）の3トーンで出力可。※楽天・Amazon汎用のレビュー返信トーン制御は別スキル `review-reply-tone-controller`、クーポン文案は `yahoo-coupon-copy-builder`、配送ポリシーチェックは `yahoo-shipping-policy-checker`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピングの商品レビューおよびストアレビューへの返信文を生成するスキル。「Yahooレビュー返信」「低評価レビューの返事」「クレームレビュー返信」「星1への返信文」「配送遅延クレーム」「不良品レビュー」「梱包クレーム」「レビューに感謝の返信」などのリクエストで使う。星評価（1〜5星）／論点（配送／品質／梱包／対応／価格）別の対応テンプレと、責任転嫁・テンプレ感・レビュー特典訴求を避けた誠実トーンを生成。短文版（200〜300字）／標準版（400〜500字）／丁寧版（600〜800字）の3トーンで出力可。※楽天・Amazon汎用のレビュー返信トーン制御は別スキル `review-reply-tone-controller`、クーポン文案は `yahoo-coupon-copy-builder`、配送ポリシーチェックは `yahoo-shipping-policy-checker`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-review-reply-generator"
+ },
+ {
+  "name": "yahoo-search-suggest-builder",
+  "description_ja": "Yahoo!検索とYahoo!ショッピングのサジェスト・関連検索からキーワードを抽出し、商品名・shopping-search-keywords・広告KWに振り分けるスキル。「Yahooサジェスト」「サジェストキーワード」「関連検索ワード」「ロングテール設計」「KW分類」「サジェストから商品名に何を入れる？」「サジェストで競合を観察」「サジェストから広告KW」などのリクエストで使う。基本語／用途語／悩み語／対象者語／シーン語／季節語／競合語の7分類で整理。※商品名の最終チューニングは別スキル `yahoo-shopping-seo-title`、広告入札・予算設計は `yahoo-ad-keyword-planner`、クーポン文案は `yahoo-coupon-copy-builder`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!検索とYahoo!ショッピングのサジェスト・関連検索からキーワードを抽出し、商品名・shopping-search-keywords・広告KWに振り分けるスキル。「Yahooサジェスト」「サジェストキーワード」「関連検索ワード」「ロングテール設計」「KW分類」「サジェストから商品名に何を入れる？」「サジェストで競合を観察」「サジェストから広告KW」などのリクエストで使う。基本語／用途語／悩み語／対象者語／シーン語／季節語／競合語の7分類で整理。※商品名の最終チューニングは別スキル `yahoo-shopping-seo-title`、広告入札・予算設計は `yahoo-ad-keyword-planner`、クーポン文案は `yahoo-coupon-copy-builder`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-search-suggest-builder"
+ },
+ {
+  "name": "yahoo-shipping-policy-checker",
+  "description_ja": "Yahoo!ショッピングの配送ポリシー・送料表記・返品ポリシーが、優良配送の基準（注文後2日以内着・出荷遅延率5%未満・ストア都合キャンセル率2.5%未満・2025.11からの総合13→10点改定）と、特商法13項目・最終確認画面6項目（2022.6改正）に整合しているかを、ストア情報／お買い物ガイド／商品ページの3者で突合するスキル。「Yahoo!の配送表記をチェック」「送料無料表記の整合性」「全国送料無料は問題ない？」「優良配送バッジを取りたい」「あす着・翌々日着」「返品ポリシーの書き分け」「不良品とお客様都合の返品」「特商法表記」「最終確認画面6項目」「定期購入の解約条件」「沖縄離島の例外」「カットオフ時刻」「ストア都合キャンセル率」など、Yahoo!ショッピング特有の配送ステータスと法定表記の整合チェックで使う。優良配送・翌日優良配送・あす着・翌々日着の達成運用、地域別送料・大型/冷凍配送・代引手数料の例外明記、不良品/お客様都合の返品書き分け、定期購入の解約条件明示まで対応。※楽天RMSの日次運用チェックは別スキル `rakuten-rms-daily-patrol`、ストア情報の特商法13項目を全モール横断で見る場合は `tokushoho-display-checker`、薬機法・景表法の文言修正は `yakki-keihyo-expression-check`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピングの配送ポリシー・送料表記・返品ポリシーが、優良配送の基準（注文後2日以内着・出荷遅延率5%未満・ストア都合キャンセル率2.5%未満・2025.11からの総合13→10点改定）と、特商法13項目・最終確認画面6項目（2022.6改正）に整合しているかを、ストア情報／お買い物ガイド／商品ページの3者で突合するスキル。「Yahoo!の配送表記をチェック」「送料無料表記の整合性」「全国送料無料は問題ない？」「優良配送バッジを取りたい」「あす着・翌々日着」「返品ポリシーの書き分け」「不良品とお客様都合の返品」「特商法表記」「最終確認画面6項目」「定期購入の解約条件」「沖縄離島の例外」「カットオフ時刻」「ストア都合キャンセル率」など、Yahoo!ショッピング特有の配送ステータスと法定表記の整合チェックで使う。優良配送・翌日優良配送・あす着・翌々日着の達成運用、地域別送料・大型/冷凍配送・代引手数料の例外明記、不良品/お客様都合の返品書き分け、定期購入の解約条件明示まで対応。※楽天RMSの日次運用チェックは別スキル `rakuten-rms-daily-patrol`、ストア情報の特商法13項目を全モール横断で見る場合は `tokushoho-display-checker`、薬機法・景表法の文言修正は `yakki-keihyo-expression-check`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-shipping-policy-checker"
+ },
+ {
+  "name": "yahoo-shopping-seo-title",
+  "description_ja": "Yahoo!ショッピングの商品名（name）と検索キーワード欄（shopping-search-keywords）をSEO最適化するスキル。「Yahooの商品名を直して」「Yahooショッピング SEO」「商品名のキーワード設計」「全角75字に収めたい」「検索に強いタイトル」「shopping-search-keywords の埋め方」「Yahooのタイトル装飾NG」「product-categoryと商品名の整合」などのリクエストで使う。アパレル・家電・食品・コスメ・日用品・書籍・ベビー・ペットなど全ジャンル対応、新規商品名作成と既存改善の両方に対応。※検索サジェストからのキーワード抽出は別スキル `yahoo-search-suggest-builder`、広告キーワード計画は `yahoo-ad-keyword-planner`、画像内テキストの監査は `yahoo-item-image-audit`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "Yahoo!ショッピングの商品名（name）と検索キーワード欄（shopping-search-keywords）をSEO最適化するスキル。「Yahooの商品名を直して」「Yahooショッピング SEO」「商品名のキーワード設計」「全角75字に収めたい」「検索に強いタイトル」「shopping-search-keywords の埋め方」「Yahooのタイトル装飾NG」「product-categoryと商品名の整合」などのリクエストで使う。アパレル・家電・食品・コスメ・日用品・書籍・ベビー・ペットなど全ジャンル対応、新規商品名作成と既存改善の両方に対応。※検索サジェストからのキーワード抽出は別スキル `yahoo-search-suggest-builder`、広告キーワード計画は `yahoo-ad-keyword-planner`、画像内テキストの監査は `yahoo-item-image-audit`。",
+  "category": "ecommerce-marketing",
+  "slug": "yahoo-shopping-seo-title"
+ },
+ {
+  "name": "yakki-keihyo-expression-check",
+  "description_ja": "化粧品・健康食品・美容雑貨・サプリ・健康器具の商品ページ・広告コピー・LP・SNS投稿を薬機法／景品表示法／健康増進法／ステマ規制で一次チェックするスキル。「薬機法チェック」「景表法リスク」「この表現危ない？」「化粧品のNG表現」「健康食品の効能」「No.1表記の根拠」「打消し表示」「ステマPR表記」「ビフォーアフター」「医師推奨」「最大級表現」「二重価格」など、薬機法・景表法に関わる文章チェック・修正・代替表現提案で使う。化粧品56効能／医薬部外品／機能性表示食品／栄養機能食品／美容雑貨／一般食品まで対応。※特商法ページのチェックは別スキル `tokutei-shotorihiki-page-checker`、返品ポリシー整合性は `return-policy-consistency-check`、レビュー返信は `review-reply-tone-controller`。\n\n【ALSEL独自スキル】株式会社ALSEL が、19年・5,000社超の EC 支援で得たノウハウをもとに開発したオリジナルスキルです。",
+  "description_original": "化粧品・健康食品・美容雑貨・サプリ・健康器具の商品ページ・広告コピー・LP・SNS投稿を薬機法／景品表示法／健康増進法／ステマ規制で一次チェックするスキル。「薬機法チェック」「景表法リスク」「この表現危ない？」「化粧品のNG表現」「健康食品の効能」「No.1表記の根拠」「打消し表示」「ステマPR表記」「ビフォーアフター」「医師推奨」「最大級表現」「二重価格」など、薬機法・景表法に関わる文章チェック・修正・代替表現提案で使う。化粧品56効能／医薬部外品／機能性表示食品／栄養機能食品／美容雑貨／一般食品まで対応。※特商法ページのチェックは別スキル `tokutei-shotorihiki-page-checker`、返品ポリシー整合性は `return-policy-consistency-check`、レビュー返信は `review-reply-tone-controller`。",
+  "category": "ecommerce-marketing",
+  "slug": "yakki-keihyo-expression-check"
+ }
+]

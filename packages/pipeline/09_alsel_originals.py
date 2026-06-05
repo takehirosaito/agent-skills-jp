@@ -140,7 +140,47 @@ _EC_100_SLUGS = [
     "yakki-keihyo-expression-check",
 ]
 
-SLUGS = _LEGACY_SLUGS + _EC_100_SLUGS
+# 2026-06 追加：空白領域30スキル（越境EC・Qoo10/モール拡張・物流通関・広告セール・D2C/CRM・ふるさと納税/B2B/ライブコマース）
+_EC_30_2026_06_SLUGS = [
+    # Batch1 越境EC
+    "amazon-global-selling-launch",
+    "shopify-markets-cross-border-setup",
+    "ebay-listing-optimization-jp",
+    "cross-border-hs-code-duty-estimator",
+    "taobao-tmall-entry-guide",
+    # Batch2 Qoo10/モール拡張・海外SEO
+    "qoo10-shop-opening-checklist",
+    "qoo10-item-registration-guide",
+    "qoo10-mega-wari-prep",
+    "au-pay-market-item-setup",
+    "multilingual-hreflang-planner",
+    # Batch3 物流・在庫・通関
+    "wms-requirements-definition",
+    "multi-warehouse-allocation-planner",
+    "import-customs-clearance-checklist",
+    "shipping-carrier-rate-optimizer",
+    "lead-time-reduction-planner",
+    # Batch4 広告・大型セール・実験
+    "tiktok-ads-ec-planner",
+    "pinterest-shopping-ads-planner",
+    "amazon-prime-day-prep",
+    "amazon-dsp-audience-planner",
+    "ab-test-design-ec",
+    # Batch5 D2C・CRM・データ
+    "d2c-subscription-design",
+    "ltv-cohort-analysis-planner",
+    "line-step-message-scenario",
+    "crm-rfm-segmentation-planner",
+    "refund-workflow-designer",
+    # Batch6 ふるさと納税・B2B・ライブコマース
+    "furusato-rakuten-listing",
+    "furusato-satofuru-listing",
+    "b2b-ec-quote-builder",
+    "b2b-credit-screening-checklist",
+    "live-commerce-script-planner",
+]
+
+SLUGS = _LEGACY_SLUGS + _EC_100_SLUGS + _EC_30_2026_06_SLUGS
 
 
 def parse_skill_md(path: Path) -> tuple[dict, str]:
