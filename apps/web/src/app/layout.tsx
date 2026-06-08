@@ -140,7 +140,7 @@ export default async function RootLayout({
         </header>
         <div className="flex-1">{children}</div>
         <footer className="border-t border-slate-200 mt-12">
-          <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-slate-600">
+          <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-sm text-slate-600">
             <div>
               <div className="font-bold text-slate-900 text-base">
                 Agent Skills by ALSEL
@@ -177,6 +177,30 @@ export default async function RootLayout({
                 <Link href="/terms" className="hover:text-slate-900">利用規約</Link>
                 <Link href="/privacy" className="hover:text-slate-900">プライバシー</Link>
                 <Link href="/takedown" className="hover:text-slate-900">削除依頼</Link>
+              </div>
+            </div>
+
+            <div>
+              <div className="font-bold text-slate-900 mb-3">
+                ALSEL運営の他メディア
+              </div>
+              <div className="flex flex-col gap-2">
+                <a
+                  href="https://uruchikara.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900"
+                >
+                  うるチカラ（EC×AIメディア） ↗
+                </a>
+                <a
+                  href="https://nomanaichikara.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-slate-900"
+                >
+                  飲まないチカラ（ノンアル・節酒メディア） ↗
+                </a>
               </div>
             </div>
 
