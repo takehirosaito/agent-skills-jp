@@ -116,6 +116,33 @@ export default async function AboutPage() {
       </section>
 
       <section className="mb-10">
+        <h2 className="text-xl font-bold mb-3">ALSEL運営の他メディア</h2>
+        <p className="text-slate-700 leading-relaxed">
+          株式会社ALSEL は本サイトのほかに、EC×AI の実務ノウハウを発信する
+          メディア{" "}
+          <a
+            href="https://uruchikara.jp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            うるチカラ
+          </a>
+          と、お酒との新しい付き合い方を提案するノンアル・節酒・禁酒の
+          ライフスタイルメディア{" "}
+          <a
+            href="https://nomanaichikara.jp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            飲まないチカラ
+          </a>
+          を運営しています。
+        </p>
+      </section>
+
+      <section className="mb-10">
         <h2 className="text-xl font-bold mb-3">お問い合わせ</h2>
         <ul className="text-slate-700 leading-relaxed space-y-1">
           <li>
