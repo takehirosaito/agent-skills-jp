@@ -18,6 +18,7 @@ jobs:
     env:
       EXPIRY_DATE: "2026-08-12"
       THRESHOLD_DAYS: "30"
+      GH_REPO: ${{ github.repository }}
     steps:
       - name: Calculate days left
         id: calc
